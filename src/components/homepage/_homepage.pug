@@ -1,4 +1,4 @@
-section
+section.section_indent
   .container.bg-color-blue
     ul.horizontal-menu
       li
@@ -107,8 +107,63 @@ section
           li
             a(href="#") Yoghurt of Bulgaria
 
-section
+section.section_indent
   .container
-    span 123
+    .container_wrap
+      .slider-wrap
+        .swiper-container.main-slider-block(main-slider)
+          .swiper-wrapper
+            .swiper-slide.main-slider-block__slide
+              img.main-slider-block__img(src="img/main-slider-img1.jpg", alt="")
+              .main-slider-block__mask
+                h2
+                  = 'Наборы косметики '
+                  span.text-orange Bioderma 
+                  = 'за полцены'
+                  br
+                  = 'только до 25 декабря'
+                p
+                  = 'Каждый раз, покупая какую-либо ценную вещь в дом, мы изучаем много различной'
+                  br
+                  = 'информации и становимся профессионалами в этой области.'
+                .wrap-btn
+                  a(href="#").simple-button Собрать свой набор
+            .swiper-slide.main-slider-block__slide
+              img.main-slider-block__img(src="img/main-slider-img1.jpg", alt="")
+              .main-slider-block__mask
+                h2
+                  = 'Наборы косметики '
+                  span.text-orange Bioderma 
+                  = 'за полцены'
+                  br
+                  = 'только до 25 декабря'
+                p
+                  = 'Каждый раз, покупая какую-либо ценную вещь в дом, мы изучаем много различной'
+                  br
+                  = 'информации и становимся профессионалами в этой области.'
+                .wrap-btn
+                  a(href="#").simple-button Собрать свой набор
+            .swiper-slide.main-slider-block__slide
+              img.main-slider-block__img(src="img/main-slider-img1.jpg", alt="")
+              .main-slider-block__mask
+                h2
+                  = 'Наборы косметики '
+                  span.text-orange Bioderma 
+                  = 'за полцены'
+                  br
+                  = 'только до 25 декабря'
+                p
+                  = 'Каждый раз, покупая какую-либо ценную вещь в дом, мы изучаем много различной'
+                  br
+                  = 'информации и становимся профессионалами в этой области.'
+                .wrap-btn
+                  a(href="#").simple-button Собрать свой набор
+          .swiper-pagination
+        .swiper-button-prev
+          +svgMono('arrowBottom')
+        .swiper-button-next
+          +svgMono('arrowBottom')
 
+      .product-day
+        span 123
 

@@ -17,4 +17,22 @@
       });
     },
   };
+  APP.Plugins.Sliders = {
+    init: function () {
+      new Swiper('[main-slider]', {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        loop: true,
+      });
+    },
+    destroy: function () {
+      // ... code ...
+    },
+  };
 })(jQuery, window.APP);
