@@ -26,6 +26,9 @@ body, html
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+::placeholder
+  color: $fontColorGrey
+
 ::selection
   color: white
   background: $colorPrimary
@@ -49,8 +52,6 @@ body, html
     flex: 1 0 auto
     display: flex
     flex-direction: column
-    // fixed container fix
-    padding-top: 150px
 
 .container
   max-width: 1440px
@@ -59,6 +60,14 @@ body, html
   margin-right: auto
   padding-left: 30px
   padding-right: 30px
+  &-relative
+    position: relative
+    max-width: 1440px
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    padding-left: 30px
+    padding-right: 30px
 
 +r($sm)
   .container

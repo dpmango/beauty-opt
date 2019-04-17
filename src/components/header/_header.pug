@@ -1,79 +1,81 @@
 // HEADER :: START
 
-header.header
-  .container.container_bottom-line
+header.header.header_padding-bottom
+  .container.border-bottom
 
     .header-wrap
-      .header-wrap__item
 
-        .header-start-menu.header-start-menu_indent
+      .top-menu.top-menu_indent
 
-          .header-start-menu__item
-            .header-block-delivery
-              span.main-text
-                +svgMono('delivery')
-                = 'Ваш город доставки: '
-                a.f-600.link-text(href='#') Воронеж
+        .top-menu__delivery.main-text
+          +svgMono('delivery')
+          = 'Ваш город доставки: '
+          a.f-600.link-text(href='#') Воронеж
 
-          .header-start-menu__item
-            ul.header-small-menu
-              li.header-small-menu__item
-                a(href="#").main-text.link-text Доставка и оплата
-              li.header-small-menu__item
-                a(href="#").main-text.link-text Гарантия и возврат
-              li.header-small-menu__item
-                a(href="#").main-text.link-text Система бонусов
+        ul.header-small-menu
+          li
+            a(href="#") Доставка и оплата
+          li
+            a(href="#") Гарантия и возврат
+          li
+            a(href="#") Система бонусов
 
   .container
     .header-wrap
-      .header-wrap__item
 
-        .header-center-menu.header-center-menu_indent
-          .header-center-menu__item
-            .header-center-menu-left
-              .header-center-menu-left__item
-                a(href="#").header-block-logo
-                 i.icon.icon-logo
-              .header-center-menu-left__item
-                a(href="#").header-block-link
-                  .header-block-link__ico
-                    +svgMono('call')
-                  .header-block-link__text
-                    .main-text.f-600.header-block-link__text_indent-bottom 8 800 287 14 73
-                    .small-text.color-grey Заказать обратный звонок
+      .center-menu.center-menu_indent
+        .center-menu-left
+          .center-menu-left__item
+            a(href="#").header-block-logo
+              i.icon.icon-logo
+          .center-menu-left__item
+            a(href="#").menu-center-link
+              .menu-center-link__ico
+                +svgMono('call')
+              .menu-center-link__text
+                .main-text.f-600.menu-center-link__text_indent-bottom 8 800 287 14 73
+                .small-text.color-grey Заказать обратный звонок
 
-          .header-center-menu__item
-            .header-center-menu-right
-              .header-center-menu-right__item
-                a(href="#").header-block-link
-                  .header-block-link__ico
-                    +svgMono('comparison')
-                  .header-block-link__text
-                    .main-text.f-600.header-block-link__text_indent-bottom Сравнение товаров
-                    .small-text.color-grey На сумму 1390 руб.
-              .header-center-menu-right__item
-                a(href="#").header-block-link
-                  .header-block-link__ico
-                    +svgMono('basket')
-                    span.header-block-link__numb 3
-                  .header-block-link__text
-                    .main-text.f-600.header-block-link__text_indent-bottom Ваша корзина
-                    .small-text.color-grey 3 товара на 35 140 руб.
+        .center-menu-right
+          .center-menu-right__item
+            a(href="#").menu-center-link
+              .menu-center-link__ico
+                +svgMono('comparison')
+              .menu-center-link__text
+                .main-text.f-600.menu-center-link__text_indent-bottom Сравнение товаров
+                .small-text.color-grey На сумму 1390 руб.
+          .center-menu-right__item
+            a(href="#").menu-center-link
+              .menu-center-link__ico
+                +svgMono('basket')
+                span.menu-center-link__numb 3
+              .menu-center-link__text
+                .main-text.f-600.menu-center-link__text_indent-bottom Ваша корзина
+                .small-text.color-grey 3 товара на 35 140 руб.
 
-        .header-end-menu
-          .header-end-menu__item
-            a(href="#").btn-open-all-catalog
-              .btn-open-all-catalog-burger.btn-open-all-catalog-burger_indent
-                .btn-open-all-catalog-burger__line
-                .btn-open-all-catalog-burger__line
-                .btn-open-all-catalog-burger__line
-              span.btn-open-all-catalog__text Полный каталог
-          .header-end-menu__item
-            form.search-form
-              input(
-                type="search",
-                placeholder='Поиск товара по названию, бренду и артиклу'
-                )
-              input(type="text")
-          .header-end-menu__item
-            span 123
+      .bottom-menu
+
+        a(href="#").btn-open-all-catalog
+          .btn-open-all-catalog-burger.btn-open-all-catalog-burger_indent
+            .btn-open-all-catalog-burger__line
+            .btn-open-all-catalog-burger__line
+            .btn-open-all-catalog-burger__line
+          span.btn-open-all-catalog__text Полный каталог
+        
+        form.search-form.search-form_indent
+          .search-form__block-input
+            input.search-form__inpuut.main-text(
+              type="search",
+              placeholder='Поиск товара по названию, бренду и артиклу'
+              )
+          button.search-form__button(type="submit")
+            +svgMono('search')
+            = 'Найти'
+
+        .block-login.main-text
+          a(href="#").block-login__entrance.link-text
+            +svgMono('user')
+            = 'Вход'
+          .block-login__separator.block-login__separator_indent
+          a(href="#").block-login__registration.link-text
+            = 'Регистрация'
