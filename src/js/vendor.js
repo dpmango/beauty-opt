@@ -3,7 +3,7 @@ import svg4everybody from 'svg4everybody';
 import picturefill from 'picturefill';
 import viewportUnitsBuggyfill from 'viewport-units-buggyfill';
 import Swiper from 'swiper';
-import fancybox from '@fancyapps/fancybox';
+import fancybox from 'fancybox';
 import popper from 'popper.js';
 import AOS from 'aos';
 import scrollMonitor from 'scrollmonitor';
