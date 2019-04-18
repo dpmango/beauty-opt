@@ -17,29 +17,26 @@ var webpackConfig = {
   //   // umdNamedDefine: true,
   // },
   module: {
-    rules: [
-      {
-        test: require.resolve('jquery'),
-        use: [
-          {
-            loader: 'expose-loader',
-            options: 'jQuery',
-          },
-          {
-            loader: 'expose-loader',
-            options: '$',
-          },
-        ],
-      },
-    ],
+    rules: [{
+      test: require.resolve('jquery'),
+      use: [{
+          loader: 'expose-loader',
+          options: 'jQuery',
+        },
+        {
+          loader: 'expose-loader',
+          options: '$',
+        },
+      ],
+    }, ],
   },
-  plugins: [
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-    }),
-  ],
+  // plugins: [
+  //   new webpack.ProvidePlugin({
+  //     $: 'jquery',
+  //     jQuery: 'jquery',
+  //     'window.jQuery': 'jquery',
+  //   }),
+  // ],
 };
 
 // gulp.task('javascript:vendor', function() {
@@ -54,14 +51,13 @@ var webpackConfig = {
 //   );
 // });
 
-gulp.task('javascript:vendor', function() {
-  return gulp
+gulp.task('javascript:vendor', function () {
+  return (
+    gulp
     .src([config.src.js + '/vendor.js'])
-    .pipe(
-      plumber({
-        errorHandler: config.errorHandler,
-      })
-    )
+    .pipe(plumber({
+      errorHandler: config.errorHandler
+    }))
     .pipe(webpackStream(webpackConfig))
     .pipe(concat('vendor.js'))
     .pipe(
@@ -69,21 +65,20 @@ gulp.task('javascript:vendor', function() {
         presets: ['@babel/preset-env'],
       })
     )
-    .pipe(gulp.dest(config.dest.js));
+    .pipe(gulp.dest(config.dest.js))
+  );
 });
 
-gulp.task('javascript:app', function() {
+gulp.task('javascript:app', function () {
   return gulp
     .src([
       config.src.js + '/app.js',
       config.src.js + '/modules/**/*.js',
       config.src.components + '/**/*.js',
     ])
-    .pipe(
-      plumber({
-        errorHandler: config.errorHandler,
-      })
-    )
+    .pipe(plumber({
+      errorHandler: config.errorHandler
+    }))
     .pipe(concat('app.js'))
     .pipe(
       babel({
@@ -96,7 +91,7 @@ gulp.task('javascript:app', function() {
 
 gulp.task('javascript', ['javascript:vendor', 'javascript:app']);
 
-gulp.task('javascript:watch', function() {
+gulp.task('javascript:watch', function () {
   gulp.watch([config.src.js + '/vendor.js'], ['javascript:vendor']);
   gulp.watch(
     [

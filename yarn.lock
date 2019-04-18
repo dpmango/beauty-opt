@@ -549,11 +549,6 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@fancyapps/fancybox@^3.5.7":
-  version "3.5.7"
-  resolved "https://registry.yarnpkg.com/@fancyapps/fancybox/-/fancybox-3.5.7.tgz#12f8734663ec6eae7f9236b92ca236e6e07fdfd5"
-  integrity sha512-rcEtu8t+WnmqIDV/Wfm1yvy/nDdwc7YV25j9HLxGC2/WOsUhk9rcWg2nB8g1BrjRt9zaoADdjHTU6ILYTJzBBg==
-
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/identity-map/-/identity-map-1.0.1.tgz#cfa23bc5840f9104ce32a65e74db7e7a974bbee1"
@@ -3586,11 +3581,6 @@ fancy-log@^1.3.3:
     color-support "^1.1.3"
     parse-node-version "^1.0.0"
     time-stamp "^1.0.0"
-
-fancybox@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/fancybox/-/fancybox-3.0.1.tgz#13f6927449157ed026c69e78c2ba5bf0f1da9af7"
-  integrity sha512-HZ57O6j5Zk4Uvusd5pNUgWi7CCjKx+HFlCzjMPeRJ//0bQWUK+xVpkn3EzXWJate4ZSKNFP9kU2l49MP1g+oow==
 
 fast-deep-equal@^1.0.0:
   version "1.0.0"
@@ -7356,11 +7346,6 @@ pngjs-nozlib@^1.0.0:
 pngjs@^2.0.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-2.3.1.tgz#11d1e12b9cb64d63e30c143a330f4c1f567da85f"
-
-popper.js@^1.15.0:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.15.0.tgz#5560b99bbad7647e9faa475c6b8056621f5a4ff2"
-  integrity sha512-w010cY1oCUmI+9KwwlWki+r5jxKfTFDVoadl7MSrIujHU5MJ5OR6HTDj6Xo8aoR/QsA56x8jKjA59qGH4ELtrA==
 
 portscanner@2.1.1:
   version "2.1.1"
