@@ -110,6 +110,7 @@ section.section_indent
 section.section_indent
   .container
     .container_wrap
+
       .slider-wrap
         .swiper-container.main-slider-block(main-slider)
           .swiper-wrapper
@@ -164,6 +165,63 @@ section.section_indent
         .swiper-button-next
           +svgMono('arrowBottom')
 
-      .product-day
-        span 123
+      .block-product
+        .block-product__img
+          img(src="img/images1.jpg", alt="")
 
+section.section_indent
+  .container
+    .block-info-list
+      .block-info-list__item
+        .block-info-list__ico.block-info-list__ico_indent
+          +svgColor('boxTime')
+        span.block-info-list__text
+          = 'Курьерская доставка по Воронежу'
+          br
+          = 'на следующий день'
+      .block-info-list__item
+        .block-info-list__ico.block-info-list__ico_indent
+          +svgColor('discount')
+        span.block-info-list__text
+          = 'Акции и скидки круглый год,'
+          br
+          = 'возврщение % от покупок бонусами'
+      .block-info-list__item
+        .block-info-list__ico.block-info-list__ico_indent
+          +svgColor('listStar')
+        span.block-info-list__text
+          = 'Официальные диллеры,'
+          br
+          = 'сертифицированный товар'
+      .block-info-list__item
+        .block-info-list__ico.block-info-list__ico_indent
+          +svgColor('cream')
+        span.block-info-list__text
+          = 'Товарный ассортимент из более чем'
+          br
+          = '24 000 позиций'
+
+section.section_indent
+  .container
+    h2.h2-title Товары со скидкой
+    .block-product
+      .block-product__img
+        img(src="img/images2.jpg", alt="")
+      .block-product__wrap-text
+        span.block-product__brand.block-product_indent_b Aveda
+        a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+        .block-product__wrap.block-product_indent_b
+          span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+          span.block-product__amount-discount - 280 руб.
+        span.block-product__price.block-product_indent_bx2 1 230 руб.
+        .block-product__wrap.block-product_indent_bx2
+          a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+            +svgMono('basket')
+            +svgMono('addBasket')
+          a(href="").link-text.block-product__compare
+            +svgMono('comparison')
+            span Сравнить
+        .block-product__wrap
+          a(href="#").block-product__btn-bottom
+            +svgMono('questionMark')
+            span Купить по оптовой цене

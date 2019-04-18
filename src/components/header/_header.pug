@@ -10,7 +10,11 @@ header.header.header_padding-bottom
         .top-menu__delivery.main-text
           +svgMono('delivery')
           = 'Ваш город доставки: '
-          a.f-600.link-text(href='#') Воронеж
+          a.f-600.link-text(
+            href='#popap-test',
+            data-fancybox
+          )
+           = 'Воронеж'
 
         ul.header-small-menu
           li

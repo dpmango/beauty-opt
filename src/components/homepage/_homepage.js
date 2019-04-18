@@ -4,6 +4,7 @@
 (function ($, APP) {
   APP.Components.Homepage = {
     init: function () {
+
       $('.horizontal-menu').on('click', 'a', function () {
         if (!$(this).hasClass('horizontal-menu_active')) {
           $(this).parents('.horizontal-menu').find('a').removeClass('horizontal-menu_active');
@@ -15,6 +16,12 @@
         }
         return false;
       });
+
+      $('.block-product__in-garbage').on('click', function () {
+        $(this).toggleClass('block-product__in-garbage_active');
+        return false;
+      });
+
     },
   };
   APP.Plugins.Sliders = {
