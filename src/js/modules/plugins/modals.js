@@ -1,12 +1,12 @@
 //////////
 // MODALS
 //////////
-(function($, APP) {
+(function ($, APP) {
   APP.Plugins.Modals = {
-    init: function() {
-      $('[data-fancybox]').fancybox();
+    init: function () {
+      $('[js-popup]').fancybox();
     },
-    destroy: function() {
+    destroy: function () {
       // ... code ...
     },
   };
