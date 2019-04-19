@@ -4,7 +4,7 @@
 (function ($, APP) {
   APP.Plugins.Modals = {
     init: function () {
-      $('[js-popup]').fancybox();
+      $('[data-fancybox]').fancybox();
     },
     destroy: function () {
       // ... code ...
