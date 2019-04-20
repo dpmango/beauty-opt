@@ -132,6 +132,8 @@
           width: 75%
     .btn-open-all-catalog__text
       transform: translate(0, -4px)
+    &:hover
+      background-color: $colorLightGreen
 
 .btn-open-all-catalog-burger
   position: relative
@@ -207,3 +209,67 @@
     &_indent
       margin: 0 20px
 
+.search-options
+  position: absolute
+  opacity: 0
+  visibility: hidden
+  z-index: 10
+  top: 100%
+  left: 0
+  overflow: hidden
+  border-radius: 0 0 6px 6px
+  width: 100%
+  background-color: #fff
+  box-shadow: 0px 4px 14px rgba(121, 121, 121, 0.25)
+  transition: $transitionSpeed
+  &_active
+    opacity: 1
+    visibility: visible
+  ul
+    width: 100%
+    margin: 0
+    padding: 0
+    li
+      width: 100%
+      a
+        display: flex
+        align-items: center
+        width: 100%
+        padding: 20px
+        border-bottom: 1px solid #F0F7F7
+        transition: $transitionSpeed
+        &:hover
+          background-color: #F0F7F7
+  &__img
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-shrink: 0
+    width: 40px
+    height: 40px
+    img
+      max-width: 100%
+      max-height: 100%
+    &_indent
+      margin-right: 20px
+  &__name
+    font-size: 16px
+    &_indent
+      margin-bottom: 5px
+  &__price
+    font-weight: 600
+  &__wrap-text
+    width: 100%
+  &__wrap-all-product
+    padding: 20px
+  &__all-product-text
+    color: #B7B7B7
+  &__btn-all
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    background-color: #26A1AD
+    color: #fff
+    letter-spacing: 0.02em
+    height: 46px

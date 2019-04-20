@@ -1,28 +1,52 @@
 // HEADER :: START
 
 header.header.header_padding-bottom
-  .container.border-bottom
+  .container.border-bottom.border-bottom_mobile-none.mobile-bg-blue
 
     .header-wrap
 
       .top-menu.top-menu_indent
 
-        .top-menu__delivery.main-text
+        .top-menu__delivery
           +svgMono('delivery')
           = 'Ваш город доставки: '
-          a.f-600.link-text.test(
-            href='#popap-test',
+          a(
+            href='#popap-select-city',
             data-fancybox
-          )
+          ).f-600.link-text
            = 'Воронеж'
 
-        ul.header-small-menu
+        ul.header-small-menu.hidden-1200
           li
             a(href="#") Доставка и оплата
           li
             a(href="#") Гарантия и возврат
           li
             a(href="#") Система бонусов
+
+        ul.mobile-small-menu
+          li
+            a(href="tel:8 800 287 14 73").link-text
+              +svgMono('call')
+              = '8 800 287 14 73'
+          li.wrap-mobile-search
+            a(href="#").wrap-mobile-search__ico
+              +svgMono('search')
+            form.mobile-search
+              input(
+                type="search",
+                placeholder='Поиск товара'
+              ).mobile-search__input
+              button(type="submit").mobile-search__button
+                +svgMono('search')
+          li
+            .block-login
+              a(href="#").block-login__entrance.link-text
+                +svgMono('user')
+                = 'Вход'
+              .block-login__separator.block-login__separator_indent
+              a(href="#").block-login__registration.link-text
+                = 'Регистрация'
 
   .container
     .header-wrap
@@ -32,7 +56,8 @@ header.header.header_padding-bottom
           .center-menu-left__item
             a(href="#").header-block-logo
               i.icon.icon-logo
-          .center-menu-left__item
+              i.icon.icon-logoSmall
+          .center-menu-left__item.hidden-1200
             a(href="#").menu-center-link
               .menu-center-link__ico
                 +svgMono('call')
@@ -53,6 +78,7 @@ header.header.header_padding-bottom
               .menu-center-link__ico
                 +svgMono('basket')
                 span.menu-center-link__numb 3
+              .menu-center-link__mobile-text Корзина
               .menu-center-link__text
                 .main-text.f-600.menu-center-link__text_indent-bottom Ваша корзина
                 .small-text.color-grey 3 товара на 35 140 руб.
@@ -68,15 +94,45 @@ header.header.header_padding-bottom
         
         form.search-form.search-form_indent
           .search-form__block-input
-            input.search-form__inpuut.main-text(
+            input.search-form__inpuut(
               type="search",
               placeholder='Поиск товара по названию, бренду и артиклу'
               )
+            .search-options
+              ul
+                li
+                  a(href="#")
+                    .search-options__img.search-options__img_indent
+                      img(src="img/small-img1.jpg", alt="")
+                    .search-options__wrap-text
+                      .search-options__name.search-options__name_indent Men Pure-formance Men's Aftershave
+                      .search-options__price 4 510 руб.
+                li
+                  a(href="#")
+                    .search-options__img.search-options__img_indent
+                      img(src="img/small-img2.jpg", alt="")
+                    .search-options__wrap-text
+                      .search-options__name.search-options__name_indent Men Pure-formance Men's Aftershave
+                      .search-options__price 4 510 руб.
+                li
+                  a(href="#")
+                    .search-options__img.search-options__img_indent
+                      img(src="img/small-img1.jpg", alt="")
+                    .search-options__wrap-text
+                      .search-options__name.search-options__name_indent Men Pure-formance Men's Aftershave
+                      .search-options__price 4 510 руб.
+              .search-options__wrap-all-product
+                span.search-options__all-product-text
+                  = 'Всего найдено: '
+                span.search-options__all-product-numb
+                  = '346 товаров'
+              a(href="#").search-options__btn-all Смотреть все результаты
+
           button.search-form__button(type="submit")
             +svgMono('search')
             = 'Найти'
 
-        .block-login.main-text
+        .block-login.hidden-1200
           a(href="#").block-login__entrance.link-text
             +svgMono('user')
             = 'Вход'

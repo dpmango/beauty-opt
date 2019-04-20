@@ -1,4 +1,4 @@
-section.section_indent
+section.section_indent.hidden-1200
   .container.bg-color-blue
     ul.horizontal-menu
       li
@@ -33,11 +33,11 @@ section.section_indent
         a(href="#")
           = 'Акссесуары'
           +svgMono('arrowBottom')
-      li
+      li.hidden-1439
         a(href="#")
           = 'Расходные материалы'
           +svgMono('arrowBottom')
-      li
+      li.hidden-1439
         a(href="#")
           = 'Азия'
           +svgMono('arrowBottom')
@@ -111,7 +111,7 @@ section.section_indent
   .container
     .container_wrap
 
-      .slider-wrap
+      .slider-wrap.slider-wrap_indent
         .swiper-container.main-slider-block(main-slider)
           .swiper-wrapper
             .swiper-slide.main-slider-block__slide
@@ -159,69 +159,889 @@ section.section_indent
                   = 'информации и становимся профессионалами в этой области.'
                 .wrap-btn
                   a(href="#").simple-button Собрать свой набор
-          .swiper-pagination
-        .swiper-button-prev
+          .swiper-pagination.swiper-pagination__main-slider
+        .swiper-button-prev.swiper-button-prev__main-slider
           +svgMono('arrowBottom')
-        .swiper-button-next
+        .swiper-button-next.swiper-button-next__main-slider
           +svgMono('arrowBottom')
 
-      .block-product
-        .block-product__img
+      .block-product.block-product-day.hidden-1200
+        .block-product__wrap-tag
+          span.block-product__tag.block-product__tag_green Товар дня
+        .block-product__img.block-product-day__img_height
           img(src="img/images1.jpg", alt="")
+        .block-product__wrap-text.block-product__wrap-text_border_b
+          span.block-product__brand.block-product_indent_b Aveda
+          a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+          .block-product__wrap.block-product_indent_b
+            span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+            span.block-product__amount-discount - 280 руб.
+          span.block-product__price 1 230 руб.
+        .block-product__wrap-text
+          .block-product__wrap
+            a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+              +svgMono('basket')
+              +svgMono('addBasket')
+            a(href="").link-text.block-product__compare
+              +svgMono('comparison')
+              span Сравнить
 
-section.section_indent
+section.section_indent.hidden-769-b
+  .container
+    h2.h2-title Популярные категории
+    .categories-grid.categories-grid_indent
+      .categories-grid__category
+        .categories-grid__img
+          img(src="img/category-1.jpg", alt="")
+        .categories-grid__wrap-text
+          a(href="#").link-text.categories-grid__name Восстановление и сохранение здоровых волос
+          span.categories-grid__quantity 764 товара
+      .categories-grid__category
+        .categories-grid__img
+          img(src="img/category-2.jpg", alt="")
+        .categories-grid__wrap-text
+          a(href="#").link-text.categories-grid__name Окрашивание и тонирование
+          span.categories-grid__quantity 209 товаров
+      .categories-grid__category
+        .categories-grid__img
+          img(src="img/category-3.jpg", alt="")
+        .categories-grid__wrap-text
+          a(href="#").link-text.categories-grid__name Оборудование для косметических салонов
+          span.categories-grid__quantity 74 товара
+      .categories-grid__category.categories-grid__category_hidden
+        .categories-grid__img
+          img(src="img/category-1.jpg", alt="")
+        .categories-grid__wrap-text
+          a(href="#").link-text.categories-grid__name Восстановление и сохранение здоровых волос
+          span.categories-grid__quantity 764 товара
+      .categories-grid__category.categories-grid__category_hidden
+        .categories-grid__img
+          img(src="img/category-2.jpg", alt="")
+        .categories-grid__wrap-text
+          a(href="#").link-text.categories-grid__name Окрашивание и тонирование
+          span.categories-grid__quantity 209 товаров
+      .categories-grid__category.categories-grid__category_hidden
+        .categories-grid__img
+          img(src="img/category-3.jpg", alt="")
+        .categories-grid__wrap-text
+          a(href="#").link-text.categories-grid__name Оборудование для косметических салонов
+          span.categories-grid__quantity 74 товара
+    .wrap-btn-center.wrap-btn-center_indent
+      button.btn-transparent.btn-transparent_mobile-all-w#show-all-categories Показать все категории
+
+section.section_indent.hidden-768
   .container
     .block-info-list
       .block-info-list__item
         .block-info-list__ico.block-info-list__ico_indent
           +svgColor('boxTime')
         span.block-info-list__text
-          = 'Курьерская доставка по Воронежу'
+          = 'Курьерская доставка по Воронежу '
           br
           = 'на следующий день'
       .block-info-list__item
         .block-info-list__ico.block-info-list__ico_indent
           +svgColor('discount')
         span.block-info-list__text
-          = 'Акции и скидки круглый год,'
+          = 'Акции и скидки круглый год, '
           br
           = 'возврщение % от покупок бонусами'
       .block-info-list__item
         .block-info-list__ico.block-info-list__ico_indent
           +svgColor('listStar')
         span.block-info-list__text
-          = 'Официальные диллеры,'
+          = 'Официальные диллеры, '
           br
           = 'сертифицированный товар'
       .block-info-list__item
         .block-info-list__ico.block-info-list__ico_indent
           +svgColor('cream')
         span.block-info-list__text
-          = 'Товарный ассортимент из более чем'
+          = 'Товарный ассортимент из более чем '
           br
           = '24 000 позиций'
 
 section.section_indent
   .container
     h2.h2-title Товары со скидкой
-    .block-product
-      .block-product__img
-        img(src="img/images2.jpg", alt="")
-      .block-product__wrap-text
-        span.block-product__brand.block-product_indent_b Aveda
-        a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
-        .block-product__wrap.block-product_indent_b
-          span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
-          span.block-product__amount-discount - 280 руб.
-        span.block-product__price.block-product_indent_bx2 1 230 руб.
-        .block-product__wrap.block-product_indent_bx2
-          a(href="#").block-product__in-garbage.block-product__in-garbage_indent
-            +svgMono('basket')
-            +svgMono('addBasket')
-          a(href="").link-text.block-product__compare
-            +svgMono('comparison')
-            span Сравнить
-        .block-product__wrap
-          a(href="#").block-product__btn-bottom
-            +svgMono('questionMark')
-            span Купить по оптовой цене
+    .auto-width-slider-wrap.auto-width-slider-wrap_indent
+      .swiper-container.auto-width-slider.auto-width-slider_indent(auto-width-slider)
+        .swiper-wrapper
+          .swiper-slide.block-product
+            .block-product__wrap-tag
+              span.block-product__tag.block-product__tag_yellow Распродажа
+              span.block-product__tag.block-product__tag_green Хит продаж
+            .block-product__img
+              img(src="img/images2.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__wrap-tag
+              span.block-product__tag.block-product__tag_yellow Распродажа
+            .block-product__img
+              img(src="img/images2.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images1-1.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Invati Nourishing Exfoliating Shampoo
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 4 510 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images3.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images2.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images2.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images1-1.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Invati Nourishing Exfoliating Shampoo
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 4 510 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images3.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images2.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images2.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+        .swiper-pagination-small.swiper-pagination__auto-width-slider
+      .swiper-button-prev.swiper-button-prev__auto-width-slider
+        +svgMono('arrowBottom')
+      .swiper-button-next.swiper-button-next__auto-width-slider
+        +svgMono('arrowBottom')
+
+section.section_indent.hidden-1201-b
+  .container
+    h2.h2-title Новинки и хиты продаж
+    .block-main-tags.block-main-tags_indent
+      a(href="#").block-main-tags__tag Новинки
+      a(href="#").block-main-tags__tag Хиты продаж
+    .auto-width-slider-wrap.auto-width-slider-wrap_indent
+      .swiper-container.auto-width-slider.auto-width-slider_indent(auto-width-slider3)
+        .swiper-wrapper
+          .swiper-slide.block-product
+            .block-product__wrap-tag
+              span.block-product__tag.block-product__tag_yellow Распродажа
+              span.block-product__tag.block-product__tag_green Хит продаж
+            .block-product__img
+              img(src="img/images2.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__wrap-tag
+              span.block-product__tag.block-product__tag_yellow Распродажа
+            .block-product__img
+              img(src="img/images2.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images1-1.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Invati Nourishing Exfoliating Shampoo
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 4 510 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images3.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images2.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images2.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images1-1.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Invati Nourishing Exfoliating Shampoo
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 4 510 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images3.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images2.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+          .swiper-slide.block-product
+            .block-product__img
+              img(src="img/images2.jpg", alt="")
+            .block-product__wrap-text
+              span.block-product__brand.block-product_indent_b Aveda
+              a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+              .block-product__wrap.block-product_indent_b
+                span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+                span.block-product__amount-discount - 280 руб.
+              span.block-product__price.block-product_indent_bx2 1 230 руб.
+              .block-product__wrap.block-product_indent_bx2
+                a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                  +svgMono('basket')
+                  +svgMono('addBasket')
+                a(href="").link-text.block-product__compare
+                  +svgMono('comparison')
+                  span Сравнить
+              .block-product__wrap
+                a(href="#").block-product__btn-bottom
+                  +svgMono('questionMark')
+                  span Купить по оптовой цене
+        .swiper-pagination-small.swiper-pagination__auto-width-slider3
+
+section.section_indent.hidden-1200
+  .container
+    h2.h2-title Новинки и хиты продаж
+    .block-main-tags.block-main-tags_indent
+      a(href="#").block-main-tags__tag Новинки
+      a(href="#").block-main-tags__tag Хиты продаж
+    .container-slider-product-grid.container-slider-product-grid_indent
+      .wrap-slider-product-grid
+        .item-slider-product-grid.block-product
+          .block-product__wrap-tag
+            span.block-product__tag.block-product__tag_yellow Распродажа
+            span.block-product__tag.block-product__tag_green Хит продаж
+          .block-product__img
+            img(src="img/images2.jpg", alt="")
+          .block-product__wrap-text
+            span.block-product__brand.block-product_indent_b Aveda
+            a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+            .block-product__wrap.block-product_indent_b
+              span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+              span.block-product__amount-discount - 280 руб.
+            span.block-product__price.block-product_indent_bx2 1 230 руб.
+            .block-product__wrap.block-product_indent_bx2
+              a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                +svgMono('basket')
+                +svgMono('addBasket')
+              a(href="").link-text.block-product__compare
+                +svgMono('comparison')
+                span Сравнить
+            .block-product__wrap
+              a(href="#").block-product__btn-bottom
+                +svgMono('questionMark')
+                span Купить по оптовой цене
+        .item-slider-product-grid.block-product
+          .block-product__wrap-tag
+            span.block-product__tag.block-product__tag_yellow Распродажа
+            span.block-product__tag.block-product__tag_green Хит продаж
+          .block-product__img
+            img(src="img/images2.jpg", alt="")
+          .block-product__wrap-text
+            span.block-product__brand.block-product_indent_b Aveda
+            a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+            .block-product__wrap.block-product_indent_b
+              span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+              span.block-product__amount-discount - 280 руб.
+            span.block-product__price.block-product_indent_bx2 1 230 руб.
+            .block-product__wrap.block-product_indent_bx2
+              a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                +svgMono('basket')
+                +svgMono('addBasket')
+              a(href="").link-text.block-product__compare
+                +svgMono('comparison')
+                span Сравнить
+            .block-product__wrap
+              a(href="#").block-product__btn-bottom
+                +svgMono('questionMark')
+                span Купить по оптовой цене
+        .item-slider-product-grid.block-product
+          .block-product__wrap-tag
+            span.block-product__tag.block-product__tag_yellow Распродажа
+            span.block-product__tag.block-product__tag_green Хит продаж
+          .block-product__img
+            img(src="img/images2.jpg", alt="")
+          .block-product__wrap-text
+            span.block-product__brand.block-product_indent_b Aveda
+            a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+            .block-product__wrap.block-product_indent_b
+              span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+              span.block-product__amount-discount - 280 руб.
+            span.block-product__price.block-product_indent_bx2 1 230 руб.
+            .block-product__wrap.block-product_indent_bx2
+              a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                +svgMono('basket')
+                +svgMono('addBasket')
+              a(href="").link-text.block-product__compare
+                +svgMono('comparison')
+                span Сравнить
+            .block-product__wrap
+              a(href="#").block-product__btn-bottom
+                +svgMono('questionMark')
+                span Купить по оптовой цене
+        .item-slider-product-grid.block-product
+          .block-product__wrap-tag
+            span.block-product__tag.block-product__tag_yellow Распродажа
+            span.block-product__tag.block-product__tag_green Хит продаж
+          .block-product__img
+            img(src="img/images2.jpg", alt="")
+          .block-product__wrap-text
+            span.block-product__brand.block-product_indent_b Aveda
+            a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+            .block-product__wrap.block-product_indent_b
+              span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+              span.block-product__amount-discount - 280 руб.
+            span.block-product__price.block-product_indent_bx2 1 230 руб.
+            .block-product__wrap.block-product_indent_bx2
+              a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                +svgMono('basket')
+                +svgMono('addBasket')
+              a(href="").link-text.block-product__compare
+                +svgMono('comparison')
+                span Сравнить
+            .block-product__wrap
+              a(href="#").block-product__btn-bottom
+                +svgMono('questionMark')
+                span Купить по оптовой цене
+        .item-slider-product-grid.block-product
+          .block-product__wrap-tag
+            span.block-product__tag.block-product__tag_yellow Распродажа
+            span.block-product__tag.block-product__tag_green Хит продаж
+          .block-product__img
+            img(src="img/images2.jpg", alt="")
+          .block-product__wrap-text
+            span.block-product__brand.block-product_indent_b Aveda
+            a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+            .block-product__wrap.block-product_indent_b
+              span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+              span.block-product__amount-discount - 280 руб.
+            span.block-product__price.block-product_indent_bx2 1 230 руб.
+            .block-product__wrap.block-product_indent_bx2
+              a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                +svgMono('basket')
+                +svgMono('addBasket')
+              a(href="").link-text.block-product__compare
+                +svgMono('comparison')
+                span Сравнить
+            .block-product__wrap
+              a(href="#").block-product__btn-bottom
+                +svgMono('questionMark')
+                span Купить по оптовой цене
+        .item-slider-product-grid.block-product
+          .block-product__wrap-tag
+            span.block-product__tag.block-product__tag_yellow Распродажа
+            span.block-product__tag.block-product__tag_green Хит продаж
+          .block-product__img
+            img(src="img/images2.jpg", alt="")
+          .block-product__wrap-text
+            span.block-product__brand.block-product_indent_b Aveda
+            a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+            .block-product__wrap.block-product_indent_b
+              span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+              span.block-product__amount-discount - 280 руб.
+            span.block-product__price.block-product_indent_bx2 1 230 руб.
+            .block-product__wrap.block-product_indent_bx2
+              a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                +svgMono('basket')
+                +svgMono('addBasket')
+              a(href="").link-text.block-product__compare
+                +svgMono('comparison')
+                span Сравнить
+            .block-product__wrap
+              a(href="#").block-product__btn-bottom
+                +svgMono('questionMark')
+                span Купить по оптовой цене
+        .item-slider-product-grid.block-product
+          .block-product__wrap-tag
+            span.block-product__tag.block-product__tag_yellow Распродажа
+            span.block-product__tag.block-product__tag_green Хит продаж
+          .block-product__img
+            img(src="img/images2.jpg", alt="")
+          .block-product__wrap-text
+            span.block-product__brand.block-product_indent_b Aveda
+            a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+            .block-product__wrap.block-product_indent_b
+              span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+              span.block-product__amount-discount - 280 руб.
+            span.block-product__price.block-product_indent_bx2 1 230 руб.
+            .block-product__wrap.block-product_indent_bx2
+              a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                +svgMono('basket')
+                +svgMono('addBasket')
+              a(href="").link-text.block-product__compare
+                +svgMono('comparison')
+                span Сравнить
+            .block-product__wrap
+              a(href="#").block-product__btn-bottom
+                +svgMono('questionMark')
+                span Купить по оптовой цене
+        .item-slider-product-grid.block-product
+          .block-product__wrap-tag
+            span.block-product__tag.block-product__tag_yellow Распродажа
+            span.block-product__tag.block-product__tag_green Хит продаж
+          .block-product__img
+            img(src="img/images2.jpg", alt="")
+          .block-product__wrap-text
+            span.block-product__brand.block-product_indent_b Aveda
+            a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+            .block-product__wrap.block-product_indent_b
+              span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+              span.block-product__amount-discount - 280 руб.
+            span.block-product__price.block-product_indent_bx2 1 230 руб.
+            .block-product__wrap.block-product_indent_bx2
+              a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                +svgMono('basket')
+                +svgMono('addBasket')
+              a(href="").link-text.block-product__compare
+                +svgMono('comparison')
+                span Сравнить
+            .block-product__wrap
+              a(href="#").block-product__btn-bottom
+                +svgMono('questionMark')
+                span Купить по оптовой цене
+        .item-slider-product-grid.block-product.hidden-1439
+          .block-product__wrap-tag
+            span.block-product__tag.block-product__tag_yellow Распродажа
+            span.block-product__tag.block-product__tag_green Хит продаж
+          .block-product__img
+            img(src="img/images2.jpg", alt="")
+          .block-product__wrap-text
+            span.block-product__brand.block-product_indent_b Aveda
+            a(href="#").link-text.block-product__name.block-product_indent_b Men Pure-formance Men's Aftershave
+            .block-product__wrap.block-product_indent_b
+              span.block-product__old-price.block-product__old-price_indent_r 3 900 руб.
+              span.block-product__amount-discount - 280 руб.
+            span.block-product__price.block-product_indent_bx2 1 230 руб.
+            .block-product__wrap.block-product_indent_bx2
+              a(href="#").block-product__in-garbage.block-product__in-garbage_indent
+                +svgMono('basket')
+                +svgMono('addBasket')
+              a(href="").link-text.block-product__compare
+                +svgMono('comparison')
+                span Сравнить
+            .block-product__wrap
+              a(href="#").block-product__btn-bottom
+                +svgMono('questionMark')
+                span Купить по оптовой цене
+
+section.section_indent2.bg-color-blue
+  .container
+    h2.h2-title.h2-title_center Акции и специальные предложения
+    .auto-width-slider-wrap.auto-width-slider-wrap_indent
+      .swiper-container.auto-width-slider.auto-width-slider_indent(auto-width-slider2)
+        .swiper-wrapper
+          .swiper-slide.block-slider-stock
+            img(src="img/m_main_avedathickeningtonic_posta-magazine-2.jpg", alt="")
+            .block-slider-stock__mask
+              .block-slider-stock__wrap-text
+                span.block-slider-stock__time.block-slider-stock__time_indent c 31 августа по 12 сентября
+                a(href="#").block-slider-stock__text Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda
+          .swiper-slide.block-slider-special-offers
+            .block-slider-special-offers__img
+              img(src="img/images2-1.jpg", alt="")
+            .block-slider-special-offers__wrap-text
+              .block-slider-special-offers__inner-text
+                span.block-slider-special-offers__time.block-slider-special-offers__time_indent c 31 августа по 12 сентября
+                a(href="#").block-slider-special-offers__text Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda
+          .swiper-slide.block-slider-special-offers
+            .block-slider-special-offers__img
+              img(src="img/images2-1.jpg", alt="")
+            .block-slider-special-offers__wrap-text
+              .block-slider-special-offers__inner-text
+                span.block-slider-special-offers__time.block-slider-special-offers__time_indent c 31 августа по 12 сентября
+                a(href="#").block-slider-special-offers__text Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda
+          .swiper-slide.block-slider-special-offers
+            .block-slider-special-offers__img
+              img(src="img/images2-1.jpg", alt="")
+            .block-slider-special-offers__wrap-text
+              .block-slider-special-offers__inner-text
+                span.block-slider-special-offers__time.block-slider-special-offers__time_indent c 31 августа по 12 сентября
+                a(href="#").block-slider-special-offers__text Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda
+          .swiper-slide.block-slider-special-offers
+            .block-slider-special-offers__img
+              img(src="img/images2-1.jpg", alt="")
+            .block-slider-special-offers__wrap-text
+              .block-slider-special-offers__inner-text
+                span.block-slider-special-offers__time.block-slider-special-offers__time_indent c 31 августа по 12 сентября
+                a(href="#").block-slider-special-offers__text Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda
+        .swiper-pagination-small.swiper-pagination__auto-width-slider2
+      .swiper-button-prev.swiper-button-prev__auto-width-slider2
+        +svgMono('arrowBottom')
+      .swiper-button-next.swiper-button-next__auto-width-slider2
+        +svgMono('arrowBottom')
+
+section.section_indent2.hidden-768
+  .container
+    h2.h2-title Популярные категории
+    .categories-grid.categories-grid_indent
+      .categories-grid__category
+        .categories-grid__img
+          img(src="img/category-1.jpg", alt="")
+        .categories-grid__wrap-text
+          a(href="#").link-text.categories-grid__name Восстановление и сохранение здоровых волос
+          span.categories-grid__quantity 764 товара
+      .categories-grid__category
+        .categories-grid__img
+          img(src="img/category-2.jpg", alt="")
+        .categories-grid__wrap-text
+          a(href="#").link-text.categories-grid__name Окрашивание и тонирование
+          span.categories-grid__quantity 209 товаров
+      .categories-grid__category
+        .categories-grid__img
+          img(src="img/category-3.jpg", alt="")
+        .categories-grid__wrap-text
+          a(href="#").link-text.categories-grid__name Оборудование для косметических салонов
+          span.categories-grid__quantity 74 товара
+      .categories-grid__category
+        .categories-grid__img
+          img(src="img/category-1.jpg", alt="")
+        .categories-grid__wrap-text
+          a(href="#").link-text.categories-grid__name Восстановление и сохранение здоровых волос
+          span.categories-grid__quantity 764 товара
+      .categories-grid__category
+        .categories-grid__img
+          img(src="img/category-2.jpg", alt="")
+        .categories-grid__wrap-text
+          a(href="#").link-text.categories-grid__name Окрашивание и тонирование
+          span.categories-grid__quantity 209 товаров
+      .categories-grid__category
+        .categories-grid__img
+          img(src="img/category-3.jpg", alt="")
+        .categories-grid__wrap-text
+          a(href="#").link-text.categories-grid__name Оборудование для косметических салонов
+          span.categories-grid__quantity 74 товара
+      .categories-grid__category.categories-grid__category_hidden
+        .categories-grid__img
+          img(src="img/category-1.jpg", alt="")
+        .categories-grid__wrap-text
+          a(href="#").link-text.categories-grid__name Восстановление и сохранение здоровых волос
+          span.categories-grid__quantity 764 товара
+      .categories-grid__category.categories-grid__category_hidden
+        .categories-grid__img
+          img(src="img/category-2.jpg", alt="")
+        .categories-grid__wrap-text
+          a(href="#").link-text.categories-grid__name Окрашивание и тонирование
+          span.categories-grid__quantity 209 товаров
+      .categories-grid__category.categories-grid__category_hidden
+        .categories-grid__img
+          img(src="img/category-3.jpg", alt="")
+        .categories-grid__wrap-text
+          a(href="#").link-text.categories-grid__name Оборудование для косметических салонов
+          span.categories-grid__quantity 74 товара
+    .wrap-btn-center.wrap-btn-center_indent
+      button.btn-transparent#show-all-categories Показать все категории

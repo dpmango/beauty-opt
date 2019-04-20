@@ -5,7 +5,16 @@ $sprite: (
 		width: 237px,
 		height: 58px,
 		total-width: 237px,
-		total-height: 58px,
+		total-height: 96px,
+		image: '../img/sprite.png'
+	),
+	logoSmall: (
+		offset-x: 0px,
+		offset-y: -68px,
+		width: 123px,
+		height: 28px,
+		total-width: 237px,
+		total-height: 96px,
 		image: '../img/sprite.png'
 	),
 );
@@ -66,4 +75,7 @@ $sprite: (
 
 	.icon-logo {
 		@include sprite(logo)
+	}
+	.icon-logoSmall {
+		@include sprite(logoSmall)
 	}
