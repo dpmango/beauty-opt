@@ -297,6 +297,33 @@
         visibility: hidden
       &:hover
         background-color: #26A1AD
+        .block-product__wrap-hint
+          opacity: 1
+          visibility: visible
+  &__wrap-hint
+    position: absolute
+    opacity: 0
+    visibility: hidden
+    top: calc(100% + 13px)
+    left: 0%
+    transform: translate(0%, 0%)
+    padding: 10px
+    background-color: rgba(#000,.7)
+    border-radius: 4px
+    pointer-events: none
+    transition: $transitionSpeed
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 18px
+      transform: translate(0, -100%)
+      border: 5.5px solid transparent
+      border-bottom: 4px solid rgba(#000,.7)
+  &__hint-text
+    white-space: pre
+    font-size: 12px
+    color: #fff
   &__compare
     display: flex
     align-items: center
