@@ -27,8 +27,8 @@
         return false;
       });
 
-      $('#show-all-categories').on('click', function () {
-        $('.categories-grid__category').removeClass('categories-grid__category_hidden');
+      $('.show-all-categories').on('click', function () {
+        $(this).parents('.container').find('.categories-grid__category').removeClass('categories-grid__category_hidden');
         $(this).parent().remove();
         return false;
       });
