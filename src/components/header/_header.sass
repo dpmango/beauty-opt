@@ -172,7 +172,7 @@
     border: 2px solid $colorLightBlue
     border-radius: 4px 0 0 4px
     border-right: none
-    padding: 0 20px
+    padding: 0 55px 0 20px
   &__button
     display: flex
     align-items: center
@@ -191,6 +191,22 @@
       margin-right: 5px
     &:hover
       background-color: $colorLightTurquoise
+  &__close
+    position: absolute
+    visibility: hidden
+    opacity: 0
+    display: flex
+    top: 50%
+    color: #A9A9A9
+    cursor: pointer
+    left: calc(100% - 20px)
+    transform: translate(-100%, -50%)
+    transition: $transitionSpeed
+    &:hover
+      color: #26A1AD
+    &_active
+      opacity: 1
+      visibility: visible
 
 .block-login
   display: flex

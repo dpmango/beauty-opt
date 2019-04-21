@@ -37,6 +37,25 @@
         $('.mobile-search').addClass('mobile-search_active');
       });
 
+      $('.search-form__inpuut').keypress(function (e) {
+        if (e.which != 32) {
+          $(this).parents('.search-form').find('.search-options').addClass('search-options_active');
+          $(this).parents('.search-form').find('.search-form__close').addClass('search-form__close_active');
+        }
+      });
+
+      $('.search-form__close').on('click', function () {
+        $(this).parents('.search-form').find('.search-options').removeClass('search-options_active');
+        $(this).parents('.search-form').find('.search-form__inpuut').val('');
+        $(this).removeClass('search-form__close_active');
+      });
+
+      $(document).click(function (e) {
+        if (!$(event.target).is(".search-form *")) {
+          $('.search-options').removeClass('search-options_active');
+        }
+      });
+
     },
   };
   APP.Plugins.Sliders = {
