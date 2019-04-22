@@ -1,4 +1,4 @@
-@media (max-width: 1439px)
++r(1439)
   .horizontal-menu .hidden-1439
     display: none
   .hidden-1439
@@ -17,7 +17,7 @@
   .categories-grid
     grid-template-columns: repeat(2, 1fr)
 
-@media (max-width: 1200px)
++r($xl)
   .slider-wrap_indent
     margin-right: 0
   .block-info-list__item
@@ -33,11 +33,11 @@
     br
       display: none
 
-@media (max-width: 992px)
++r($lg)
   .categories-grid__img
     width: 140px
 
-@media (max-width: 768px)
++r($md)
   .main-slider-block
     height: 257px
     border-radius: 4px
@@ -109,14 +109,14 @@
     bottom: auto
   .block-slider-stock__text
     display: block
-  .block-product
+  .product
     border-right: none
     &:last-child
       border-right: 1px solid #EBEBEB
   .ovv-768
     overflow: visible
 
-@media (max-width: 480px)
++r(480)
   .main-slider-block
     height: 290px
   .swiper-pagination
