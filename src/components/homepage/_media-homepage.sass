@@ -9,10 +9,10 @@
     margin-bottom: 35px
   .wrap-slider-product-grid
     grid-template-columns: repeat(4, 244px)
-  .block-info-list__text
+  .benefits__text
     br
       display: none
-  .block-info-list__item
+  .benefits__item
     width: 255px
   .categories-grid
     grid-template-columns: repeat(2, 1fr)
@@ -20,16 +20,16 @@
 +r($xl)
   .slider-wrap_indent
     margin-right: 0
-  .block-info-list__item
+  .benefits__item
     flex-direction: column
     align-items: flex-start
     width: 210px
-  .block-info-list__ico_indent
+  .benefits__ico_indent
     margin-right: 0
     margin-bottom: 10px
-  .block-info-list__ico
+  .benefits__ico
     display: flex
-  .main-slider-block__mask h2, .main-slider-block__mask p
+  .promo-slider__mask h2, .promo-slider__mask p
     br
       display: none
 
@@ -38,14 +38,14 @@
     width: 140px
 
 +r($md)
-  .main-slider-block
+  .promo-slider
     height: 257px
     border-radius: 4px
-  .main-slider-block__mask
+  .promo-slider__mask
     padding: 40px 20px
-  .main-slider-block__mask p
+  .promo-slider__mask p
     display: none
-  .main-slider-block__mask h2
+  .promo-slider__mask h2
     font-size: 22px
   .swiper-pagination
     bottom: 40px
@@ -76,38 +76,38 @@
     padding-right: 0
     text-align: center
     justify-content: center
-  .block-main-tags__tag
+  .tabs__tag
     padding: 5px 15px
-  .block-slider-stock
+  .spromo-card
     width: 380px
     height: 192px
-  .block-slider-stock__wrap-text
+  .spromo-card__wrap-text
     position: absolute
     padding: 0 40px
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
-  .block-slider-stock__mask
+  .spromo-card__mask
     background: rgba(#000,.4)
-  .block-slider-special-offers
+  .promo-card
     position: relative
     width: 380px
     height: 192px
-  .block-slider-special-offers__wrap-text
+  .promo-card__wrap-text
     position: absolute
     width: 100%
     height: 100%
     background-color: rgba(#000,.4)
-  .block-slider-special-offers__text
+  .promo-card__text
     color: #fff
-  .block-slider-special-offers__time
+  .promo-card__time
     color: #EDBA36
   .categories-grid__name
     font-size: 14px
-  .block-slider-stock__wrap-text
+  .spromo-card__wrap-text
     padding: 0 40px
     bottom: auto
-  .block-slider-stock__text
+  .spromo-card__text
     display: block
   .product
     border-right: none
@@ -117,13 +117,13 @@
     overflow: visible
 
 +r(480)
-  .main-slider-block
+  .promo-slider
     height: 290px
   .swiper-pagination
     bottom: 30px
-  .block-slider-special-offers
+  .promo-card
     width: 100%
     height: 218px
-  .block-slider-stock
+  .spromo-card
     width: 100%
     height: 218px

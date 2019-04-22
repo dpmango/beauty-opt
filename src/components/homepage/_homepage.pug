@@ -1,165 +1,34 @@
-section.section_indent.hidden-1200
-  .wrap-horizontal-menu.bg-color-blue
-    .container
-      ul.horizontal-menu
-        li
-          a(href="#")
-            = 'Оборудование'
-            +svgMono('arrowBottom')
-        li
-          a(href="#")
-            = 'Волосы'
-            +svgMono('arrowBottom')
-        li
-          a(href="#")
-            = 'Лицо'
-            +svgMono('arrowBottom')
-        li
-          a(href="#")
-            = 'Тело'
-            +svgMono('arrowBottom')
-        li
-          a(href="#")
-            = 'Ногти'
-            +svgMono('arrowBottom')
-        li
-          a(href="#")
-            = 'Брови и ресницы'
-            +svgMono('arrowBottom')
-        li
-          a(href="#")
-            = 'Инструменты'
-            +svgMono('arrowBottom')
-        li
-          a(href="#")
-            = 'Акссесуары'
-            +svgMono('arrowBottom')
-        li.hidden-1439
-          a(href="#")
-            = 'Расходные материалы'
-            +svgMono('arrowBottom')
-        li.hidden-1439
-          a(href="#")
-            = 'Азия'
-            +svgMono('arrowBottom')
+include ../horizontalMenu/_menu
 
-    .container-relative
-      .menu-all-catalog
-        .menu-all-catalog__catalog-menu
-          ul
-            li Окрашивание и тонирование
-            li
-              a(href="#") Для окрашенных волос
-            li
-              a(href="#") От выпадания
-            li
-              a(href="#") Восстановление и сохранение здоровья волос
-            li
-              a(href="#") Стайлинг
-          ul
-            li Окрашивание и тонирование
-            li
-              a(href="#") Для окрашенных волос
-            li
-              a(href="#") От выпадания
-            li
-              a(href="#") Восстановление и сохранение здоровья волос
-            li
-              a(href="#") Стайлинг
-          ul
-            li Окрашивание и тонирование
-            li
-              a(href="#") Для окрашенных волос
-            li
-              a(href="#") От выпадания
-            li
-              a(href="#") Восстановление и сохранение здоровья волос
-            li
-              a(href="#") Стайлинг
-          ul
-            li Окрашивание и тонирование
-            li
-              a(href="#") Для окрашенных волос
-            li
-              a(href="#") От выпадания
-            li
-              a(href="#") Восстановление и сохранение здоровья волос
-            li
-              a(href="#") Стайлинг
-          ul
-            li Окрашивание и тонирование
-            li
-              a(href="#") Для окрашенных волос
-            li
-              a(href="#") От выпадания
-            li
-              a(href="#") Восстановление и сохранение здоровья волос
-            li
-              a(href="#") Стайлинг
-        .menu-all-catalog__brend-menu
-          ul
-            li Бренды
-            li
-              a(href="#") Aravia Professional
-            li
-              a(href="#") Aveda
-            li
-              a(href="#") Farm Stay
-            li
-              a(href="#") Yoghurt of Bulgaria
+// TODO - разбить на компоненты html/css/js по секциям или типам
+// например - секция наши приемущества - карточка товара
+mixin mainSliderSlide
+  .swiper-slide.promo-slider__slide
+    img.promo-slider__img(src="img/main-slider-img1.jpg", alt="")
+    .promo-slider__mask
+      h2
+        = 'Наборы косметики '
+        span.text-orange Bioderma
+        = 'за полцены'
+        br
+        = 'только до 25 декабря'
+      p
+        = 'Каждый раз, покупая какую-либо ценную вещь в дом, мы изучаем много различной'
+        br
+        = 'информации и становимся профессионалами в этой области.'
+      .wrap-btn
+        a(href="#").simple-button Собрать свой набор
 
 section.section_indent
   .container
     .container_wrap
-
       .slider-wrap.slider-wrap_indent
-        .swiper-container.main-slider-block(main-slider)
+        .swiper-container.promo-slider(main-slider)
           .swiper-wrapper
-            .swiper-slide.main-slider-block__slide
-              img.main-slider-block__img(src="img/main-slider-img1.jpg", alt="")
-              .main-slider-block__mask
-                h2
-                  = 'Наборы косметики '
-                  span.text-orange Bioderma
-                  = 'за полцены'
-                  br
-                  = 'только до 25 декабря'
-                p
-                  = 'Каждый раз, покупая какую-либо ценную вещь в дом, мы изучаем много различной'
-                  br
-                  = 'информации и становимся профессионалами в этой области.'
-                .wrap-btn
-                  a(href="#").simple-button Собрать свой набор
-            .swiper-slide.main-slider-block__slide
-              img.main-slider-block__img(src="img/main-slider-img1.jpg", alt="")
-              .main-slider-block__mask
-                h2
-                  = 'Наборы косметики '
-                  span.text-orange Bioderma
-                  = 'за полцены'
-                  br
-                  = 'только до 25 декабря'
-                p
-                  = 'Каждый раз, покупая какую-либо ценную вещь в дом, мы изучаем много различной'
-                  br
-                  = 'информации и становимся профессионалами в этой области.'
-                .wrap-btn
-                  a(href="#").simple-button Собрать свой набор
-            .swiper-slide.main-slider-block__slide
-              img.main-slider-block__img(src="img/main-slider-img1.jpg", alt="")
-              .main-slider-block__mask
-                h2
-                  = 'Наборы косметики '
-                  span.text-orange Bioderma
-                  = 'за полцены'
-                  br
-                  = 'только до 25 декабря'
-                p
-                  = 'Каждый раз, покупая какую-либо ценную вещь в дом, мы изучаем много различной'
-                  br
-                  = 'информации и становимся профессионалами в этой области.'
-                .wrap-btn
-                  a(href="#").simple-button Собрать свой набор
+            +mainSliderSlide
+            +mainSliderSlide
+            +mainSliderSlide
+
           .swiper-pagination.swiper-pagination__main-slider
         .swiper-button-prev.swiper-button-prev__main-slider
           +svgMono('arrowBottom')
@@ -189,81 +58,65 @@ section.section_indent
               +svgMono('comparison')
               span Сравнить
 
+
+// CATEGORIES - MOBILE
+mixin categoryCard(classMod, name, image, count)
+  a(href="#" class="categories-grid__category " + classMod + "")
+    .categories-grid__img
+      img(src="img/"+image+"", alt="")
+    .categories-grid__wrap-text
+      span.categories-grid__name!= name
+      span.categories-grid__quantity!= count
+
 section.section_indent.hidden-769-b
   .container
     h2.h2-title Популярные категории
     .categories-grid.categories-grid_indent
-      a(href="#").categories-grid__category
-        .categories-grid__img
-          img(src="img/category-1.jpg", alt="")
-        .categories-grid__wrap-text
-          span.categories-grid__name Восстановление и сохранение здоровых волос
-          span.categories-grid__quantity 764 товара
-      a(href="#").categories-grid__category
-        .categories-grid__img
-          img(src="img/category-2.jpg", alt="")
-        .categories-grid__wrap-text
-          span.link-text.categories-grid__name Окрашивание и тонирование
-          span.categories-grid__quantity 209 товаров
-      a(href="#").categories-grid__category
-        .categories-grid__img
-          img(src="img/category-3.jpg", alt="")
-        .categories-grid__wrap-text
-          span.link-text.categories-grid__name Оборудование для косметических салонов
-          span.categories-grid__quantity 74 товара
-      a(href="#").categories-grid__category.categories-grid__category_hidden
-        .categories-grid__img
-          img(src="img/category-1.jpg", alt="")
-        .categories-grid__wrap-text
-          span.link-text.categories-grid__name Восстановление и сохранение здоровых волос
-          span.categories-grid__quantity 764 товара
-      a(href="#").categories-grid__category.categories-grid__category_hidden
-        .categories-grid__img
-          img(src="img/category-2.jpg", alt="")
-        .categories-grid__wrap-text
-          span.link-text.categories-grid__name Окрашивание и тонирование
-          span.categories-grid__quantity 209 товаров
-      a(href="#").categories-grid__category.categories-grid__category_hidden
-        .categories-grid__img
-          img(src="img/category-3.jpg", alt="")
-        .categories-grid__wrap-text
-          span.link-text.categories-grid__name Оборудование для косметических салонов
-          span.categories-grid__quantity 74 товара
+      +categoryCard("", "Восстановление и сохранение здоровых волос", "category-1.jpg", "764 товара")
+      +categoryCard("", "Окрашивание и тонирование", "category-2.jpg", "209 товаров")
+      +categoryCard("", "Оборудование для косметических салонов", "category-3.jpg", "74 товара")
+
+      +categoryCard("categories-grid__category_hidden", "Восстановление и сохранение здоровых волос", "category-1.jpg", "764 товара")
+      +categoryCard("categories-grid__category_hidden", "Окрашивание и тонирование", "category-2.jpg", "209 товаров")
+      +categoryCard("categories-grid__category_hidden", "Оборудование для косметических салонов", "category-3.jpg", "74 товара")
+
     .wrap-btn-center.wrap-btn-center_indent
       button.btn-transparent.btn-transparent_mobile-all-w.show-all-categories Показать все категории
 
+// BENEFITS SECTION
 section.section_indent.hidden-768
   .container
-    .block-info-list
-      .block-info-list__item
-        .block-info-list__ico.block-info-list__ico_indent
+    .benefits
+      .benefits__item
+        .benefits__ico.benefits__ico_indent
           +svgColor('boxTime')
-        span.block-info-list__text
+        span.benefits__text
           = 'Курьерская доставка по Воронежу '
           br
           = 'на следующий день'
-      .block-info-list__item
-        .block-info-list__ico.block-info-list__ico_indent
+      .benefits__item
+        .benefits__ico.benefits__ico_indent
           +svgColor('discount')
-        span.block-info-list__text
+        span.benefits__text
           = 'Акции и скидки круглый год, '
           br
           = 'возврщение % от покупок бонусами'
-      .block-info-list__item
-        .block-info-list__ico.block-info-list__ico_indent
+      .benefits__item
+        .benefits__ico.benefits__ico_indent
           +svgColor('listStar')
-        span.block-info-list__text
+        span.benefits__text
           = 'Официальные диллеры, '
           br
           = 'сертифицированный товар'
-      .block-info-list__item
-        .block-info-list__ico.block-info-list__ico_indent
+      .benefits__item
+        .benefits__ico.benefits__ico_indent
           +svgColor('cream')
-        span.block-info-list__text
+        span.benefits__text
           = 'Товарный ассортимент из более чем '
           br
           = '24 000 позиций'
 
+// SEPARATOR
 section.section_indent.hidden-768
   .container
     .grey-line
@@ -326,9 +179,9 @@ section.section_indent
 section.section_indent.hidden-1201-b
   .container
     h2.h2-title Новинки и хиты продаж
-    .block-main-tags.block-main-tags_indent
-      a(href="#").block-main-tags__tag Новинки
-      a(href="#").block-main-tags__tag Хиты продаж
+    .tabs.tabs_indent
+      a(href="#").tabs__tag Новинки
+      a(href="#").tabs__tag Хиты продаж
     .auto-width-slider-wrap.auto-width-slider-wrap_indent
       .swiper-container.auto-width-slider.ovv-768.auto-width-slider_indent(auto-width-slider3)
         .swiper-wrapper
@@ -345,222 +198,55 @@ section.section_indent.hidden-1201-b
 
         .swiper-pagination-small.swiper-pagination__auto-width-slider3
 
+mixin junkProduct
+  .item-slider-product-grid.product
+    .product__wrap-tag
+      span.product__tag.product__tag_yellow Распродажа
+      span.product__tag.product__tag_green Хит продаж
+    .product__img
+      img(src="img/images2.jpg", alt="")
+    .product__wrap-text
+      span.product__brand.product_indent_b Aveda
+      a(href="#").link-text.product__name.product_indent_b Men Pure-formance Men's Aftershave
+      .product__wrap.product_indent_b
+        span.product__old-price.product__old-price_indent_r 3 900 руб.
+        span.product__amount-discount - 280 руб.
+      span.product__price.product_indent_bx2 1 230 руб.
+      .product__wrap.product_indent_bx2
+        a(href="#").product__in-garbage.product__in-garbage_indent
+          +svgMono('basket')
+          +svgMono('addBasket')
+          .product__wrap-hint
+            span.product__hint-text Товар в вашей корзине
+        a(href="").link-text.product__compare
+          +svgMono('comparison')
+          span Сравнить
+      .product__wrap
+        a(href="#").product__btn-bottom
+          +svgMono('questionMark')
+          span Купить по оптовой цене
+
+
+// TODO - убрать, нужно решать править css/js для верхней секции для правильного отображения на мобильном
 section.section_indent.hidden-1200
   .container
     h2.h2-title Новинки и хиты продаж
-    .block-main-tags.block-main-tags_indent
-      a(href="#").block-main-tags__tag Новинки
-      a(href="#").block-main-tags__tag Хиты продаж
+    .tabs.tabs_indent
+      a(href="#").tabs__tag Новинки
+      a(href="#").tabs__tag Хиты продаж
     .container-slider-product-grid.container-slider-product-grid_indent
       .wrap-slider-product-grid
-        .item-slider-product-grid.product
-          .product__wrap-tag
-            span.product__tag.product__tag_yellow Распродажа
-            span.product__tag.product__tag_green Хит продаж
-          .product__img
-            img(src="img/images2.jpg", alt="")
-          .product__wrap-text
-            span.product__brand.product_indent_b Aveda
-            a(href="#").link-text.product__name.product_indent_b Men Pure-formance Men's Aftershave
-            .product__wrap.product_indent_b
-              span.product__old-price.product__old-price_indent_r 3 900 руб.
-              span.product__amount-discount - 280 руб.
-            span.product__price.product_indent_bx2 1 230 руб.
-            .product__wrap.product_indent_bx2
-              a(href="#").product__in-garbage.product__in-garbage_indent
-                +svgMono('basket')
-                +svgMono('addBasket')
-                .product__wrap-hint
-                  span.product__hint-text Товар в вашей корзине
-              a(href="").link-text.product__compare
-                +svgMono('comparison')
-                span Сравнить
-            .product__wrap
-              a(href="#").product__btn-bottom
-                +svgMono('questionMark')
-                span Купить по оптовой цене
-        .item-slider-product-grid.product
-          .product__wrap-tag
-            span.product__tag.product__tag_yellow Распродажа
-            span.product__tag.product__tag_green Хит продаж
-          .product__img
-            img(src="img/images2.jpg", alt="")
-          .product__wrap-text
-            span.product__brand.product_indent_b Aveda
-            a(href="#").link-text.product__name.product_indent_b Men Pure-formance Men's Aftershave
-            .product__wrap.product_indent_b
-              span.product__old-price.product__old-price_indent_r 3 900 руб.
-              span.product__amount-discount - 280 руб.
-            span.product__price.product_indent_bx2 1 230 руб.
-            .product__wrap.product_indent_bx2
-              a(href="#").product__in-garbage.product__in-garbage_indent
-                +svgMono('basket')
-                +svgMono('addBasket')
-                .product__wrap-hint
-                  span.product__hint-text Товар в вашей корзине
-              a(href="").link-text.product__compare
-                +svgMono('comparison')
-                span Сравнить
-            .product__wrap
-              a(href="#").product__btn-bottom
-                +svgMono('questionMark')
-                span Купить по оптовой цене
-        .item-slider-product-grid.product
-          .product__wrap-tag
-            span.product__tag.product__tag_yellow Распродажа
-            span.product__tag.product__tag_green Хит продаж
-          .product__img
-            img(src="img/images2.jpg", alt="")
-          .product__wrap-text
-            span.product__brand.product_indent_b Aveda
-            a(href="#").link-text.product__name.product_indent_b Men Pure-formance Men's Aftershave
-            .product__wrap.product_indent_b
-              span.product__old-price.product__old-price_indent_r 3 900 руб.
-              span.product__amount-discount - 280 руб.
-            span.product__price.product_indent_bx2 1 230 руб.
-            .product__wrap.product_indent_bx2
-              a(href="#").product__in-garbage.product__in-garbage_indent
-                +svgMono('basket')
-                +svgMono('addBasket')
-                .product__wrap-hint
-                  span.product__hint-text Товар в вашей корзине
-              a(href="").link-text.product__compare
-                +svgMono('comparison')
-                span Сравнить
-            .product__wrap
-              a(href="#").product__btn-bottom
-                +svgMono('questionMark')
-                span Купить по оптовой цене
-        .item-slider-product-grid.product
-          .product__wrap-tag
-            span.product__tag.product__tag_yellow Распродажа
-            span.product__tag.product__tag_green Хит продаж
-          .product__img
-            img(src="img/images2.jpg", alt="")
-          .product__wrap-text
-            span.product__brand.product_indent_b Aveda
-            a(href="#").link-text.product__name.product_indent_b Men Pure-formance Men's Aftershave
-            .product__wrap.product_indent_b
-              span.product__old-price.product__old-price_indent_r 3 900 руб.
-              span.product__amount-discount - 280 руб.
-            span.product__price.product_indent_bx2 1 230 руб.
-            .product__wrap.product_indent_bx2
-              a(href="#").product__in-garbage.product__in-garbage_indent
-                +svgMono('basket')
-                +svgMono('addBasket')
-                .product__wrap-hint
-                  span.product__hint-text Товар в вашей корзине
-              a(href="").link-text.product__compare
-                +svgMono('comparison')
-                span Сравнить
-            .product__wrap
-              a(href="#").product__btn-bottom
-                +svgMono('questionMark')
-                span Купить по оптовой цене
-        .item-slider-product-grid.product
-          .product__wrap-tag
-            span.product__tag.product__tag_yellow Распродажа
-            span.product__tag.product__tag_green Хит продаж
-          .product__img
-            img(src="img/images2.jpg", alt="")
-          .product__wrap-text
-            span.product__brand.product_indent_b Aveda
-            a(href="#").link-text.product__name.product_indent_b Men Pure-formance Men's Aftershave
-            .product__wrap.product_indent_b
-              span.product__old-price.product__old-price_indent_r 3 900 руб.
-              span.product__amount-discount - 280 руб.
-            span.product__price.product_indent_bx2 1 230 руб.
-            .product__wrap.product_indent_bx2
-              a(href="#").product__in-garbage.product__in-garbage_indent
-                +svgMono('basket')
-                +svgMono('addBasket')
-                .product__wrap-hint
-                  span.product__hint-text Товар в вашей корзине
-              a(href="").link-text.product__compare
-                +svgMono('comparison')
-                span Сравнить
-            .product__wrap
-              a(href="#").product__btn-bottom
-                +svgMono('questionMark')
-                span Купить по оптовой цене
-        .item-slider-product-grid.product
-          .product__wrap-tag
-            span.product__tag.product__tag_yellow Распродажа
-            span.product__tag.product__tag_green Хит продаж
-          .product__img
-            img(src="img/images2.jpg", alt="")
-          .product__wrap-text
-            span.product__brand.product_indent_b Aveda
-            a(href="#").link-text.product__name.product_indent_b Men Pure-formance Men's Aftershave
-            .product__wrap.product_indent_b
-              span.product__old-price.product__old-price_indent_r 3 900 руб.
-              span.product__amount-discount - 280 руб.
-            span.product__price.product_indent_bx2 1 230 руб.
-            .product__wrap.product_indent_bx2
-              a(href="#").product__in-garbage.product__in-garbage_indent
-                +svgMono('basket')
-                +svgMono('addBasket')
-                .product__wrap-hint
-                  span.product__hint-text Товар в вашей корзине
-              a(href="").link-text.product__compare
-                +svgMono('comparison')
-                span Сравнить
-            .product__wrap
-              a(href="#").product__btn-bottom
-                +svgMono('questionMark')
-                span Купить по оптовой цене
-        .item-slider-product-grid.product
-          .product__wrap-tag
-            span.product__tag.product__tag_yellow Распродажа
-            span.product__tag.product__tag_green Хит продаж
-          .product__img
-            img(src="img/images2.jpg", alt="")
-          .product__wrap-text
-            span.product__brand.product_indent_b Aveda
-            a(href="#").link-text.product__name.product_indent_b Men Pure-formance Men's Aftershave
-            .product__wrap.product_indent_b
-              span.product__old-price.product__old-price_indent_r 3 900 руб.
-              span.product__amount-discount - 280 руб.
-            span.product__price.product_indent_bx2 1 230 руб.
-            .product__wrap.product_indent_bx2
-              a(href="#").product__in-garbage.product__in-garbage_indent
-                +svgMono('basket')
-                +svgMono('addBasket')
-                .product__wrap-hint
-                  span.product__hint-text Товар в вашей корзине
-              a(href="").link-text.product__compare
-                +svgMono('comparison')
-                span Сравнить
-            .product__wrap
-              a(href="#").product__btn-bottom
-                +svgMono('questionMark')
-                span Купить по оптовой цене
-        .item-slider-product-grid.product
-          .product__wrap-tag
-            span.product__tag.product__tag_yellow Распродажа
-            span.product__tag.product__tag_green Хит продаж
-          .product__img
-            img(src="img/images2.jpg", alt="")
-          .product__wrap-text
-            span.product__brand.product_indent_b Aveda
-            a(href="#").link-text.product__name.product_indent_b Men Pure-formance Men's Aftershave
-            .product__wrap.product_indent_b
-              span.product__old-price.product__old-price_indent_r 3 900 руб.
-              span.product__amount-discount - 280 руб.
-            span.product__price.product_indent_bx2 1 230 руб.
-            .product__wrap.product_indent_bx2
-              a(href="#").product__in-garbage.product__in-garbage_indent
-                +svgMono('basket')
-                +svgMono('addBasket')
-                .product__wrap-hint
-                  span.product__hint-text Товар в вашей корзине
-              a(href="").link-text.product__compare
-                +svgMono('comparison')
-                span Сравнить
-            .product__wrap
-              a(href="#").product__btn-bottom
-                +svgMono('questionMark')
-                span Купить по оптовой цене
+        +junkProduct
+        +junkProduct
+        +junkProduct
+        +junkProduct
+
+        +junkProduct
+        +junkProduct
+        +junkProduct
+        +junkProduct
+
+        // TODO - зачем еще один товар? Можно его скрывать по css селектору :nth-child ?
         .item-slider-product-grid.product.hidden-1439
           .product__wrap-tag
             span.product__tag.product__tag_yellow Распродажа
@@ -588,109 +274,54 @@ section.section_indent.hidden-1200
                 +svgMono('questionMark')
                 span Купить по оптовой цене
 
+// PROMOS
+mixin promoCard
+  .swiper-slide.promo-card
+    .promo-card__img
+      img(src="img/images2-1.jpg", alt="")
+    .promo-card__wrap-text
+      .promo-card__inner-text
+        span.promo-card__time.promo-card__time_indent c 31 августа по 12 сентября
+        a(href="#").promo-card__text Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda
+
 section.section_indent2.bg-color-blue
   .container
     h2.h2-title.h2-title_center Акции и специальные предложения
     .auto-width-slider-wrap.auto-width-slider-wrap_indent
       .swiper-container.auto-width-slider.auto-width-slider_indent.ovv(auto-width-slider2)
         .swiper-wrapper
-          .swiper-slide.block-slider-stock
+          .swiper-slide.spromo-card
             img(src="img/m_main_avedathickeningtonic_posta-magazine-2.jpg", alt="")
-            .block-slider-stock__mask
-              .block-slider-stock__wrap-text
-                span.block-slider-stock__time.block-slider-stock__time_indent c 31 августа по 12 сентября
-                a(href="#").block-slider-stock__text Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda
-          .swiper-slide.block-slider-special-offers
-            .block-slider-special-offers__img
-              img(src="img/images2-1.jpg", alt="")
-            .block-slider-special-offers__wrap-text
-              .block-slider-special-offers__inner-text
-                span.block-slider-special-offers__time.block-slider-special-offers__time_indent c 31 августа по 12 сентября
-                a(href="#").block-slider-special-offers__text Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda
-          .swiper-slide.block-slider-special-offers
-            .block-slider-special-offers__img
-              img(src="img/images2-1.jpg", alt="")
-            .block-slider-special-offers__wrap-text
-              .block-slider-special-offers__inner-text
-                span.block-slider-special-offers__time.block-slider-special-offers__time_indent c 31 августа по 12 сентября
-                a(href="#").block-slider-special-offers__text Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda
-          .swiper-slide.block-slider-special-offers
-            .block-slider-special-offers__img
-              img(src="img/images2-1.jpg", alt="")
-            .block-slider-special-offers__wrap-text
-              .block-slider-special-offers__inner-text
-                span.block-slider-special-offers__time.block-slider-special-offers__time_indent c 31 августа по 12 сентября
-                a(href="#").block-slider-special-offers__text Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda
-          .swiper-slide.block-slider-special-offers
-            .block-slider-special-offers__img
-              img(src="img/images2-1.jpg", alt="")
-            .block-slider-special-offers__wrap-text
-              .block-slider-special-offers__inner-text
-                span.block-slider-special-offers__time.block-slider-special-offers__time_indent c 31 августа по 12 сентября
-                a(href="#").block-slider-special-offers__text Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda
+            .spromo-card__mask
+              .spromo-card__wrap-text
+                span.spromo-card__time.spromo-card__time_indent c 31 августа по 12 сентября
+                a(href="#").spromo-card__text Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda
+          +promoCard
+          +promoCard
+          +promoCard
+          +promoCard
         .swiper-pagination-small.swiper-pagination__auto-width-slider2
       .swiper-button-prev.swiper-button-prev__auto-width-slider2
         +svgMono('arrowBottom')
       .swiper-button-next.swiper-button-next__auto-width-slider2
         +svgMono('arrowBottom')
 
+// CATEGORIES - desktop
 section.section_indent2.hidden-768
   .container
     h2.h2-title Популярные категории
     .categories-grid.categories-grid_indent
-      a(href="#").categories-grid__category
-        .categories-grid__img
-          img(src="img/category-1.jpg", alt="")
-        .categories-grid__wrap-text
-          span.categories-grid__name Восстановление и сохранение здоровых волос
-          span.categories-grid__quantity 764 товара
-      a(href="#").categories-grid__category
-        .categories-grid__img
-          img(src="img/category-2.jpg", alt="")
-        .categories-grid__wrap-text
-          span.categories-grid__name Окрашивание и тонирование
-          span.categories-grid__quantity 209 товаров
-      a(href="#").categories-grid__category
-        .categories-grid__img
-          img(src="img/category-3.jpg", alt="")
-        .categories-grid__wrap-text
-          span.categories-grid__name Оборудование для косметических салонов
-          span.categories-grid__quantity 74 товара
-      a(href="#").categories-grid__category
-        .categories-grid__img
-          img(src="img/category-1.jpg", alt="")
-        .categories-grid__wrap-text
-          span.categories-grid__name Восстановление и сохранение здоровых волос
-          span.categories-grid__quantity 764 товара
-      a(href="#").categories-grid__category
-        .categories-grid__img
-          img(src="img/category-2.jpg", alt="")
-        .categories-grid__wrap-text
-          span.categories-grid__name Окрашивание и тонирование
-          span.categories-grid__quantity 209 товаров
-      a(href="#").categories-grid__category
-        .categories-grid__img
-          img(src="img/category-3.jpg", alt="")
-        .categories-grid__wrap-text
-          span.categories-grid__name Оборудование для косметических салонов
-          span.categories-grid__quantity 74 товара
-      a(href="#").categories-grid__category.categories-grid__category_hidden
-        .categories-grid__img
-          img(src="img/category-1.jpg", alt="")
-        .categories-grid__wrap-text
-          span.categories-grid__name Восстановление и сохранение здоровых волос
-          span.categories-grid__quantity 764 товара
-      a(href="#").categories-grid__category.categories-grid__category_hidden
-        .categories-grid__img
-          img(src="img/category-2.jpg", alt="")
-        .categories-grid__wrap-text
-          span.categories-grid__name Окрашивание и тонирование
-          span.categories-grid__quantity 209 товаров
-      a(href="#").categories-grid__category.categories-grid__category_hidden
-        .categories-grid__img
-          img(src="img/category-3.jpg", alt="")
-        .categories-grid__wrap-text
-          span.categories-grid__name Оборудование для косметических салонов
-          span.categories-grid__quantity 74 товара
+      +categoryCard("", "Восстановление и сохранение здоровых волос", "category-1.jpg", "764 товара")
+      +categoryCard("", "Окрашивание и тонирование", "category-2.jpg", "209 товаров")
+      +categoryCard("", "Оборудование для косметических салонов", "category-3.jpg", "74 товара")
+
+      +categoryCard("", "Восстановление и сохранение здоровых волос", "category-1.jpg", "764 товара")
+      +categoryCard("", "Окрашивание и тонирование", "category-2.jpg", "209 товаров")
+      +categoryCard("", "Оборудование для косметических салонов", "category-3.jpg", "74 товара")
+
+      +categoryCard("categories-grid__category_hidden", "Восстановление и сохранение здоровых волос", "category-1.jpg", "764 товара")
+      +categoryCard("categories-grid__category_hidden", "Окрашивание и тонирование", "category-2.jpg", "209 товаров")
+      +categoryCard("categories-grid__category_hidden", "Оборудование для косметических салонов", "category-3.jpg", "74 товара")
+
     .wrap-btn-center.wrap-btn-center_indent
       button.btn-transparent.show-all-categories Показать все категории

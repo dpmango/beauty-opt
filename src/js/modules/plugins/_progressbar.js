@@ -1,15 +1,19 @@
 //////////
 // progressbar
 //////////
-(function ($, APP) {
+(function($, APP) {
   APP.Plugins.Progressbar = {
-    init: function () {
+    init: function() {
+      if ($('[js-Bar]').length === 0) {
+        return;
+      }
+
       var bar = new ProgressBar.Line('[js-Bar]', {
-        easing: 'easeInOut'
-    });
+        easing: 'easeInOut',
+      });
       bar.animate(1);
     },
-    destroy: function () {
+    destroy: function() {
       // ... code ...
     },
   };
