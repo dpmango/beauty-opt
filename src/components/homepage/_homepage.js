@@ -5,6 +5,16 @@
   APP.Components.Homepage = {
     init: function () {
 
+      $(document).click(function (e) {
+        if (!$(e.target).is(".search-form *")) {
+          $('.search-options').removeClass('search-options_active');
+        }
+        if (!$(e.target).is(".wrap-horizontal-menu *")) {
+          $('.menu-all-catalog').removeClass('menu-all-catalog_active');
+          $('.horizontal-menu a').removeClass('horizontal-menu_active');
+        }
+      });
+
       $('.horizontal-menu').on('click', 'a', function () {
         if (!$(this).hasClass('horizontal-menu_active')) {
           $(this).parents('.horizontal-menu').find('a').removeClass('horizontal-menu_active');
@@ -48,12 +58,6 @@
         $(this).parents('.search-form').find('.search-options').removeClass('search-options_active');
         $(this).parents('.search-form').find('.search-form__inpuut').val('');
         $(this).removeClass('search-form__close_active');
-      });
-
-      $(document).click(function (e) {
-        if (!$(event.target).is(".search-form *")) {
-          $('.search-options').removeClass('search-options_active');
-        }
       });
 
     },

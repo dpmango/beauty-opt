@@ -183,14 +183,14 @@
     visibility: hidden
     width: 9px
     height: 18px
-    border: 2px solid #EDBA36
+    border: 1px solid #FFC328
     border-right: none
     border-radius: 100% 0 0 100% / 50% 0 0 50%
     top: 50%
     left: 50%
-    transform: translate(-100%, -50%) rotate(360deg)
+    transform: translate(-100%, -50%) rotate(-180deg)
     transform-origin: 100% center
-    transition: $transitionSpeed
+    // transition: 5s
   &:hover
     &:before
       background-color: #FFC328
@@ -373,7 +373,7 @@
 .auto-width-slider-wrap
   position: relative
   &_indent
-    margin-top: 20px
+    margin-top: 40px
 
 .swiper-pagination-small
   position: absolute
@@ -507,6 +507,9 @@
     border: 1px solid #EBEBEB
     &_hidden
       display: none
+    &:hover
+      .categories-grid__name
+        color: $colorHoverLink
   &__img
     display: flex
     align-items: center
@@ -527,6 +530,7 @@
     align-self: flex-start
     width: 100%
     font-size: 18px
+    transition: $transitionSpeed
   &__quantity
     align-self: flex-end
     width: 100%
@@ -534,3 +538,8 @@
     color: #B7B7B7
   &_indent
     margin-top: 20px
+
+.grey-line
+  width: 100%
+  height: 1px
+  background-color: #ECECEC

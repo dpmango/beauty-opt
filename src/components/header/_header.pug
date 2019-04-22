@@ -1,52 +1,53 @@
 // HEADER :: START
 
 header.header.header_padding-bottom
-  .container.border-bottom.border-bottom_mobile-none.mobile-bg-blue
+  .border-bottom.border-bottom_mobile-none
+    .container.mobile-bg-blue
 
-    .header-wrap
+      .header-wrap
 
-      .top-menu.top-menu_indent
+        .top-menu.top-menu_indent
 
-        .top-menu__delivery
-          +svgMono('delivery')
-          = 'Ваш город доставки: '
-          a(
-            href='#popap-select-city',
-            data-fancybox
-          ).f-600.link-text
-           = 'Воронеж'
+          .top-menu__delivery
+            +svgMono('delivery')
+            = 'Ваш город доставки: '
+            a(
+              href='#popap-select-city',
+              data-fancybox
+            ).f-600.link-text
+              = 'Воронеж'
 
-        ul.header-small-menu.hidden-1200
-          li
-            a(href="#") Доставка и оплата
-          li
-            a(href="#") Гарантия и возврат
-          li
-            a(href="#") Система бонусов
+          ul.header-small-menu.hidden-1200
+            li
+              a(href="#") Доставка и оплата
+            li
+              a(href="#") Гарантия и возврат
+            li
+              a(href="#") Система бонусов
 
-        ul.mobile-small-menu
-          li
-            a(href="tel:8 800 287 14 73").link-text
-              +svgMono('call')
-              = '8 800 287 14 73'
-          li.wrap-mobile-search
-            a(href="#").wrap-mobile-search__ico
-              +svgMono('search')
-            form.mobile-search
-              input(
-                type="search",
-                placeholder='Поиск товара'
-              ).mobile-search__input
-              button(type="submit").mobile-search__button
+          ul.mobile-small-menu
+            li
+              a(href="tel:8 800 287 14 73").link-text
+                +svgMono('call')
+                = '8 800 287 14 73'
+            li.wrap-mobile-search
+              a(href="#").wrap-mobile-search__ico
                 +svgMono('search')
-          li
-            .block-login
-              a(href="#").block-login__entrance.link-text
-                +svgMono('user')
-                = 'Вход'
-              .block-login__separator.block-login__separator_indent
-              a(href="#").block-login__registration.link-text
-                = 'Регистрация'
+              form.mobile-search
+                input(
+                  type="search",
+                  placeholder='Поиск товара'
+                ).mobile-search__input
+                button(type="submit").mobile-search__button
+                  +svgMono('search')
+            li
+              .block-login
+                a(href="#").block-login__entrance.link-text
+                  +svgMono('user')
+                  = 'Вход'
+                .block-login__separator.block-login__separator_indent
+                a(href="#").block-login__registration.link-text
+                  = 'Регистрация'
 
   .container
     .header-wrap
@@ -134,7 +135,7 @@ header.header.header_padding-bottom
             +svgMono('search')
             = 'Найти'
 
-        .block-login.hidden-1200
+        .block-login.block-login_indent.hidden-1200
           a(href="#").block-login__entrance.link-text
             +svgMono('user')
             = 'Вход'
