@@ -18,7 +18,7 @@
       this.listenResize();
     },
     listenResize: function() {
-      _window.on('resize', debounce(this.initResponsiveSwipers.bind(this)));
+      _window.on('resize', debounce(this.initResponsiveSwipers.bind(this), 200));
     },
     initSwipers: function() {
       // TODO - сменить на селекторы с префиксом js - [js-main-slider] и т.д
@@ -87,7 +87,7 @@
       var dataObj = this.data.responsiveSwipers.featuredProducts;
 
       if ($(selector).length > 0) {
-        if (_window.width() >= dataObj.disableOn) {
+        if (window.innerWidth >= dataObj.disableOn) {
           if (dataObj.instance !== undefined) {
             dataObj.instance.destroy(true, true);
             dataObj.instance = undefined;
