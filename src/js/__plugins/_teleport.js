@@ -18,9 +18,9 @@ function initTeleport() {
         var condition;
 
         if (conditionPosition === '<') {
-          condition = _window.width() < conditionMedia;
+          condition = window.innerWidth < conditionMedia;
         } else if (conditionPosition === '>') {
-          condition = _window.width() > conditionMedia;
+          condition = window.innerWidth > conditionMedia;
         }
 
         if (condition) {
