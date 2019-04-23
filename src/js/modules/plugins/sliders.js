@@ -1,12 +1,9 @@
 //////////
 // SLIDERS
 //////////
-(function ($, APP) {
+(function($, APP) {
   APP.Plugins.Sliders = {
-    init: function () {
-
-      var main_bar = '.swiper-pagination__main-slider .swiper-pagination-bullet-active';
-
+    init: function() {
       new Swiper('[main-slider]', {
         navigation: {
           nextEl: '.swiper-button-next.swiper-button-next__main-slider',
@@ -17,13 +14,18 @@
           clickable: true,
         },
         loop: true,
+        autoplay: {
+          delay: 4000,
+        },
+        // effect: 'fade',
+        // fadeEffect: {
+        //   crossFade: true,
+        // },
         on: {
-          slideChangeTransitionEnd: function () {
-            // alert('1');
+          slideChange: function() {
+            var curSlide = this.realIndex; // swiper current slide
+            APP.Plugins.Progressbar.animateBullets('mainSlider', curSlide);
           },
-          slideChangeTransitionStart: function () {
-            // alert('2');
-          }
         },
       });
 
@@ -95,9 +97,8 @@
           }
         }
       }
-
     },
-    destroy: function () {
+    destroy: function() {
       // ... code ...
     },
   };

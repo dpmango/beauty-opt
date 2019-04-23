@@ -1,28 +1,52 @@
 //////////
 // progressbar
 //////////
-(function ($, APP) {
+(function($, APP) {
   APP.Plugins.Progressbar = {
-    init: function () {
+    data: {
+      bullets: {
+        mainSlider: [],
+      },
+    },
+    init: function() {
+      var _this = this;
+      var $bullets = $('.swiper-pagination__main-slider .swiper-pagination-bullet');
 
-      var main_bar = '.swiper-pagination__main-slider .swiper-pagination-bullet-active';
-
-      if ($(main_bar).length === 0) {
+      if ($bullets.length === 0) {
         return;
       }
 
-      var bar = new ProgressBar.SemiCircle(main_bar, {
-        strokeWidth: 6,
-        easing: 'easeInOut',
-        duration: 1400,
-        color: '#FFEA82',
-        trailColor: '#eee',
-        trailWidth: 1,
-        svgStyle: null
+      $bullets.each(function(i, bullet) {
+        var bar = new ProgressBar.Circle(bullet, {
+          strokeWidth: 6,
+          easing: 'linear',
+          duration: 4000,
+          color: '#EDBA36',
+          // trailColor: 'transparent',
+          // trailWidth: 1,
+          // svgStyle: null,
+        });
+
+        _this.data.bullets.mainSlider.push(bar);
       });
 
+      // initial start
+      this.animateBullets('mainSlider', 0);
     },
-    destroy: function () {
+    animateBullets: function(name, curIndex) {
+      var bullets = this.data.bullets[name];
+
+      $.each(bullets, function(i, bullet) {
+        if (curIndex === i) {
+          bullet.animate(1);
+        } else {
+          bullet.animate(0, {
+            duration: 150,
+          });
+        }
+      });
+    },
+    destroy: function() {
       // ... code ...
     },
   };
