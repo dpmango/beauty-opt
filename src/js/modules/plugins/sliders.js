@@ -1,9 +1,12 @@
 //////////
 // SLIDERS
 //////////
-(function($, APP) {
+(function ($, APP) {
   APP.Plugins.Sliders = {
-    init: function() {
+    init: function () {
+
+      var main_bar = '.swiper-pagination__main-slider .swiper-pagination-bullet-active';
+
       new Swiper('[main-slider]', {
         navigation: {
           nextEl: '.swiper-button-next.swiper-button-next__main-slider',
@@ -14,6 +17,14 @@
           clickable: true,
         },
         loop: true,
+        on: {
+          slideChangeTransitionEnd: function () {
+            // alert('1');
+          },
+          slideChangeTransitionStart: function () {
+            // alert('2');
+          }
+        },
       });
 
       new Swiper('[auto-width-slider]', {
@@ -45,20 +56,48 @@
         },
       });
 
-      new Swiper('[auto-width-slider3]', {
-        slidesPerView: 'auto',
-        spaceBetween: 40,
-        pagination: {
-          el: '.swiper-pagination-small.swiper-pagination__auto-width-slider3',
-        },
-        breakpoints: {
-          768: {
-            spaceBetween: 0,
-          },
-        },
-      });
+      var aboutSwiper = {
+        instance: undefined,
+        disableOn: 1201,
+      };
+
+      initSliders();
+
+      function initSliders() {
+        // TODO - wrong selector on barba.js changes
+
+        // INIT CHECKERS
+        var aboutSelector = '[auto-width-slider3]';
+
+        if ($(aboutSelector).length > 0) {
+          if (_window.width() >= aboutSwiper.disableOn) {
+            if (aboutSwiper.instance !== undefined) {
+              aboutSwiper.instance.destroy(true, true);
+              aboutSwiper.instance = undefined;
+            }
+            // return
+          } else {
+            if (aboutSwiper.instance === undefined) {
+              // ABOUT SWIPER
+              aboutSwiper.instance = new Swiper(aboutSelector, {
+                slidesPerView: 'auto',
+                spaceBetween: 40,
+                pagination: {
+                  el: '.swiper-pagination-small.swiper-pagination__auto-width-slider3',
+                },
+                breakpoints: {
+                  768: {
+                    spaceBetween: 0,
+                  },
+                },
+              });
+            }
+          }
+        }
+      }
+
     },
-    destroy: function() {
+    destroy: function () {
       // ... code ...
     },
   };

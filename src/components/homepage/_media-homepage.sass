@@ -16,6 +16,10 @@
     width: 255px
   .categories-grid
     grid-template-columns: repeat(2, 1fr)
+  .dect-grid
+    .swiper-slide
+      &:nth-child(n+9)
+        display: none
 
 +r($xl)
   .slider-wrap_indent
@@ -127,3 +131,16 @@
   .spromo-card
     width: 100%
     height: 218px
+
++rmin(1201)
+  .dect-grid
+    .swiper-wrapper
+      display: grid
+      justify-content: space-between
+      grid-template-columns: repeat(4, 244px)
+      grid-row-gap: 20px
+
++rmin(1440)
+  .dect-grid
+    .swiper-wrapper
+      grid-template-columns: repeat(5, 244px)

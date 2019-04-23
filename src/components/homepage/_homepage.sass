@@ -163,37 +163,9 @@
   width: 20px
   height: 20px
   margin-right: 10px
-  transition: $transitionSpeed
+  // transition: $transitionSpeed
   &:last-child
     margin-right: 0
-  &:before
-    content: ''
-    position: absolute
-    width: 6px
-    height: 6px
-    border-radius: 50%
-    background-color: #E8E8E8
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-  &:after
-    content: ''
-    position: absolute
-    opacity: 0
-    visibility: hidden
-    width: 9px
-    height: 18px
-    border: 1px solid #FFC328
-    border-right: none
-    border-radius: 100% 0 0 100% / 50% 0 0 50%
-    top: 50%
-    left: 50%
-    transform: translate(-100%, -50%) rotate(-180deg)
-    transform-origin: 100% center
-    // transition: 5s
-  &:hover
-    &:before
-      background-color: #FFC328
 
 .swiper-pagination-bullet-active
   &:before

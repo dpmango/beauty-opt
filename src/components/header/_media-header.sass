@@ -1,7 +1,7 @@
 
-@media (max-width: 1200px)
++r($xl)
   .hidden-1200
-    display: none
+    display: none !important
   .center-menu-left__item
     margin-right: 0
   .center-menu-right
@@ -38,7 +38,7 @@
   .swiper-button-prev
     display: none !important
 
-@media (max-width: 768px)
++r($md)
   .top-menu__delivery
     font-size: 0
     a
@@ -126,7 +126,7 @@
   .menu-center-link__mobile-text
     margin-left: 10px
 
-@media (min-width: 769px)
++rmin(769)
   .wrap-mobile-search
     display: none !important
   .mobile-search
@@ -138,7 +138,7 @@
   .hidden-769-b
     display: none
 
-@media (min-width: 1201px)
++rmin(1201)
   .mobile-small-menu
     display: none
   .hidden-1201-b

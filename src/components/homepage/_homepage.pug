@@ -8,7 +8,7 @@ mixin mainSliderSlide
     .promo-slider__mask
       h2
         = 'Наборы косметики '
-        span.text-orange Bioderma
+        span.text-orange Bioderma 
         = 'за полцены'
         br
         = 'только до 25 декабря'
@@ -176,14 +176,14 @@ section.section_indent
         +svgMono('arrowBottom')
 
 // FEATURED Slider
-section.section_indent.hidden-1201-b
+section.section_indent
   .container
     h2.h2-title Новинки и хиты продаж
     .tabs.tabs_indent
       a(href="#").tabs__tag Новинки
       a(href="#").tabs__tag Хиты продаж
     .auto-width-slider-wrap.auto-width-slider-wrap_indent
-      .swiper-container.auto-width-slider.ovv-768.auto-width-slider_indent(auto-width-slider3)
+      .swiper-container.auto-width-slider.ovv-768.auto-width-slider_indent.dect-grid(auto-width-slider3)
         .swiper-wrapper
           +productCard("Men Pure-formance", "images2.jpg", "sale hit")
           +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
@@ -194,85 +194,8 @@ section.section_indent.hidden-1201-b
           +productCard("Men Pure-formance", "images2.jpg")
           +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
           +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
-          +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
 
         .swiper-pagination-small.swiper-pagination__auto-width-slider3
-
-mixin junkProduct
-  .item-slider-product-grid.product
-    .product__wrap-tag
-      span.product__tag.product__tag_yellow Распродажа
-      span.product__tag.product__tag_green Хит продаж
-    .product__img
-      img(src="img/images2.jpg", alt="")
-    .product__wrap-text
-      span.product__brand.product_indent_b Aveda
-      a(href="#").link-text.product__name.product_indent_b Men Pure-formance Men's Aftershave
-      .product__wrap.product_indent_b
-        span.product__old-price.product__old-price_indent_r 3 900 руб.
-        span.product__amount-discount - 280 руб.
-      span.product__price.product_indent_bx2 1 230 руб.
-      .product__wrap.product_indent_bx2
-        a(href="#").product__in-garbage.product__in-garbage_indent
-          +svgMono('basket')
-          +svgMono('addBasket')
-          .product__wrap-hint
-            span.product__hint-text Товар в вашей корзине
-        a(href="").link-text.product__compare
-          +svgMono('comparison')
-          span Сравнить
-      .product__wrap
-        a(href="#").product__btn-bottom
-          +svgMono('questionMark')
-          span Купить по оптовой цене
-
-
-// TODO - убрать, нужно решать править css/js для верхней секции для правильного отображения на мобильном
-section.section_indent.hidden-1200
-  .container
-    h2.h2-title Новинки и хиты продаж
-    .tabs.tabs_indent
-      a(href="#").tabs__tag Новинки
-      a(href="#").tabs__tag Хиты продаж
-    .container-slider-product-grid.container-slider-product-grid_indent
-      .wrap-slider-product-grid
-        +junkProduct
-        +junkProduct
-        +junkProduct
-        +junkProduct
-
-        +junkProduct
-        +junkProduct
-        +junkProduct
-        +junkProduct
-
-        // TODO - зачем еще один товар? Можно его скрывать по css селектору :nth-child ?
-        .item-slider-product-grid.product.hidden-1439
-          .product__wrap-tag
-            span.product__tag.product__tag_yellow Распродажа
-            span.product__tag.product__tag_green Хит продаж
-          .product__img
-            img(src="img/images2.jpg", alt="")
-          .product__wrap-text
-            span.product__brand.product_indent_b Aveda
-            a(href="#").link-text.product__name.product_indent_b Men Pure-formance Men's Aftershave
-            .product__wrap.product_indent_b
-              span.product__old-price.product__old-price_indent_r 3 900 руб.
-              span.product__amount-discount - 280 руб.
-            span.product__price.product_indent_bx2 1 230 руб.
-            .product__wrap.product_indent_bx2
-              a(href="#").product__in-garbage.product__in-garbage_indent
-                +svgMono('basket')
-                +svgMono('addBasket')
-                .product__wrap-hint
-                  span.product__hint-text Товар в вашей корзине
-              a(href="").link-text.product__compare
-                +svgMono('comparison')
-                span Сравнить
-            .product__wrap
-              a(href="#").product__btn-bottom
-                +svgMono('questionMark')
-                span Купить по оптовой цене
 
 // PROMOS
 mixin promoCard
