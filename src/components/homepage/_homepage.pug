@@ -68,20 +68,21 @@ mixin categoryCard(classMod, name, image, count)
       span.categories-grid__name!= name
       span.categories-grid__quantity!= count
 
-section.section_indent.hidden-769-b
-  .container
-    h2.h2-title Популярные категории
-    .categories-grid.categories-grid_indent
-      +categoryCard("", "Восстановление и сохранение здоровых волос", "category-1.jpg", "764 товара")
-      +categoryCard("", "Окрашивание и тонирование", "category-2.jpg", "209 товаров")
-      +categoryCard("", "Оборудование для косметических салонов", "category-3.jpg", "74 товара")
+section.section_indent.hidden-769-b(data-teleport-target="categories-mobile")
+  // contents to be teleported here
+  //- .container
+  //-   h2.h2-title Популярные категории
+  //-   .categories-grid.categories-grid_indent
+  //-     +categoryCard("", "Восстановление и сохранение здоровых волос", "category-1.jpg", "764 товара")
+  //-     +categoryCard("", "Окрашивание и тонирование", "category-2.jpg", "209 товаров")
+  //-     +categoryCard("", "Оборудование для косметических салонов", "category-3.jpg", "74 товара")
 
-      +categoryCard("categories-grid__category_hidden", "Восстановление и сохранение здоровых волос", "category-1.jpg", "764 товара")
-      +categoryCard("categories-grid__category_hidden", "Окрашивание и тонирование", "category-2.jpg", "209 товаров")
-      +categoryCard("categories-grid__category_hidden", "Оборудование для косметических салонов", "category-3.jpg", "74 товара")
+  //-     +categoryCard("categories-grid__category_hidden", "Восстановление и сохранение здоровых волос", "category-1.jpg", "764 товара")
+  //-     +categoryCard("categories-grid__category_hidden", "Окрашивание и тонирование", "category-2.jpg", "209 товаров")
+  //-     +categoryCard("categories-grid__category_hidden", "Оборудование для косметических салонов", "category-3.jpg", "74 товара")
 
-    .wrap-btn-center.wrap-btn-center_indent
-      button.btn-transparent.btn-transparent_mobile-all-w.show-all-categories Показать все категории
+  //-   .wrap-btn-center.wrap-btn-center_indent
+  //-     button.btn-transparent.btn-transparent_mobile-all-w.show-all-categories Показать все категории
 
 // BENEFITS SECTION
 section.section_indent.hidden-768
@@ -234,7 +235,7 @@ section.section_indent2.bg-color-blue
 // TODO - тут можно подключить телепорт и использовать одну из версий - верхнюю или эту
 // /src/js/__plugins/_teleport.js
 
-section.section_indent2.hidden-768
+section.section_indent2.hidden-768(js-teleport data-teleport-to="categories-mobile" data-teleport-condition="<769")
   .container
     h2.h2-title Популярные категории
     .categories-grid.categories-grid_indent
