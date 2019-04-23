@@ -18,7 +18,7 @@
       this.listenResize();
     },
     listenResize: function() {
-      _window.on('resize', debounce(this.initResponsiveSwipers.bind(this)));
+      _window.on('resize', debounce(this.initResponsiveSwipers.bind(this), 200));
     },
     initSwipers: function() {
       // TODO - сменить на селекторы с префиксом js - [js-main-slider] и т.д
