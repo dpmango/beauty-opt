@@ -1,5 +1,12 @@
-# Gulp Starter Pack
+# Бьюти опт
 This package intended to solve common front-end development tasks. Works best for psd/sketch to html projects and save you a lot of time setting up local environment
+
+## Demo
+[http://beauty-opt.surge.sh](http://beauty-opt.surge.sh)
+
+## TODO'S
+- [ ] сменить на селекторы с префиксом js - [js-main-slider] и т.д
+- [ ] Телепорт категорий
 
 ## How to start
 * `yarn` or `npm i` - install npm dependencies

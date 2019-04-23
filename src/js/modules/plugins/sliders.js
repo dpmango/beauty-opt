@@ -3,7 +3,26 @@
 //////////
 (function($, APP) {
   APP.Plugins.Sliders = {
+    data: {
+      swipers: [],
+      responsiveSwipers: {
+        featuredProducts: {
+          instance: undefined,
+          disableOn: 1201,
+        },
+      },
+    },
     init: function() {
+      this.initSwipers();
+      this.initResponsiveSwipers();
+      this.listenResize();
+    },
+    listenResize: function() {
+      _window.on('resize', debounce(this.initResponsiveSwipers.bind(this)));
+    },
+    initSwipers: function() {
+      // TODO - сменить на селекторы с префиксом js - [js-main-slider] и т.д
+
       new Swiper('[main-slider]', {
         navigation: {
           nextEl: '.swiper-button-next.swiper-button-next__main-slider',
@@ -57,43 +76,38 @@
           el: '.swiper-pagination-small.swiper-pagination__auto-width-slider2',
         },
       });
+    },
+    initResponsiveSwipers: function() {
+      var featuredProducts = '[js-featured-products-swiper]';
+      if ($(featuredProducts).length > 0) {
+        this.initFeaturedProductsSwiper(featuredProducts);
+      }
+    },
+    initFeaturedProductsSwiper: function(selector) {
+      var dataObj = this.data.responsiveSwipers.featuredProducts;
 
-      var aboutSwiper = {
-        instance: undefined,
-        disableOn: 1201,
-      };
-
-      initSliders();
-
-      function initSliders() {
-        // TODO - wrong selector on barba.js changes
-
-        // INIT CHECKERS
-        var aboutSelector = '[auto-width-slider3]';
-
-        if ($(aboutSelector).length > 0) {
-          if (_window.width() >= aboutSwiper.disableOn) {
-            if (aboutSwiper.instance !== undefined) {
-              aboutSwiper.instance.destroy(true, true);
-              aboutSwiper.instance = undefined;
-            }
-            // return
-          } else {
-            if (aboutSwiper.instance === undefined) {
-              // ABOUT SWIPER
-              aboutSwiper.instance = new Swiper(aboutSelector, {
-                slidesPerView: 'auto',
-                spaceBetween: 40,
-                pagination: {
-                  el: '.swiper-pagination-small.swiper-pagination__auto-width-slider3',
+      if ($(selector).length > 0) {
+        if (_window.width() >= dataObj.disableOn) {
+          if (dataObj.instance !== undefined) {
+            dataObj.instance.destroy(true, true);
+            dataObj.instance = undefined;
+          }
+          // return
+        } else {
+          if (dataObj.instance === undefined) {
+            // ABOUT SWIPER
+            dataObj.instance = new Swiper(selector, {
+              slidesPerView: 'auto',
+              spaceBetween: 40,
+              pagination: {
+                el: '.swiper-pagination-small.swiper-pagination__auto-width-slider3',
+              },
+              breakpoints: {
+                768: {
+                  spaceBetween: 0,
                 },
-                breakpoints: {
-                  768: {
-                    spaceBetween: 0,
-                  },
-                },
-              });
-            }
+              },
+            });
           }
         }
       }
