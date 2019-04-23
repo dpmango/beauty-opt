@@ -163,9 +163,17 @@
   width: 20px
   height: 20px
   margin-right: 10px
-  // transition: $transitionSpeed
+  transform: scale(-1, 1)
   &:last-child
     margin-right: 0
+  &:before
+    content: ''
+    +vcenter
+    border-radius: 50%
+    width: 6px
+    height: 6px
+    background-color: #E8E8E8
+    transition: $transitionSpeed
 
 .swiper-pagination-bullet-active
   &:before
