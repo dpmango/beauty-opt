@@ -1,33 +1,33 @@
 include ../horizontalMenu/_menu
 
-// TODO - разбить на компоненты html/css/js по секциям или типам
-// например - секция наши приемущества - карточка товара
-mixin mainSliderSlide
+// MAIN SLIDER
+mixin mainSliderSlide(image, title, text, btn)
   .swiper-slide.promo-slider__slide
-    img.promo-slider__img(src="img/main-slider-img1.jpg", alt="")
+    img.promo-slider__img(src="img/"+ image +"", alt="")
     .promo-slider__mask
-      h2
-        = 'Наборы косметики '
-        span.text-orange Bioderma
-        = 'за полцены'
-        br
-        = 'только до 25 декабря'
-      p
-        = 'Каждый раз, покупая какую-либо ценную вещь в дом, мы изучаем много различной'
-        br
-        = 'информации и становимся профессионалами в этой области.'
+      h2!= title
+      p!= text
       .wrap-btn
-        a(href="#").simple-button Собрать свой набор
+        a(href="#").simple-button!= btn
 
 section.section_indent
   .container
     .container_wrap
       .slider-wrap.slider-wrap_indent
-        .swiper-container.promo-slider(main-slider)
+        .swiper-container.promo-slider(js-main-slider)
           .swiper-wrapper
-            +mainSliderSlide
-            +mainSliderSlide
-            +mainSliderSlide
+            +mainSliderSlide("main-slider-img1.jpg",
+            "Наборы косметики <span class='text-orange'>Bioderma</span> за полцены <br>только до 25 декабря",
+            "Каждый раз, покупая какую-либо ценную вещь в дом, мы изучаем много различной <br>информации и становимся профессионалами в этой области.",
+            "Собрать свой набор")
+            +mainSliderSlide("main-slider-img1.jpg",
+            "Наборы косметики <span class='text-orange'>Bioderma</span> за полцены <br>только до 25 декабря",
+            "Каждый раз, покупая какую-либо ценную вещь в дом, мы изучаем много различной <br>информации и становимся профессионалами в этой области.",
+            "Собрать свой набор")
+            +mainSliderSlide("main-slider-img1.jpg",
+            "Наборы косметики <span class='text-orange'>Bioderma</span> за полцены <br>только до 25 декабря",
+            "Каждый раз, покупая какую-либо ценную вещь в дом, мы изучаем много различной <br>информации и становимся профессионалами в этой области.",
+            "Собрать свой набор")
 
           .swiper-pagination.swiper-pagination__main-slider
         .swiper-button-prev.swiper-button-prev__main-slider
@@ -70,19 +70,6 @@ mixin categoryCard(classMod, name, image, count)
 
 section.section_indent.hidden-769-b(data-teleport-target="categories-mobile")
   // contents to be teleported here
-  //- .container
-  //-   h2.h2-title Популярные категории
-  //-   .categories-grid.categories-grid_indent
-  //-     +categoryCard("", "Восстановление и сохранение здоровых волос", "category-1.jpg", "764 товара")
-  //-     +categoryCard("", "Окрашивание и тонирование", "category-2.jpg", "209 товаров")
-  //-     +categoryCard("", "Оборудование для косметических салонов", "category-3.jpg", "74 товара")
-
-  //-     +categoryCard("categories-grid__category_hidden", "Восстановление и сохранение здоровых волос", "category-1.jpg", "764 товара")
-  //-     +categoryCard("categories-grid__category_hidden", "Окрашивание и тонирование", "category-2.jpg", "209 товаров")
-  //-     +categoryCard("categories-grid__category_hidden", "Оборудование для косметических салонов", "category-3.jpg", "74 товара")
-
-  //-   .wrap-btn-center.wrap-btn-center_indent
-  //-     button.btn-transparent.btn-transparent_mobile-all-w.show-all-categories Показать все категории
 
 // BENEFITS SECTION
 section.section_indent.hidden-768
@@ -157,7 +144,7 @@ section.section_indent
   .container
     h2.h2-title Товары со скидкой
     .auto-width-slider-wrap.auto-width-slider-wrap_indent
-      .swiper-container.auto-width-slider.ovv-768.auto-width-slider_indent(auto-width-slider)
+      .swiper-container.auto-width-slider.ovv-768.auto-width-slider_indent(js-auto-width-slider)
         .swiper-wrapper
           +productCard("Men Pure-formance", "images2.jpg", "sale hit")
           +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
@@ -199,31 +186,37 @@ section.section_indent
         .swiper-pagination-small.swiper-pagination__auto-width-slider3
 
 // PROMOS
-mixin promoCard
+mixin promoCard(image, time, text)
   .swiper-slide.promo-card
     .promo-card__img
-      img(src="img/images2-1.jpg", alt="")
+      img(src="img/"+ image +"", alt="")
     .promo-card__wrap-text
       .promo-card__inner-text
-        span.promo-card__time.promo-card__time_indent c 31 августа по 12 сентября
-        a(href="#").promo-card__text Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda
+        span.promo-card__time.promo-card__time_indent!= time
+        a(href="#").promo-card__text!= text
+
+mixin spromoCard(image, time, text)
+  .swiper-slide.spromo-card
+    img(src="img/"+ image +"", alt="")
+    .spromo-card__mask
+      .spromo-card__wrap-text
+        span.spromo-card__time.spromo-card__time_indent!= time
+        a(href="#").spromo-card__text!= text
 
 section.section_indent2.bg-color-blue
   .container
     h2.h2-title.h2-title_center Акции и специальные предложения
     .auto-width-slider-wrap.auto-width-slider-wrap_indent
-      .swiper-container.auto-width-slider.auto-width-slider_indent.ovv(auto-width-slider2)
+      .swiper-container.auto-width-slider.auto-width-slider_indent.ovv(js-auto-width-slider2)
         .swiper-wrapper
-          .swiper-slide.spromo-card
-            img(src="img/m_main_avedathickeningtonic_posta-magazine-2.jpg", alt="")
-            .spromo-card__mask
-              .spromo-card__wrap-text
-                span.spromo-card__time.spromo-card__time_indent c 31 августа по 12 сентября
-                a(href="#").spromo-card__text Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda
-          +promoCard
-          +promoCard
-          +promoCard
-          +promoCard
+
+          +spromoCard("m_main_avedathickeningtonic_posta-magazine-2.jpg", "c 31 августа по 12 сентября", "Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda")
+
+          +promoCard("images2-1.jpg", "c 31 августа по 12 сентября", "Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda")
+          +promoCard("images2-1.jpg", "c 31 августа по 12 сентября", "Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda")
+          +promoCard("images2-1.jpg", "c 31 августа по 12 сентября", "Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda")
+          +promoCard("images2-1.jpg", "c 31 августа по 12 сентября", "Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda")
+
         .swiper-pagination-small.swiper-pagination__auto-width-slider2
       .swiper-button-prev.swiper-button-prev__auto-width-slider2
         +svgMono('arrowBottom')
@@ -231,10 +224,6 @@ section.section_indent2.bg-color-blue
         +svgMono('arrowBottom')
 
 // CATEGORIES - desktop
-
-// TODO - тут можно подключить телепорт и использовать одну из версий - верхнюю или эту
-// /src/js/__plugins/_teleport.js
-
 section.section_indent2.hidden-768(js-teleport data-teleport-to="categories-mobile" data-teleport-condition="<769")
   .container
     h2.h2-title Популярные категории

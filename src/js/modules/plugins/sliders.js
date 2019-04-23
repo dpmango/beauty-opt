@@ -21,9 +21,8 @@
       _window.on('resize', debounce(this.initResponsiveSwipers.bind(this), 200));
     },
     initSwipers: function() {
-      // TODO - сменить на селекторы с префиксом js - [js-main-slider] и т.д
 
-      new Swiper('[main-slider]', {
+      new Swiper('[js-main-slider]', {
         navigation: {
           nextEl: '.swiper-button-next.swiper-button-next__main-slider',
           prevEl: '.swiper-button-prev.swiper-button-prev__main-slider',
@@ -36,10 +35,6 @@
         autoplay: {
           delay: 4000,
         },
-        // effect: 'fade',
-        // fadeEffect: {
-        //   crossFade: true,
-        // },
         on: {
           slideChange: function() {
             var curSlide = this.realIndex; // swiper current slide
@@ -48,7 +43,7 @@
         },
       });
 
-      new Swiper('[auto-width-slider]', {
+      new Swiper('[js-auto-width-slider]', {
         slidesPerView: 'auto',
         spaceBetween: 40,
         navigation: {
@@ -65,7 +60,7 @@
         },
       });
 
-      new Swiper('[auto-width-slider2]', {
+      new Swiper('[js-auto-width-slider2]', {
         slidesPerView: 'auto',
         spaceBetween: 40,
         navigation: {
