@@ -1,0 +1,32 @@
+// subdirectory
+
+.wrap-subdirectory-menu
+  flex-shrink: 0
+  width: 244px
+  margin-right: 40px
+
+.wrap-subdirectory-sliders
+  flex-grow: 1
+  width: 1px
+
+.inner-subdirectory-sliders
+  &_indent
+    margin-bottom: 40px
+
+.subdirectory-menu
+  display: flex
+  flex-wrap: wrap
+  margin: 0
+  padding: 0
+  border: 1px solid #E8E8E8
+  li
+    width: 100%
+    a
+      display: block
+      padding: 10px 20px
+      transition: $transitionSpeed
+      &:hover
+        background-color: rgba(#E1F0F2,.4)
+  &_indent
+    margin-bottom: 40px
+

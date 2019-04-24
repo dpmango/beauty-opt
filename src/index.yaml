@@ -3,5 +3,5 @@ ProjectTitle: Beauty-opt
 PageList:
 - file: homepage.html
   ready: 100
-# - file: page.html
-#   ready: 0
+- file: subdirectory.html
+  ready: 1

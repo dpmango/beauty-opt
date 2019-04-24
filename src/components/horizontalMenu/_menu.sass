@@ -1,0 +1,28 @@
+.horizontal-menu
+  display: flex
+  overflow: hidden
+  height: 60px
+  padding: 0
+  margin: 0
+  li
+    display: flex
+    a
+      display: flex
+      align-items: center
+      padding: 0 20px
+      font-size: 14px
+      font-weight: 600
+      transition: $transitionSpeed
+      svg
+        flex-shrink: 0
+        transition: $transitionSpeed
+        margin-left: 10px
+        width: 10px
+      &:hover
+        background-color: #EAF5F6
+        color: $colorHoverLink
+      &.horizontal-menu_active
+        background-color: #EAF5F6
+        color: $colorHoverLink
+        svg
+          transform: rotate(180deg)

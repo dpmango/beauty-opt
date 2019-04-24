@@ -105,7 +105,7 @@
   justify-content: space-between
   height: 48px
 
-.btn-open-all-catalog
+.btn-open-full-catalog
   display: flex
   align-items: center
   justify-content: center
@@ -115,7 +115,7 @@
   transition: $transitionSpeed
   &:hover
     background-color: $colorLightGreen
-    .btn-open-all-catalog__text
+    .btn-open-full-catalog__text
       transform: translate(0, -4px)
   &__text
     transition: $transitionSpeed
@@ -125,18 +125,18 @@
     color: #fff
   &_active
     background-color: $colorLightGreen
-    .btn-open-all-catalog-burger
+    .btn-open-full-catalog-burger
       &__line
         &:nth-child(1)
           width: 50%
         &:nth-child(2)
           width: 75%
-    .btn-open-all-catalog__text
+    .btn-open-full-catalog__text
       transform: translate(0, -4px)
     &:hover
       background-color: $colorLightGreen
 
-.btn-open-all-catalog-burger
+.btn-open-full-catalog-burger
   position: relative
   width: 16px
   height: 12px
@@ -174,6 +174,9 @@
     border-radius: 4px 0 0 4px
     border-right: none
     padding: 0 55px 0 20px
+    transition: $transitionSpeed
+    &:focus
+      border-color: $colorTurquoise
   &__button
     display: flex
     align-items: center
@@ -292,3 +295,59 @@
     color: #fff
     letter-spacing: 0.02em
     height: 46px
+
+.wrap-menu-full-catalog
+  position: relative
+  display: flex
+
+.menu-full-catalog
+  position: absolute
+  opacity: 0
+  visibility: hidden
+  z-index: 10
+  overflow: hidden
+  top: 100%
+  left: 0
+  width: 290px
+  background-color: #fff
+  box-shadow: 20px 20px 54px rgba(218, 218, 218, 0.25)
+  &__head
+    position: relative
+    display: flex
+    align-items: center
+    padding-left: 40px
+    height: 70px
+    width: 100%
+    border-bottom: 1px solid #ECECEC
+  &__title
+    font-size: 22px
+  &__btn-close
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    top: 50%
+    width: 50px
+    height: 50px
+    color: #B7B7B7
+    padding: 0
+    background: none
+    left: calc(100% - 24px)
+    transform: translate(-100%, -50%)
+    transition: $transitionSpeed
+    &:hover
+      color: #26A1AD
+    svg
+      width: 18px
+      height: 18px
+  &__main
+    display: flex
+    flex-wrap: wrap
+    margin: 0
+    padding: 0
+    li
+      display: flex
+      width: 100%
+      a
+        display: flex
+        padding: 20px 40px

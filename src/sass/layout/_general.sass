@@ -23,7 +23,6 @@ body, html
   min-width: 320px
   max-width: 100%
   margin: 0
-  overflow-x: hidden
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
@@ -86,9 +85,6 @@ body, html
   font-size: 12px
   border-bottom-left-radius: 5px
 
-.section_indent2
-  padding: 40px 0
-
 .flex-center
   display: flex
   justify-content: center
@@ -101,8 +97,16 @@ body, html
 .color-grey
   color: $fontColorGrey
 
-.section_indent
-  padding-bottom: 40px
+.section
+  &_indent
+    padding-bottom: 40px
+  &_indent2
+    padding: 40px 0
+  &_indent-small
+    padding-bottom: 20px
+  &_negative-position-t
+    position: relative
+    margin-top: -20px
 
 .text-orange
   color: #FFC328
@@ -126,6 +130,38 @@ body, html
     height: 18px
   &:hover
     color: #26A1AD
+
+.breadcrumbs
+  display: flex
+  margin: 0
+  padding: 0
+  li
+    position: relative
+    padding-right: 14px
+    margin-right: 14px
+    a
+      color: #B7B7B7
+      transition: $transitionSpeed
+      &:hover
+        color: #26A1AD
+    &:after
+      content: ''
+      position: absolute
+      width: 4px
+      height: 8px
+      background-image: url('../img/arrow.svg')
+      background-repeat: no-repeat
+      background-position: center
+      top: 50%
+      left: 100%
+      transform: translate(-50%, -50%)
+    &:last-child
+      padding-right: 0
+      margin-right: 0
+      a
+        color: #26A1AD
+      &:after
+        display: none
 
 body.compensate-for-scrollbar
   overflow: hidden

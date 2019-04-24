@@ -86,12 +86,33 @@ header.header.header_padding-bottom
 
       .bottom-menu
 
-        a(href="#").btn-open-all-catalog
-          .btn-open-all-catalog-burger.btn-open-all-catalog-burger_indent
-            .btn-open-all-catalog-burger__line
-            .btn-open-all-catalog-burger__line
-            .btn-open-all-catalog-burger__line
-          span.btn-open-all-catalog__text Полный каталог
+        .wrap-menu-full-catalog
+          a(href="#").btn-open-full-catalog
+            .btn-open-full-catalog-burger.btn-open-full-catalog-burger_indent
+              .btn-open-full-catalog-burger__line
+              .btn-open-full-catalog-burger__line
+              .btn-open-full-catalog-burger__line
+            span.btn-open-full-catalog__text Полный каталог
+          .menu-full-catalog
+            .menu-full-catalog__head
+              span.menu-full-catalog__title Каталог
+              button.menu-full-catalog__btn-close
+                +svgMono('close')
+            ul.menu-full-catalog__main
+              li
+                a(href="#") Оборудование
+              li
+                a(href="#") Для роста волос
+              li
+                a(href="#") Лицо
+              li
+                a(href="#") Тело
+              li
+                a(href="#") От выпадания
+              li
+                a(href="#") Брови и ресницы
+              li
+                a(href="#") Инструменты
         
         form.search-form.search-form_indent
           .search-form__block-input
