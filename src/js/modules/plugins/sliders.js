@@ -70,6 +70,23 @@
         pagination: {
           el: '.swiper-pagination-small.swiper-pagination__auto-width-slider2',
         },
+        breakpoints: {
+          768: {
+            spaceBetween: 0,
+          },
+        },
+      });
+
+      new Swiper('[js-promotions-specials]', {
+        slidesPerView: 'auto',
+        spaceBetween: 40,
+        navigation: {
+          nextEl: '.swiper-button-next.swiper-button-next__promotions-specials',
+          prevEl: '.swiper-button-prev.swiper-button-prev__promotions-specials',
+        },
+        pagination: {
+          el: '.swiper-pagination-small.swiper-pagination__promotions-specials',
+        },
       });
     },
     initResponsiveSwipers: function() {

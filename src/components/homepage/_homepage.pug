@@ -205,11 +205,11 @@ mixin spromoCard(image, time, text)
         span.spromo-card__time.spromo-card__time_indent!= time
         a(href="#").spromo-card__text!= text
 
-section.section_indent2.bg-color-blue
+section.section_indent2.bg-color-blue.ovh
   .container
     h2.h2-title.h2-title_center Акции и специальные предложения
     .auto-width-slider-wrap.auto-width-slider-wrap_indent
-      .swiper-container.auto-width-slider.auto-width-slider_indent.ovv(js-auto-width-slider2)
+      .swiper-container.auto-width-slider.auto-width-slider_indent.ovv(js-promotions-specials)
         .swiper-wrapper
 
           +spromoCard("m_main_avedathickeningtonic_posta-magazine-2.jpg", "c 31 августа по 12 сентября", "Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda")
@@ -219,10 +219,10 @@ section.section_indent2.bg-color-blue
           +promoCard("images2-1.jpg", "c 31 августа по 12 сентября", "Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda")
           +promoCard("images2-1.jpg", "c 31 августа по 12 сентября", "Успейте подготовиться к лету с новой серией кремов и спреев для загара Aveda")
 
-        .swiper-pagination-small.swiper-pagination__auto-width-slider2
-      .swiper-button-prev.swiper-button-prev__auto-width-slider2
+        .swiper-pagination-small.swiper-pagination__promotions-specials
+      .swiper-button-prev.swiper-button-prev__promotions-specials
         +svgMono('arrowBottom')
-      .swiper-button-next.swiper-button-next__auto-width-slider2
+      .swiper-button-next.swiper-button-next__promotions-specials
         +svgMono('arrowBottom')
 
 // CATEGORIES - desktop
