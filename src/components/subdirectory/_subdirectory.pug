@@ -1,7 +1,7 @@
 include ../horizontalMenu/_menu
 
 // BREADCRUMBS
-section.section_indent-small.section_negative-position-t
+section.section_indent-small.section_negative-position-t20.hidden-768
   .container
     ul.breadcrumbs
       li
@@ -10,6 +10,13 @@ section.section_indent-small.section_negative-position-t
         a(href="#") Волосы
       li
         a(href="#") Окрашивание и тонирование
+
+// MOBILE BUTTON BACK
+section.section_indent-small.section_negative-position-t28.hidden-769-b
+  .container
+    a(href="#").btn-back
+      +svgMono('arrowBottom')
+      = 'Уход за волосами'
 
 // H1 TITLE
 section.section_indent
@@ -47,89 +54,91 @@ mixin productCard(name, image, tags)
           span Купить по оптовой цене
 
 // MAIN SUBDIRECTORY
-section.section_indent
-  .container.container_wrap
+section.section_indent.ovh
+  .container
 
-    .wrap-subdirectory-menu
-      ul.subdirectory-menu.subdirectory-menu_indent
-        li
-          a(href="#") Восстановление и сохранение здоровья волос
-        li
-          a(href="#") Технические линейки
-        li
-          a(href="#") Стайлинг
-        li
-          a(href="#") Уходы
-        li
-          a(href="#") Еще один подраздел
-        li
-          a(href="#") Еще один подраздел
+    .wrap-subdirectory
 
-      .product.product-day
-        .product__wrap-tag
-          span.product__tag.product__tag_green Товар дня
-        .product__img.product-day__img_height
-          img(src="img/images1.jpg", alt="")
-        .product__wrap-text.product__wrap-text_border_b
-          span.product__brand.product_indent_b Aveda
-          a(href="#").link-text.product__name.product_indent_b Men Pure-formance Men's Aftershave
-          .product__wrap.product_indent_b
-            span.product__old-price.product__old-price_indent_r 3 900 руб.
-            span.product__amount-discount - 280 руб.
-          span.product__price 1 230 руб.
-        .product__wrap-text
-          .product__wrap
-            a(href="#").product__in-garbage.product__in-garbage_indent
-              +svgMono('basket')
-              +svgMono('addBasket')
-              .product__wrap-hint
-                span.product__hint-text Товар в вашей корзине
-            a(href="").link-text.product__compare
-              +svgMono('comparison')
-              span Сравнить
+      .wrap-subdirectory-menu.wrap-subdirectory-menu_indent
+        ul.subdirectory-menu.subdirectory-menu_indent
+          li
+            a(href="#") Восстановление и сохранение здоровья волос
+          li
+            a(href="#") Технические линейки
+          li
+            a(href="#") Стайлинг
+          li
+            a(href="#") Уходы
+          li
+            a(href="#") Еще один подраздел
+          li
+            a(href="#") Еще один подраздел
 
-    .wrap-subdirectory-sliders
-      .inner-subdirectory-sliders.inner-subdirectory-sliders_indent
-        h2.h2-title Восстановление и сохранение здоровья волос
-        .auto-width-slider-wrap.auto-width-slider-wrap_indent-small
-          .swiper-container.auto-width-slider.auto-width-slider_indent(js-auto-width-slider)
-            .swiper-wrapper
-              +productCard("Men Pure-formance", "images2.jpg", "sale hit")
-              +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
-              +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
-              +productCard("Men Pure-formance Men's Aftershave", "images3.jpg")
-              +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "sale")
-              +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
-              +productCard("Men Pure-formance", "images2.jpg")
-              +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
-              +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
-              +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
+        .product.product-day.hidden-768
+          .product__wrap-tag
+            span.product__tag.product__tag_green Товар дня
+          .product__img.product-day__img_height
+            img(src="img/images1.jpg", alt="")
+          .product__wrap-text.product__wrap-text_border_b
+            span.product__brand.product_indent_b Aveda
+            a(href="#").link-text.product__name.product_indent_b Men Pure-formance Men's Aftershave
+            .product__wrap.product_indent_b
+              span.product__old-price.product__old-price_indent_r 3 900 руб.
+              span.product__amount-discount - 280 руб.
+            span.product__price 1 230 руб.
+          .product__wrap-text
+            .product__wrap
+              a(href="#").product__in-garbage.product__in-garbage_indent
+                +svgMono('basket')
+                +svgMono('addBasket')
+                .product__wrap-hint
+                  span.product__hint-text Товар в вашей корзине
+              a(href="").link-text.product__compare
+                +svgMono('comparison')
+                span Сравнить
 
-            .swiper-pagination-small.swiper-pagination__auto-width-slider
-          .swiper-button-prev.swiper-button-prev__auto-width-slider
-            +svgMono('arrowBottom')
-          .swiper-button-next.swiper-button-next__auto-width-slider
-            +svgMono('arrowBottom')
+      .wrap-subdirectory-sliders
+        .inner-subdirectory-sliders.inner-subdirectory-sliders_indent
+          h2.h2-title Восстановление и сохранение здоровья волос
+          .auto-width-slider-wrap.auto-width-slider-wrap_indent-small
+            .swiper-container.auto-width-slider.auto-width-slider_indent.ovv-992(js-auto-width-slider)
+              .swiper-wrapper
+                +productCard("Men Pure-formance", "images2.jpg", "sale hit")
+                +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
+                +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+                +productCard("Men Pure-formance Men's Aftershave", "images3.jpg")
+                +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "sale")
+                +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
+                +productCard("Men Pure-formance", "images2.jpg")
+                +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
+                +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+                +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
 
-      .inner-subdirectory-sliders
-        h2.h2-title Технические линейки
-        .auto-width-slider-wrap.auto-width-slider-wrap_indent-small
-          .swiper-container.auto-width-slider.auto-width-slider_indent(js-auto-width-slider2)
-            .swiper-wrapper
-              +productCard("Men Pure-formance", "images2.jpg", "sale hit")
-              +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
-              +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
-              +productCard("Men Pure-formance Men's Aftershave", "images3.jpg")
-              +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "sale")
-              +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
-              +productCard("Men Pure-formance", "images2.jpg")
-              +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
-              +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
-              +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
+              .swiper-pagination-small.swiper-pagination__auto-width-slider
+            .swiper-button-prev.swiper-button-prev__auto-width-slider
+              +svgMono('arrowBottom')
+            .swiper-button-next.swiper-button-next__auto-width-slider
+              +svgMono('arrowBottom')
 
-            .swiper-pagination-small.swiper-pagination__auto-width-slider2
-          .swiper-button-prev.swiper-button-prev__auto-width-slider2
-            +svgMono('arrowBottom')
-          .swiper-button-next.swiper-button-next__auto-width-slider2
-            +svgMono('arrowBottom')
+        .inner-subdirectory-sliders
+          h2.h2-title Технические линейки
+          .auto-width-slider-wrap.auto-width-slider-wrap_indent-small
+            .swiper-container.auto-width-slider.auto-width-slider_indent.ovv-992(js-auto-width-slider2)
+              .swiper-wrapper
+                +productCard("Men Pure-formance", "images2.jpg", "sale hit")
+                +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
+                +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+                +productCard("Men Pure-formance Men's Aftershave", "images3.jpg")
+                +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "sale")
+                +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
+                +productCard("Men Pure-formance", "images2.jpg")
+                +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
+                +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+                +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
+
+              .swiper-pagination-small.swiper-pagination__auto-width-slider2
+            .swiper-button-prev.swiper-button-prev__auto-width-slider2
+              +svgMono('arrowBottom')
+            .swiper-button-next.swiper-button-next__auto-width-slider2
+              +svgMono('arrowBottom')
 

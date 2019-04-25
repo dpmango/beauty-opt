@@ -4,4 +4,4 @@ PageList:
 - file: homepage.html
   ready: 100
 - file: subdirectory.html
-  ready: 1
+  ready: 100

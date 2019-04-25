@@ -140,11 +140,11 @@ mixin productCard(name, image, tags)
           span Купить по оптовой цене
 
 // PROMO Slider
-section.section_indent
+section.section_indent.ovh
   .container
     h2.h2-title Товары со скидкой
     .auto-width-slider-wrap.auto-width-slider-wrap_indent
-      .swiper-container.auto-width-slider.ovv-768.auto-width-slider_indent(js-auto-width-slider)
+      .swiper-container.auto-width-slider.ovv-992.auto-width-slider_indent(js-auto-width-slider)
         .swiper-wrapper
           +productCard("Men Pure-formance", "images2.jpg", "sale hit")
           +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
@@ -164,14 +164,14 @@ section.section_indent
         +svgMono('arrowBottom')
 
 // FEATURED Slider
-section.section_indent
+section.section_indent.ovh
   .container
     h2.h2-title Новинки и хиты продаж
     .tabs.tabs_indent
       a(href="#").tabs__tag Новинки
       a(href="#").tabs__tag Хиты продаж
     .auto-width-slider-wrap.auto-width-slider-wrap_indent
-      .swiper-container.auto-width-slider.ovv-768.auto-width-slider_indent.dect-grid(js-featured-products-swiper)
+      .swiper-container.auto-width-slider.ovv-992.auto-width-slider_indent.dect-grid(js-featured-products-swiper)
         .swiper-wrapper
           +productCard("Men Pure-formance", "images2.jpg", "sale hit")
           +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")

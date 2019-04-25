@@ -54,7 +54,7 @@
           el: '.swiper-pagination-small.swiper-pagination__auto-width-slider',
         },
         breakpoints: {
-          768: {
+          992: {
             spaceBetween: 0,
           },
         },
@@ -71,7 +71,7 @@
           el: '.swiper-pagination-small.swiper-pagination__auto-width-slider2',
         },
         breakpoints: {
-          768: {
+          992: {
             spaceBetween: 0,
           },
         },
@@ -115,7 +115,7 @@
                 el: '.swiper-pagination-small.swiper-pagination__auto-width-slider3',
               },
               breakpoints: {
-                768: {
+                992: {
                   spaceBetween: 0,
                 },
               },
