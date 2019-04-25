@@ -36,6 +36,7 @@
         return false;
       });
 
+      // Показать все категории
       $('.show-all-categories').on('click', function() {
         $(this)
           .parents('.container')

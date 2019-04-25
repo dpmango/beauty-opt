@@ -37,6 +37,8 @@
     display: none !important
   .swiper-button-prev
     display: none !important
+  .menu-full-catalog
+    width: 100%
 
 +r($md)
   .top-menu__delivery
@@ -127,6 +129,11 @@
     width: auto
   .menu-center-link__mobile-text
     margin-left: 10px
+  .menu-center-link
+    &:hover
+      .menu-center-link__ico
+        background: none
+        color: #26A1AD
 
 +rmin(769)
   .wrap-mobile-search

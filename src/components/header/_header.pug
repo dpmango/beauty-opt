@@ -93,26 +93,128 @@ header.header.header_padding-bottom
               .btn-open-full-catalog-burger__line
               .btn-open-full-catalog-burger__line
             span.btn-open-full-catalog__text Полный каталог
-          .menu-full-catalog
+          .menu-full-catalog.menu-full-catalog_hidden
             .menu-full-catalog__head
               span.menu-full-catalog__title Каталог
+              a(href="#").btn-back.menu-full-catalog__hidden
+                +svgMono('arrowBottom')
+                = 'Вернуться назад'
               button.menu-full-catalog__btn-close
                 +svgMono('close')
             ul.menu-full-catalog__main
               li
-                a(href="#") Оборудование
+                a(href="#")
+                  = 'Оборудование'
+                  +svgMono('arrowBottom')
+                ul
+                  li
+                    a(href="#")
+                      = 'Для окрашивания'
+                      +svgMono('arrowBottom')
+                    ul
+                      li
+                        a(href="#")
+                          = '123'
+                          +svgMono('arrowBottom')
+                        ul
+                          li
+                            a(href="#") rr
+                          li
+                            a(href="#") rr
+                          li
+                            a(href="#") rr
+                          li
+                            a(href="#") rr
+                      li
+                        a(href="#") 123
+                      li
+                        a(href="#") 123
+                  li
+                    a(href="#") Для роста волос
+                  li
+                    a(href="#") Стайлинг
+                  li
+                    a(href="#")
+                      = 'Жирные волосы'
+                      +svgMono('arrowBottom')
+                    ul
+                      li
+                        a(href="#") тут
+                      li
+                        a(href="#") тут
+                      li
+                        a(href="#") тут
+                      li
+                        a(href="#") тут
+                      li
+                        a(href="#") тут
+                      li
+                        a(href="#") тут
+                  li
+                    a(href="#") От выпадания
               li
-                a(href="#") Для роста волос
+                a(href="#")
+                  = 'Для роста волос'
+                  +svgMono('arrowBottom')
+                ul
+                  li
+                    a(href="#") 22
+                  li
+                    a(href="#") 22
+                  li
+                    a(href="#")
+                      = '22'
+                      +svgMono('arrowBottom')
+                    ul
+                      li
+                        a(href="#") 3asd
+                      li
+                        a(href="#") 3asd
+                      li
+                        a(href="#") 3asd
+                      li
+                        a(href="#") 3asd
+                      li
+                        a(href="#") 3asd
+                      li
+                        a(href="#") 3asd
+                      li
+                        a(href="#") 3asd
+                      li
+                        a(href="#") 3asd
+                      li
+                        a(href="#") 3asd
+                  li
+                    a(href="#") 22
+                  li
+                    a(href="#") 22
               li
-                a(href="#") Лицо
+                a(href="#")
+                  = 'Лицо'
+                  +svgMono('arrowBottom')
+                ul
+                  li
+                    a(href="#") 23
+                  li
+                    a(href="#") 23
+                  li
+                    a(href="#") 23
+                  li
+                    a(href="#") 23
+                  li
+                    a(href="#") 23
               li
-                a(href="#") Тело
+                a(href="#")
+                  = 'Тело'
               li
-                a(href="#") От выпадания
+                a(href="#")
+                  = 'От выпадания'
               li
-                a(href="#") Брови и ресницы
+                a(href="#")
+                  = 'Брови и ресницы'
               li
-                a(href="#") Инструменты
+                a(href="#")
+                  = 'Инструменты'
         
         form.search-form.search-form_indent
           .search-form__block-input
