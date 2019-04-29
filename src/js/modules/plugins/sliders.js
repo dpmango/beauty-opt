@@ -112,7 +112,20 @@
               slidesPerView: 'auto',
               spaceBetween: 40,
               pagination: {
-                el: '.swiper-pagination-small.swiper-pagination__auto-width-slider3',
+                el: '.swiper-pagination-small.swiper-pagination__featured-products-swiper',
+              },
+              breakpoints: {
+                992: {
+                  spaceBetween: 0,
+                },
+              },
+            });
+            // добавил еще 1 сладер, думаю что не правильно
+            dataObj.instance = new Swiper('[js-featured-products-swiper2]', {
+              slidesPerView: 'auto',
+              spaceBetween: 40,
+              pagination: {
+                el: '.swiper-pagination-small.swiper-pagination__featured-products-swiper2',
               },
               breakpoints: {
                 992: {

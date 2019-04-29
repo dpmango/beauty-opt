@@ -1,0 +1,88 @@
+////////////
+////category
+////////////
+
+.wrap-category
+  display: flex
+
+.wrap-filters
+  flex-shrink: 0
+  width: 244px
+  &_indent
+    margin-right: 40px
+
+.wrap-category-products
+  flex-grow: 1
+
+.filters-form
+  padding: 20px
+  border: 1px solid #E8E8E8
+  &__row
+    &_indent
+      padding-bottom: 20px
+      margin-bottom: 20px
+      border-bottom: 1px solid #E8E8E8
+  &__title
+    display: block
+    font-weight: 600
+    line-height: 21px
+    &_indent
+      margin-bottom: 20px
+  &__selected-filters
+    display: flex
+    flex-wrap: wrap
+    margin: 0
+    padding: 0
+    &_indent
+      margin-bottom: 10px
+    li
+      display: flex
+      align-items: center
+      padding: 5px 10px
+      font-size: 12px
+      line-height: 18px
+      color: #fff
+      background-color: #39B993
+      border-radius: 4px
+      margin-right: 10px
+      margin-bottom: 10px
+      svg
+        width: 10px
+        height: 10px
+        margin-left: 10px
+  &__btn
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    line-height: 21px
+    letter-spacing: 0.02em
+    padding: 0
+    background-color: #fff
+    border: 2px solid #E1F0F2
+    border-radius: 4px
+    width: 100%
+    height: 42px
+    transition: $transitionSpeed
+    &:hover
+      background-color: #E1F0F2
+  &__spoiler-head
+    display: flex
+    align-items: center
+    cursor: pointer
+    line-height: 21px
+    font-weight: 600
+    &_indent
+      margin-right: 25px
+    &_passive
+      .ico-mono-arrowBottom
+        transform: rotate(-180deg)
+    .ico-mono-arrowBottom
+      width: 14px
+      height: 14px
+      margin-right: 10px
+      color: #B7B7B7
+      transition: $transitionSpeed
+  &__spoiler-body
+    &_indent
+      margin-top: 20px

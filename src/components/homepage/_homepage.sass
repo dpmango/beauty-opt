@@ -372,7 +372,7 @@
     &_height
       height: 182px
 
-.tabs
+.tabs-link
   display: flex
   flex-wrap: wrap
   &__tag
@@ -393,6 +393,20 @@
         background-color: #26A1AD
   &_indent
     margin-top: 10px
+
+.tab
+  position: absolute
+  overflow: hidden
+  visibility: hidden
+  width: 1px
+  opacity: 0
+  transition: $transitionSpeed
+  &_active
+    position: relative
+    overflow: visible
+    visibility: visible
+    width: auto
+    opacity: 1
 
 .wrap-slider-product-grid
   display: grid

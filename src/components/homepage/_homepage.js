@@ -1,43 +1,34 @@
 //////////
 // Homepage
 //////////
-(function($, APP) {
+(function ($, APP) {
   APP.Components.Homepage = {
-    init: function() {
-      $(document).click(function(e) {
-        if (!$(e.target).is('.wrap-horizontal-menu *')) {
-          $('.menu-all-catalog').removeClass('menu-all-catalog_active');
-          $('.horizontal-menu a').removeClass('horizontal-menu_active');
-        }
-      });
+    init: function () {
 
-      $('.horizontal-menu').on('click', 'a', function() {
-        if (!$(this).hasClass('horizontal-menu_active')) {
-          $(this)
-            .parents('.horizontal-menu')
-            .find('a')
-            .removeClass('horizontal-menu_active');
-          $(this).addClass('horizontal-menu_active');
-          $('.menu-all-catalog').addClass('menu-all-catalog_active');
-        } else {
-          $(this).removeClass('horizontal-menu_active');
-          $('.menu-all-catalog').removeClass('menu-all-catalog_active');
-        }
-        return false;
-      });
-
-      $('.product__in-garbage').on('click', function() {
+      // кнопка в корзину
+      $(document).on('click', '.product__in-garbage', function () {
         $(this).toggleClass('product__in-garbage_active');
         return false;
       });
 
-      $('.tabs__tag').on('click', function() {
-        $(this).toggleClass('tabs__tag_active');
+      // табы
+      $(document).on('click', '.tabs-link__tag', function () {
+        var tab_current = $(this).attr('href');
+        $(this)
+          .parents('.tabs-link')
+          .find('.tabs-link__tag')
+          .removeClass('tabs-link__tag_active');
+        $(this)
+          .addClass('tabs-link__tag_active');
+        $('.tab')
+          .removeClass('tab_active');
+        $(tab_current)
+          .addClass('tab_active');
         return false;
       });
 
       // Показать все категории
-      $('.show-all-categories').on('click', function() {
+      $(document).on('click', '.show-all-categories', function () {
         $(this)
           .parents('.container')
           .find('.categories-grid__category')

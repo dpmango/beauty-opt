@@ -54,7 +54,7 @@ section.section_indent
               +svgMono('addBasket')
               .product__wrap-hint
                 span.product__hint-text Товар в вашей корзине
-            a(href="").link-text.product__compare
+            a(href="#").link-text.product__compare
               +svgMono('comparison')
               span Сравнить
 
@@ -131,7 +131,7 @@ mixin productCard(name, image, tags)
           +svgMono('addBasket')
           .product__wrap-hint
             span.product__hint-text Товар в вашей корзине
-        a(href="").link-text.product__compare
+        a(href="#").link-text.product__compare
           +svgMono('comparison')
           span Сравнить
       .product__wrap
@@ -167,25 +167,49 @@ section.section_indent.ovh
 section.section_indent.ovh
   .container
     h2.h2-title Новинки и хиты продаж
-    .tabs.tabs_indent
-      a(href="#").tabs__tag Новинки
-      a(href="#").tabs__tag Хиты продаж
-    .auto-width-slider-wrap.auto-width-slider-wrap_indent
-      .swiper-container.auto-width-slider.ovv-992.auto-width-slider_indent.dect-grid(js-featured-products-swiper)
-        .swiper-wrapper
-          +productCard("Men Pure-formance", "images2.jpg", "sale hit")
-          +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
-          +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
-          +productCard("Men Pure-formance Men's Aftershave", "images3.jpg")
-          +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "sale")
-          +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
-          +productCard("Men Pure-formance", "images2.jpg")
-          +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
-          +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
-          +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
-          +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
 
-        .swiper-pagination-small.swiper-pagination__auto-width-slider3
+    // TAB LINK
+    .tabs-link.tabs-link_indent
+      a(href="#tab-1").tabs-link__tag.tabs-link__tag_active Новинки
+      a(href="#tab-2").tabs-link__tag Хиты продаж
+
+    .wrap-tabs
+
+      // TAB 1
+      .auto-width-slider-wrap.auto-width-slider-wrap_indent.tab.tab_active#tab-1
+        .swiper-container.auto-width-slider.ovv-992.auto-width-slider_indent.dect-grid(js-featured-products-swiper)
+          .swiper-wrapper
+            +productCard("Men Pure-formance", "images2.jpg", "sale hit")
+            +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
+            +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+            +productCard("Men Pure-formance Men's Aftershave", "images3.jpg")
+            +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "sale")
+            +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
+            +productCard("Men Pure-formance", "images2.jpg")
+            +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
+            +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+            +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+            +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+
+          .swiper-pagination-small.swiper-pagination__featured-products-swiper
+
+      // TAB 2
+      .auto-width-slider-wrap.auto-width-slider-wrap_indent.tab#tab-2
+        .swiper-container.auto-width-slider.ovv-992.auto-width-slider_indent.dect-grid(js-featured-products-swiper2)
+          .swiper-wrapper
+            +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
+            +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+            +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "sale")
+            +productCard("Men Pure-formance Men's Aftershave", "images3.jpg")
+            +productCard("Men Pure-formance", "images2.jpg", "sale hit")
+            +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
+            +productCard("Men Pure-formance", "images2.jpg")
+            +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
+            +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+            +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+            +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+
+          .swiper-pagination-small.swiper-pagination__featured-products-swiper2
 
 // PROMOS
 mixin promoCard(image, time, text)

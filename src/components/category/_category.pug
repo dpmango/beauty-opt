@@ -1,2 +1,50 @@
 include ../horizontalMenu/_menu
 
+// BREADCRUMBS
+section.section_indent-small.section_negative-position-t20.hidden-768
+  .container
+    ul.breadcrumbs
+      li
+        a(href="#") Главная
+      li
+        a(href="#") Волосы
+      li
+        a(href="#") Окрашивание и тонирование
+      li
+        a(href="#") Восстановление и сохранение здоровья волос
+
+section.section_indent
+  .container
+    .wrap-category
+      .wrap-filters.wrap-filters_indent
+        form.filters-form
+          .filters-form__row.filters-form__row_indent
+            span.filters-form__title.filters-form__title_indent Выбранные фильтры
+            ul.filters-form__selected-filters.filters-form__selected-filters_indent
+              li
+                = 'Olaplex'
+                +svgMono('close')
+              li
+                = 'Восстановление'
+                +svgMono('close')
+            button.filters-form__btn Очистить фильтр
+          .filters-form__row.filters-form__row_indent
+            span.filters-form__spoiler-head.filters-form__spoiler-head_indent
+              +svgMono('arrowBottom')
+              = 'Назначение'
+            .filters-form__spoiler-body.filters-form__spoiler-body_indent
+              div 123
+              div 123
+              div 123
+              div 123
+          .filters-form__row.filters-form__row_indent
+            span.filters-form__spoiler-head.filters-form__spoiler-head_indent
+              +svgMono('arrowBottom')
+              = 'Назначение'
+            .filters-form__spoiler-body.filters-form__spoiler-body_indent
+              div 123
+              div 123
+              div 123
+              div 123
+      .wrap-category-products
+        span 123
