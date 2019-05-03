@@ -22,6 +22,15 @@
         }
       });
 
+      $(document).on('click', '.catalog-view__select li', function () {
+        $(this)
+          .parents('.catalog-view__select')
+          .find('li')
+          .removeClass('catalog-view__active');
+        $(this)
+          .addClass('catalog-view__active');
+      });
+
     },
   };
 })(jQuery, window.APP);

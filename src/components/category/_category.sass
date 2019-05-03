@@ -17,6 +17,8 @@
 .filters-form
   padding: 20px
   border: 1px solid #E8E8E8
+  &_indent
+    margin-bottom: 40px
   &__row
     &_indent
       padding-bottom: 20px
@@ -86,3 +88,87 @@
   &__spoiler-body
     &_indent
       margin-top: 20px
+
+.slider-price
+  &__row
+    display: flex
+    justify-content: space-between
+    &_indent
+      margin-bottom: 20px
+  &__input
+    width: 80px
+    height: 42px
+    border: 2px solid #E1F0f2
+    border-radius: 4px
+    padding: 0 20px
+  &__price-slider
+    width: 100%
+    height: 2px
+    background-color: #CAEDF1
+    .ui-widget-header
+      background-color: #60B7BF
+    .ui-state-default
+      cursor: pointer
+      top: -10px
+      width: 20px
+      height: 20px
+      background-color: #fff
+      border-radius: 50%
+      border: 2px solid #60B7BF
+
+.wrap-checkbox
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  &_indent
+    margin-bottom: 10px
+
+.inner-category-products-setting
+  display: flex
+  justify-content: space-between
+
+.selectric-sorting-products
+  height: 42px
+  width: 244px
+
+.inner-catalog-view
+  display: flex
+  align-items: center
+  height: 42px
+
+.catalog-view
+  display: flex
+  align-items: center
+  svg
+    transition: $transitionSpeed
+  &__name
+    &_indent
+      margin-right: 20px
+  &__select
+    display: flex
+    border-radius: 4px
+    overflow: hidden
+    border: 2px solid #E1F0F2
+    margin: 0
+    padding: 0
+    li
+      display: flex
+      align-items: center
+      justify-content: center
+      color: #323232
+      width: 42px
+      height: 38px
+      cursor: pointer
+      transition: $transitionSpeed
+  &__active
+    background-color: #E1F0F2
+    svg
+      color: #26A1AD
+
+.grid-category-products
+  display: grid
+  justify-content: space-between
+  grid-template-columns: repeat(4, 244px)
+  grid-row-gap: 20px
+  &_indent
+    margin-top: 20px

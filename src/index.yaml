@@ -6,4 +6,4 @@ PageList:
 - file: subdirectory.html
   ready: 100
 - file: category.html
-  ready: 1
+  ready: 40

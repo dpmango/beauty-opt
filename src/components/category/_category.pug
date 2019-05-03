@@ -13,11 +13,41 @@ section.section_indent-small.section_negative-position-t20.hidden-768
       li
         a(href="#") Восстановление и сохранение здоровья волос
 
+mixin productCard(name, image, tags)
+  .swiper-slide.product
+    .product__wrap-tag
+      if tags && tags.indexOf("sale") !== -1
+        span.product__tag.product__tag_yellow Распродажа
+      if tags && tags.indexOf("hit") !== -1
+        span.product__tag.product__tag_green Хит продаж
+    .product__img
+      img(src="img/"+image+"", alt="")
+    .product__wrap-text
+      span.product__brand.product_indent_b Aveda
+      a(href="#").link-text.product__name.product_indent_b!= name
+      .product__wrap.product_indent_b
+        span.product__old-price.product__old-price_indent_r 3 900 руб.
+        span.product__amount-discount - 280 руб.
+      span.product__price.product_indent_bx2 1 230 руб.
+      .product__wrap.product_indent_bx2
+        a(href="#").product__in-garbage.product__in-garbage_indent
+          +svgMono('basket')
+          +svgMono('addBasket')
+          .product__wrap-hint
+            span.product__hint-text Товар в вашей корзине
+        a(href="#").link-text.product__compare
+          +svgMono('comparison')
+          span Сравнить
+      .product__wrap
+        a(href="#").product__btn-bottom
+          +svgMono('questionMark')
+          span Купить по оптовой цене
+
 section.section_indent
   .container
     .wrap-category
       .wrap-filters.wrap-filters_indent
-        form.filters-form
+        .filters-form.filters-form_indent
           .filters-form__row.filters-form__row_indent
             span.filters-form__title.filters-form__title_indent Выбранные фильтры
             ul.filters-form__selected-filters.filters-form__selected-filters_indent
@@ -33,15 +63,100 @@ section.section_indent
               +svgMono('arrowBottom')
               = 'Назначение'
             .filters-form__spoiler-body.filters-form__spoiler-body_indent
-              div(ui-slider)
+              .slider-price
+                .slider-price__row.slider-price__row_indent
+                  input(type="text").slider-price__input
+                  input(type="text").slider-price__input
+                .slider-price__row.slider-price__row_indent
+                  div(ui-slider-price).slider-price__price-slider
+                .slider-price__row
+                  span.slider-price__price-min
+                  span.slider-price__price-max
           .filters-form__row.filters-form__row_indent
             span.filters-form__spoiler-head.filters-form__spoiler-head_indent
               +svgMono('arrowBottom')
               = 'Назначение'
             .filters-form__spoiler-body.filters-form__spoiler-body_indent
-              div 123
-              div 123
-              div 123
-              div 123
+              .wrap-checkbox.wrap-checkbox_indent
+                input#checkbox-1-1(type='checkbox' name='checkbox-1-1')
+                label(for='checkbox-1-1') Питание
+              .wrap-checkbox.wrap-checkbox_indent
+                input#checkbox-1-2(type='checkbox' name='checkbox-1-2')
+                label(for='checkbox-1-2') Восстановление
+              .wrap-checkbox.wrap-checkbox_indent
+                input#checkbox-1-3(type='checkbox' name='checkbox-1-3')
+                label(for='checkbox-1-3') Выпрямление
+              .wrap-checkbox
+                input#checkbox-1-4(type='checkbox' name='checkbox-1-4')
+                label(for='checkbox-1-4') Расглаживание
+          .filters-form__row.filters-form__row_indent
+            span.filters-form__spoiler-head.filters-form__spoiler-head_indent
+              +svgMono('arrowBottom')
+              = 'Бренд'
+            .filters-form__spoiler-body.filters-form__spoiler-body_indent
+              .wrap-checkbox.wrap-checkbox_indent
+                input#checkbox-2-1(type='checkbox' name='checkbox-2-1')
+                label(for='checkbox-2-1') Elizabeth Arden
+              .wrap-checkbox.wrap-checkbox_indent
+                input#checkbox-2-2(type='checkbox' name='checkbox-2-2')
+                label(for='checkbox-2-2') Olaplex
+              .wrap-checkbox.wrap-checkbox_indent
+                input#checkbox-2-3(type='checkbox' name='checkbox-2-3')
+                label(for='checkbox-2-3') NailLook
+              .wrap-checkbox
+                input#checkbox-2-4(type='checkbox' name='checkbox-2-4')
+                label(for='checkbox-2-4') Vegetable Beauty
+          button.filters-form__btn Очистить фильтр
+
+        .product.product-day
+          .product__wrap-tag
+            span.product__tag.product__tag_green Товар дня
+          .product__img.product-day__img_height
+            img(src="img/images1.jpg", alt="")
+          .product__wrap-text.product__wrap-text_border_b
+            span.product__brand.product_indent_b Aveda
+            a(href="#").link-text.product__name.product_indent_b Men Pure-formance Men's Aftershave
+            .product__wrap.product_indent_b
+              span.product__old-price.product__old-price_indent_r 3 900 руб.
+              span.product__amount-discount - 280 руб.
+            span.product__price 1 230 руб.
+          .product__wrap-text
+            .product__wrap
+              a(href="#").product__in-garbage.product__in-garbage_indent
+                +svgMono('basket')
+                +svgMono('addBasket')
+                .product__wrap-hint
+                  span.product__hint-text Товар в вашей корзине
+              a(href="").link-text.product__compare
+                +svgMono('comparison')
+                span Сравнить
+
       .wrap-category-products
-        span 123
+
+        .inner-category-products-setting
+          select(js-select).sorting-products
+            option(value="1") Сначала дешевые
+            option(value="2") Сначала дорогие
+            option(value="3") Доп. сортировка
+            option(value="4") Доп. сортировка
+          .catalog-view
+            span.catalog-view__name.catalog-view__name_indent Вид каталога
+            ul.catalog-view__select
+              li
+                +svgMono('hardly')
+              li.catalog-view__active
+                +svgMono('grid')
+
+        .grid-category-products.grid-category-products_indent
+          +productCard("Men Pure-formance", "images2.jpg", "sale hit")
+          +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
+          +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+          +productCard("Men Pure-formance Men's Aftershave", "images3.jpg")
+          +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "sale")
+          +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
+          +productCard("Men Pure-formance", "images2.jpg")
+          +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
+          +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+          +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
+          +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+          +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")

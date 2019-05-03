@@ -70,7 +70,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.Validations.init();
       APP.Plugins.Progressbar.init();
       APP.Plugins.Teleport.init();
-      APP.Plugins.ui.init();
+      APP.Plugins.ui_slider.init();
       // APP.Plugins.Countdown.init();
       // APP.Plugins.FooterReveal.init();
     };
