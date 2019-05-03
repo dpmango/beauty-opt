@@ -1,9 +1,7 @@
 ProjectTitle: Beauty-opt
 
 PageList:
-- file: homepage.html
-  ready: 100
-- file: subdirectory.html
-  ready: 100
-- file: category.html
-  ready: 40
+  - file: homepage.html
+    ready: 100
+  - file: subdirectory.html
+    ready: 100
