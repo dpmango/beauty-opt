@@ -5,5 +5,5 @@ PageList:
   ready: 100
 - file: subdirectory.html
   ready: 100
-# - file: category.html
-#   ready: 1
+- file: category.html
+  ready: 1
