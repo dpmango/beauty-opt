@@ -1,0 +1,18 @@
++r(1439)
+  .grid-category-products
+    grid-template-columns: repeat(3, 244px)
+    .product
+      &:nth-child(n+10)
+        display: none
+
++r(1080)
+  .grid-category-products
+    grid-template-columns: repeat(2, 244px)
+    .product
+      &:nth-child(n+7)
+        display: none
+
++r($lg)
+  .grid-category-products
+    .product
+      border-right: 1px solid #EBEBEB

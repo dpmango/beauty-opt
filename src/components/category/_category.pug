@@ -13,8 +13,13 @@ section.section_indent-small.section_negative-position-t20.hidden-768
       li
         a(href="#") Восстановление и сохранение здоровья волос
 
+// H1 TITLE
+section.section_indent
+  .container
+    h1.h1-title Восстановление и сохранение здоровья волос
+
 mixin productCard(name, image, tags)
-  .swiper-slide.product
+  .product
     .product__wrap-tag
       if tags && tags.indexOf("sale") !== -1
         span.product__tag.product__tag_yellow Распродажа
@@ -65,8 +70,8 @@ section.section_indent
             .filters-form__spoiler-body.filters-form__spoiler-body_indent
               .slider-price
                 .slider-price__row.slider-price__row_indent
-                  input(type="text").slider-price__input
-                  input(type="text").slider-price__input
+                  input(type="text").slider-price__input-min
+                  input(type="text").slider-price__input-max
                 .slider-price__row.slider-price__row_indent
                   div(ui-slider-price).slider-price__price-slider
                 .slider-price__row
@@ -160,3 +165,30 @@ section.section_indent
           +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
           +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
           +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
+
+        .pagination-page.pagination-page_indent
+          span.pagination-page__numb-all-page.pagination-page__numb-all-page_indent
+            = 'Страница '
+            b.pagination-page__current-p 1
+            = ' из '
+            b.pagination-page__all-p 47
+          .pagination-page__main
+            .pagination-page__prev
+              +svgMono('arrowBottom')
+            ul.pagination-page__numbs
+              li
+                a(href="#").pagination-page__active 1
+              li
+                a(href="#") 2
+              li
+                a(href="#") 3
+              li
+                a(href="#").pagination-page__no-event ...
+              li
+                a(href="#") 45
+              li
+                a(href="#") 46
+              li
+                a(href="#") 47
+            .pagination-page__next
+              +svgMono('arrowBottom')
