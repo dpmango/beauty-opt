@@ -13,6 +13,13 @@ section.section_indent-small.section_negative-position-t20.hidden-768
       li
         a(href="#") Восстановление и сохранение здоровья волос
 
+// MOBILE BUTTON BACK
+section.section_indent-small.section_negative-position-t28.hidden-769-b
+  .container
+    a(href="#").btn-back
+      +svgMono('arrowBottom')
+      = 'Уход за волосами'
+
 // H1 TITLE
 section.section_indent
   .container
@@ -113,7 +120,7 @@ section.section_indent
                 label(for='checkbox-2-4') Vegetable Beauty
           button.filters-form__btn Очистить фильтр
 
-        .product.product-day
+        .product.product-day.hidden-768
           .product__wrap-tag
             span.product__tag.product__tag_green Товар дня
           .product__img.product-day__img_height
@@ -144,7 +151,7 @@ section.section_indent
             option(value="2") Сначала дорогие
             option(value="3") Доп. сортировка
             option(value="4") Доп. сортировка
-          .catalog-view
+          .catalog-view.hidden-768
             span.catalog-view__name.catalog-view__name_indent Вид каталога
             ul.catalog-view__select
               li
@@ -180,11 +187,11 @@ section.section_indent
                 a(href="#").pagination-page__active 1
               li
                 a(href="#") 2
-              li
+              li.hidden-480
                 a(href="#") 3
               li
                 a(href="#").pagination-page__no-event ...
-              li
+              li.hidden-480
                 a(href="#") 45
               li
                 a(href="#") 46

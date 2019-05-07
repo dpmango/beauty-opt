@@ -1,0 +1,265 @@
+////////////
+//// card
+////////////
+
+.wrap-card
+  display: flex
+  &__left
+    flex-grow: 1
+    width: 1px
+    &_indent
+      margin-right: 40px
+  &__right
+    flex-shrink: 0
+    width: 528px
+
+.card-info
+  display: flex
+  flex-wrap: wrap
+  border: 1px solid #E1F0F2
+  border-bottom: none
+  &__row
+    width: 100%
+    padding: 40px
+    border-bottom: 1px solid #E1F0F2
+
+.volume-color
+  &_indent
+    &_r10
+      margin-right: 10px
+    &_r40
+      margin-right: 40px
+    &_b10
+      margin-bottom: 10px
+  &__wrap
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    &_indent
+      margin-bottom: 10px
+  &__row
+    &_indent
+      margin-bottom: 20px
+  &__volumes
+    display: flex
+    flex-wrap: wrap
+    a
+      padding: 10px 30px
+      border: 2px solid #E1F0F2
+      border-radius: 30px
+      margin: 0 20px 20px 0
+      transition: $transitionSpeed
+      &:hover
+        background-color: #E1F0F2
+    &_active
+      background-color: #E1F0F2
+  &__colors
+    display: flex
+    flex-wrap: wrap
+    a
+      position: relative
+      width: 42px
+      height: 42px
+      margin: 0 20px 20px 0
+      border-radius: 50%
+      border: 2px solid #E1F0F2
+      box-shadow: inset 0px 0px 0px 2px #fff
+      transition: $transitionSpeed
+      &:hover
+        border-color: #26A1AD
+        .volume-color__hint
+          opacity: 1
+          visibility: visible
+    &_active
+      border-color: #26A1AD !important
+    &_aths-special
+      background-color: #EFE8D6
+    &_spicy-mustard
+      background-color: #71780C
+    &_sandstone
+      background-color: #796B60
+  &__hint
+    position: absolute
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    top: calc(100% + 9px)
+    left: -2px
+    padding: 10px
+    border-radius: 4px
+    color: #fff
+    background-color: rgba(0, 0, 0, 0.7)
+    transition: $transitionSpeed
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 16px
+      transform: translate(0, -100%)
+      +arr(11, 4, rgba(0, 0, 0, 0.7), t)
+  &__wrap-price
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+  &__price-old
+    text-decoration-line: line-through
+    color: #B7B7B7
+    &_indent
+      margin-right: 15px
+  &__price-discount
+    padding: 3px 10px
+    font-size: 12px
+    line-height: 18px
+    border-radius: 2px
+    background-color: #FFF200
+  &__price-current
+    display: block
+    font-size: 22px
+    line-height: 32px
+    font-weight: 600
+  &__line-availability-all
+    position: relative
+    overflow: hidden
+    width: 60px
+    height: 6px
+    border-radius: 4px
+    background-color: #E1F0F2
+  &__line-availability-current
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 65%
+    background-color: #FFC328
+  &__wrap-hint
+    display: flex
+    color: #39B993
+  &__point
+    font-weight: 600
+    color: #39B993
+  &__delivery
+    font-weight: 600
+
+.about-product
+  &__row
+    &_indent
+      margin-bottom: 20px
+    &_indent40
+      margin-bottom: 40px
+  &__wrap
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    &_indent
+      margin-bottom: 10px
+  &__vendor-code
+    color: #B7B7B7
+  &__wrap-description
+    span
+      display: block
+      overflow: hidden
+      font-size: 16px
+      line-height: 24px
+      height: calc(24px * 3)
+  &__open
+    display: flex
+    align-items: center
+    color: #39B993
+    font-size: 12px
+    line-height: 18px
+    font-weight: 600
+    svg
+      width: 13.33px
+      height: 13.33px
+      margin-right: 10px
+    &_indent
+      margin-top: 20px
+  &__height-auto
+    height: auto !important
+  &__wrap-specifications
+    ul
+      display: block
+      margin: 0
+      padding: 0
+      li
+        display: block
+        font-size: 16px
+        line-height: 24px
+        margin-top: 10px
+        &:first-child
+          margin-top: 0px
+    &_hidden
+      display: none !important
+
+.advantages
+  &__list
+    margin: 0
+    padding: 0
+  &__item
+    display: flex
+    align-items: center
+    &_indent
+      margin-top: 20px
+  &__svg
+    svg
+      width: 48px
+      height: 48px
+      margin-right: 20px
+  &__text
+    line-height: 23px
+
+.wrap-card-img
+  display: flex
+  height: 452px
+  &_indent
+    margin-bottom: 40px
+  &__left
+    width: 122px
+    flex-shrink: 0
+    &_indent
+      margin-right: 40px
+  &__right
+    position: relative
+    width: 1px
+    flex-grow: 1
+    height: 100%
+
+.gallery-thumbs
+  height: 100%
+  &__item
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    width: 100%
+    height: 98px
+    transition: $transitionSpeed
+    img
+      max-width: 100%
+      max-height: 100%
+  .swiper-slide-thumb-active
+    border: 2px solid #39B993
+    border-radius: 4px
+
+
+.gallery-main
+  height: 100%
+  border: 1px solid #E1F0F2
+  &__item
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+    img
+      max-width: 100%
+      max-height: 100%
+  .swiper-pagination-small
+    z-index: 1
+    top: calc(100% - 40px)
+  .product__wrap-tag
+    padding: 20px
+
+.visible-768
+  display: none

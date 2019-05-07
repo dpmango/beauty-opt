@@ -6,4 +6,10 @@ PageList:
 - file: subdirectory.html
   ready: 100
 - file: category.html
-  ready: 40
+  ready: 90
+- file: card.html
+  ready: 90
+- file: basket.html
+  ready: 50
+- file: checkout.html
+  ready: 1

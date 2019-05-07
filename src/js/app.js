@@ -81,6 +81,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Components.Homepage.init();
       APP.Components.Menu.init();
       APP.Components.Category.init();
+      APP.Components.Card.init();
     };
 
     return app;

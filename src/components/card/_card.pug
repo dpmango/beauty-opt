@@ -1,0 +1,230 @@
+include ../horizontalMenu/_menu
+
+// BREADCRUMBS
+section.section_indent-small.section_negative-position-t20.hidden-768
+  .container
+    ul.breadcrumbs
+      li
+        a(href="#") Главная
+      li
+        a(href="#") Волосы
+      li
+        a(href="#") Окрашивание и тонирование
+
+// MOBILE BUTTON BACK
+section.section_indent-small.section_negative-position-t28.hidden-769-b
+  .container
+    a(href="#").btn-back
+      +svgMono('arrowBottom')
+      = 'Уход за волосами'
+
+// H1 TITLE
+section.section_indent
+  .container
+    h1.h1-title Men Pure-formance Men's Aftershave
+
+mixin productCard(name, image, tags)
+  .swiper-slide.product
+    .product__wrap-tag
+      if tags && tags.indexOf("sale") !== -1
+        span.product__tag.product__tag_yellow Распродажа
+      if tags && tags.indexOf("hit") !== -1
+        span.product__tag.product__tag_green Хит продаж
+    .product__img
+      img(src="img/"+image+"", alt="")
+    .product__wrap-text
+      span.product__brand.product_indent_b Aveda
+      a(href="#").link-text.product__name.product_indent_b!= name
+      .product__wrap.product_indent_b
+        span.product__old-price.product__old-price_indent_r 3 900 руб.
+        span.product__amount-discount - 280 руб.
+      span.product__price.product_indent_bx2 1 230 руб.
+      .product__wrap.product_indent_bx2
+        a(href="#").product__in-garbage.product__in-garbage_indent
+          +svgMono('basket')
+          +svgMono('addBasket')
+          .product__wrap-hint
+            span.product__hint-text Товар в вашей корзине
+        a(href="#").link-text.product__compare
+          +svgMono('comparison')
+          span Сравнить
+      .product__wrap
+        a(href="#").product__btn-bottom
+          +svgMono('questionMark')
+          span Купить по оптовой цене
+
+section.section_indent.ovh
+  .container
+    .wrap-card
+      .wrap-card__left.wrap-card__left_indent
+        .wrap-card-img.wrap-card-img_indent
+          .wrap-card-img__left.wrap-card-img__left_indent
+            .swiper-container.gallery-thumbs(js-gallery-thumbs)
+              .swiper-wrapper
+                .swiper-slide.gallery-thumbs__item
+                  img(src="img/card-smal1.jpg", alt="")
+                .swiper-slide.gallery-thumbs__item
+                  img(src="img/card-smal2.jpg", alt="")
+                .swiper-slide.gallery-thumbs__item
+                  img(src="img/card-smal1.jpg", alt="")
+                .swiper-slide.gallery-thumbs__item
+                  img(src="img/card-smal2.jpg", alt="")
+          .wrap-card-img__right
+            .swiper-container.gallery-main(js-gallery-main)
+              .swiper-wrapper
+                .swiper-slide.gallery-main__item
+                  .product__wrap-tag
+                    span.product__tag.product__tag_yellow Распродажа
+                    span.product__tag.product__tag_green Хит продаж
+                  img(src="img/card1.jpg", alt="")
+                .swiper-slide.gallery-main__item
+                  .product__wrap-tag
+                    span.product__tag.product__tag_yellow Распродажа
+                  img(src="img/card1.jpg", alt="")
+                .swiper-slide.gallery-main__item
+                  img(src="img/card1.jpg", alt="")
+                .swiper-slide.gallery-main__item
+                  img(src="img/card1.jpg", alt="")
+
+              .swiper-pagination-small.swiper-pagination__gallery-main
+            .swiper-button-prev.swiper-button-prev__gallery-main
+              +svgMono('arrowBottom')
+            .swiper-button-next.swiper-button-next__gallery-main
+              +svgMono('arrowBottom')
+              
+        .wrap-similar-products.hidden-1200(js-teleport data-teleport-to="categories-mobile" data-teleport-condition="<1201")
+          h2.h2-title Похожие товары
+          .auto-width-slider-wrap.auto-width-slider-wrap_indent-small
+            .swiper-container.auto-width-slider.ovv-992.auto-width-slider_indent(js-auto-width-slider)
+              .swiper-wrapper
+                +productCard("Men Pure-formance", "images2.jpg", "sale hit")
+                +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
+                +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+                +productCard("Men Pure-formance Men's Aftershave", "images3.jpg")
+                +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "sale")
+                +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
+                +productCard("Men Pure-formance", "images2.jpg")
+                +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
+                +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
+                +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
+
+              .swiper-pagination-small.swiper-pagination__auto-width-slider
+            .swiper-button-prev.swiper-button-prev__auto-width-slider
+              +svgMono('arrowBottom')
+            .swiper-button-next.swiper-button-next__auto-width-slider
+              +svgMono('arrowBottom')
+
+      .wrap-card__right
+        .card-info
+          .card-info__row
+            .volume-color
+              .volume-color__row.volume-color__row_indent
+                h4.h4-title Объем и цвет
+              .volume-color__volumes
+                a(href="#").volume-color__volumes_active 350 мл.
+                a(href="#") 250 мл.
+              .volume-color__colors
+                a(href="#").volume-color__colors_aths-special.volume-color__colors_active
+                  .volume-color__hint Красный
+                a(href="#").volume-color__colors_spicy-mustard
+                  .volume-color__hint Оранжевый
+                a(href="#").volume-color__colors_sandstone
+                  .volume-color__hint Оранжевый
+              .volume-color__row.volume-color__row_indent
+                .volume-color__wrap.volume-color__wrap_indent
+                  span.volume-color__price-old.volume-color__price-old_indent 3 900 руб.
+                  span.volume-color__price-discount - 280 руб.
+                span.volume-color__price-current 3 870 руб.
+              .volume-color__row.volume-color__row_indent
+                .volume-color__wrap
+                  span.volume-color_indent_r10 Наличие на складе
+                  .volume-color__line-availability-all.volume-color_indent_r10
+                    .volume-color__line-availability-current
+                  a(href="#").volume-color__wrap-hint
+                    +svgMono('questionMark')
+              .volume-color__row.volume-color__row_indent
+                .volume-color__wrap
+                  a(href="#").btn-add-cart.volume-color_indent_r40
+                    +svgMono('basket')
+                    +svgMono('addBasket')
+                    = 'Добавить в корзину'
+                  a(href="#").btn-compare.volume-color__mob-indent
+                    +svgMono('comparison')
+                    = 'Сравнить'
+              .volume-color__row
+                .volume-color__wrap.volume-color_indent_b10
+                  span.volume-color_indent_r10
+                    = 'Бонусные баллы'
+                    span.hidden-480  за покупку
+                    = ': '
+                    span.volume-color__point +28 баллов
+                  a(href="#").volume-color__wrap-hint
+                    +svgMono('questionMark')
+                .volume-color__wrap
+                  span
+                    = 'Доставка по Воронежу: '
+                    span.volume-color__delivery Бесплатно
+          .card-info__row
+            .about-product
+              .about-product__row.about-product__row_indent
+                span.about-product__vendor-code Артикул: ТРА129-092
+              .about-product__row.about-product__row_indent
+                h4.h4-title О товаре
+              .about-product__row.about-product__row_indent40
+                .about-product__wrap-description
+                  span Сохраняет цвет, противостоит его вымыванию. Разработанный с маслом сладкого миндаля и жемчужным порошком, этот шампунь закрепляет цвет и поддерживает его интенсивность. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam veniam, illo delectus ratione cum possimus optio! Fuga veritatis, quam ipsum ut itaque blanditiis. Quaerat earum debitis non minus corrupti dicta?
+                  a(href="#").about-product__open.about-product__open_indent.about-product__open-description
+                   +svgMono('plus')
+                   = 'Читать полное описание'
+              .about-product__row
+                .about-product__wrap-specifications
+                  ul
+                    li
+                      b Объем: 
+                      = '250 мл.'
+                    li
+                      b Тип: 
+                      = 'Для окрашенных волос'
+                    li
+                      b Бренд: 
+                      = 'American Crew'
+                    li
+                      b Тип кожи головы: 
+                      = 'Жирная'
+                    li
+                      b Пол: 
+                      = 'Мужской'
+                    li.about-product__wrap-specifications_hidden
+                      b Пол: 
+                      = 'Мужской'
+                    li.about-product__wrap-specifications_hidden
+                      b Пол: 
+                      = 'Мужской'
+                  a(href="#").about-product__open.about-product__open_indent.about-product__open-specifications
+                   +svgMono('plus')
+                   = 'Смотреть все характеристики'
+          .card-info__row
+            .advantages
+              h4.h4-title.hidden-1200 Покупать у нас выгодно
+              h4.h4-title.visible-768 Покупать у нас выгодно
+              ul.advantages__list
+                li.advantages__item.advantages__item_indent
+                  .advantages__svg
+                    +svgColor('boxTime')
+                  span.advantages__text Курьерская доставка по Воронежу на следующий день
+                li.advantages__item.advantages__item_indent
+                  .advantages__svg
+                    +svgColor('discount')
+                  span.advantages__text Акции и скидки круглый год, возврщение % от покупок бонусами
+                li.advantages__item.advantages__item_indent
+                  .advantages__svg
+                    +svgColor('listStar')
+                  span.advantages__text Официальные диллеры, сертифицированный товар
+                li.advantages__item.advantages__item_indent
+                  .advantages__svg
+                    +svgColor('cream')
+                  span.advantages__text Товарный ассортимент из более чем 24 000 позиций
+
+section.section_indent.ovh.hidden-1201-b
+  .container
+    div(data-teleport-target="categories-mobile")

@@ -1,7 +1,7 @@
 //////////
 // SLIDERS
 //////////
-(function($, APP) {
+(function ($, APP) {
   APP.Plugins.Sliders = {
     data: {
       swipers: [],
@@ -12,15 +12,15 @@
         },
       },
     },
-    init: function() {
+    init: function () {
       this.initSwipers();
       this.initResponsiveSwipers();
       this.listenResize();
     },
-    listenResize: function() {
+    listenResize: function () {
       _window.on('resize', debounce(this.initResponsiveSwipers.bind(this), 200));
     },
-    initSwipers: function() {
+    initSwipers: function () {
 
       new Swiper('[js-main-slider]', {
         navigation: {
@@ -36,7 +36,7 @@
           delay: 4000,
         },
         on: {
-          slideChange: function() {
+          slideChange: function () {
             var curSlide = this.realIndex; // swiper current slide
             APP.Plugins.Progressbar.animateBullets('mainSlider', curSlide);
           },
@@ -88,14 +88,35 @@
           el: '.swiper-pagination-small.swiper-pagination__promotions-specials',
         },
       });
+
+      var galleryThumbs = new Swiper('[js-gallery-thumbs]', {
+        slidesPerView: 'auto',
+        direction: 'vertical',
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+      });
+
+      new Swiper('[js-gallery-main]', {
+        thumbs: {
+          swiper: galleryThumbs
+        },
+        navigation: {
+          nextEl: '.swiper-button-next.swiper-button-next__gallery-main',
+          prevEl: '.swiper-button-prev.swiper-button-prev__gallery-main',
+        },
+        pagination: {
+          el: '.swiper-pagination-small.swiper-pagination__gallery-main',
+        },
+      });
+
     },
-    initResponsiveSwipers: function() {
+    initResponsiveSwipers: function () {
       var featuredProducts = '[js-featured-products-swiper]';
       if ($(featuredProducts).length > 0) {
         this.initFeaturedProductsSwiper(featuredProducts);
       }
     },
-    initFeaturedProductsSwiper: function(selector) {
+    initFeaturedProductsSwiper: function (selector) {
       var dataObj = this.data.responsiveSwipers.featuredProducts;
 
       if ($(selector).length > 0) {
@@ -137,7 +158,7 @@
         }
       }
     },
-    destroy: function() {
+    destroy: function () {
       // ... code ...
     },
   };

@@ -5,16 +5,25 @@ $sprite: (
 		width: 237px,
 		height: 58px,
 		total-width: 237px,
-		total-height: 96px,
+		total-height: 132px,
 		image: '../img/sprite.png'
 	),
 	logoSmall: (
-		offset-x: 0px,
+		offset-x: -74px,
 		offset-y: -68px,
 		width: 123px,
 		height: 28px,
 		total-width: 237px,
-		total-height: 96px,
+		total-height: 132px,
+		image: '../img/sprite.png'
+	),
+	map: (
+		offset-x: 0px,
+		offset-y: -68px,
+		width: 64px,
+		height: 64px,
+		total-width: 237px,
+		total-height: 132px,
 		image: '../img/sprite.png'
 	),
 );
@@ -78,4 +87,7 @@ $sprite: (
 	}
 	.icon-logoSmall {
 		@include sprite(logoSmall)
+	}
+	.icon-map {
+		@include sprite(map)
 	}

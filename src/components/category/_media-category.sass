@@ -7,7 +7,7 @@
 
 +r(1080)
   .grid-category-products
-    grid-template-columns: repeat(2, 244px)
+    grid-template-columns: repeat(2, calc(50% - 20px))
     .product
       &:nth-child(n+7)
         display: none
@@ -16,3 +16,24 @@
   .grid-category-products
     .product
       border-right: 1px solid #EBEBEB
+  .grid-category-products
+    grid-template-columns: repeat(2, calc(50% - 10px))
+
++r($md)
+  .wrap-category
+    flex-wrap: wrap
+  .wrap-filters
+    width: 100%
+  .wrap-filters_indent
+    margin-right: 0
+  .selectric-sorting-products
+    width: 100%
+
++r(480)
+  .grid-category-products
+    grid-template-columns: repeat(1, 100%)
+    .product
+      &:nth-child(n+4)
+        display: none
+  .hidden-480
+    display: none !important

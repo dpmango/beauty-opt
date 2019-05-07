@@ -1,0 +1,153 @@
+include ../horizontalMenu/_menu
+
+section.section_indent-small.section_negative-position-t20
+  .container
+    .progress-basket
+      .progress-basket__item.progress-basket__item_active Ваша корзина
+      .progress-basket__item.progress-basket__item_active Оформление заказа
+      .progress-basket__item Подтверждение заказа и оплата
+
+// H1 TITLE
+section.section_indent
+  .container
+    h1.h1-title Оформление заказа
+
+section.section_indent
+  .container
+    .wrap-basket
+      .wrap-basket__left.wrap-basket__left_indent
+        .checkout-row.checkout-row_indent
+          .wrap-warning
+            +svgMono('warning')
+            span.wrap-warning__text
+              = 'Если вы уже оформляли заказы до этого, то '
+              a(href="#").wrap-warning__link авторизуйтесь на сайте
+              = ', чтобы мы начислили баллы за покупку'
+        .checkout-row.checkout-row_indent
+          .wrap-form
+            .wrap-form__row.wrap-form__row_indent
+              h2.h2-title Личные данные
+            .wrap-form__row.wrap-form__row_indent
+              span.wrap-form__title-input.wrap-form__title-input_indent ФИО плательщика
+              input(type="text").wrap-form__input
+            .wrap-form__row.wrap-form__row_indent
+              span.wrap-form__title-input.wrap-form__title-input_indent Электронная почта
+              input(type="email").wrap-form__input
+            .wrap-form__row.wrap-form__row_indent
+              span.wrap-form__title-input.wrap-form__title-input_indent Контактный телефон
+              input(type="tel").wrap-form__input
+            .wrap-form__row.wrap-form__row_indent
+              .wrap-form__checkbox
+                input(type="checkbox", name="checkbox-1-1", checked="checked")#checkbox-1-1
+                label(for="checkbox-1-1") Я не являюсь получателем
+            .wrap-form__row
+              span.wrap-form__title-input.wrap-form__title-input_indent ФИО получателя
+              input(type="text").wrap-form__input
+        .checkout-row.checkout-row_indent
+          .wrap-form
+            .wrap-form__row.wrap-form__row_indent
+              h2.h2-title Где и как вы хотите получить заказ?
+            .wrap-form__row.wrap-form__row_indent
+              .top-menu__delivery
+                +svgMono('delivery')
+                = 'Ваш город доставки: '
+                a(
+                  href='#popap-select-city',
+                  data-fancybox
+                ).f-600.link-text
+                  = 'Воронеж'
+            .wrap-form__row.wrap-form__row_indent
+              .wrap-form__text Варианты доставки формируются в зависимости от выбранного города и если вы из другого региона, то выберите свой город из списка.
+            .wrap-form__row.wrap-form__row_indent
+              .wrap-form__select-delivery
+                .wrap-form__delivery-select.wrap-form__delivery-select_active
+                  .wrap-form__radio.wrap-form__radio_indent
+                  .wrap-form__wrap-text
+                    span.wrap-form__text-big.wrap-form__text-big_indent Самовывоз со склада
+                    span.wrap-form__text-gray.wrap-form__text-gray_indent Забрать товар со склада самостоятельно
+                    span.wrap-form__text-main Стоимость: бесплатно
+                .wrap-form__delivery-select
+                  .wrap-form__radio.wrap-form__radio_indent
+                  .wrap-form__wrap-text
+                    span.wrap-form__text-big.wrap-form__text-big_indent СДЭК (Доставка курьером)
+                    span.wrap-form__text-gray.wrap-form__text-gray_indent Доставка заказа курьером компании СДЭК
+                    span.wrap-form__text-main
+                      = 'Стоимость: 320 руб.'
+                      br
+                      = 'Срок: 2-4 дня'
+                .wrap-form__delivery-select
+                  .wrap-form__radio.wrap-form__radio_indent
+                  .wrap-form__wrap-text
+                    span.wrap-form__text-big.wrap-form__text-big_indent СДЭК (Самовывоз)
+                    span.wrap-form__text-gray.wrap-form__text-gray_indent Доставка заказа в один из пунктов самовывоза компании СДЭК
+                    span.wrap-form__text-main.wrap-form__text-main_indent
+                      = 'Стоимость: 320 руб.'
+                      br
+                      = 'Срок: 2-4 дня'
+                    a(href="#").wrap-form__link Выбрать пункт самовывоза
+            .wrap-form__row.wrap-form__row_indent
+              .wrap-form__warehouse-pickup
+                i.icon.icon-map
+                .wrap-form__warehouse-pickup-col.wrap-form__warehouse-pickup-col_indent_b
+                  h4.h4-title.wrap-form__warehouse-pickup-col_indent Склад самовывоза
+                  span.wrap-form__warehouse-pickup-col_indent10 г. Воронеж, ул. Революции 1905 года 33а
+                  span Время работы: 10:00 - 19:00
+                span.wrap-form__vertical-center
+                  +svgMono('warning')
+                  = 'Вы можете забрать заказ 12.11.2018 и в течение 3х дней'
+        .checkout-row.checkout-row_indent
+          .wrap-form
+            .wrap-form__row.wrap-form__row_indent
+              h2.h2-title Где и как вы хотите получить заказ?
+            .wrap-form__row.wrap-form__row_indent.wrap-form__row.wrap-form__row_indent
+              .wrap-form__select-delivery
+                .wrap-form__delivery-select
+                  .wrap-form__radio.wrap-form__radio_indent
+                  .wrap-form__wrap-text
+                    span.wrap-form__text-big.wrap-form__text-big_indent Наличными при получении
+                    span.wrap-form__text-gray.wrap-form__text-gray_indent Наличными курьеру при получении
+                .wrap-form__delivery-select
+                  .wrap-form__radio.wrap-form__radio_indent
+                  .wrap-form__wrap-text
+                    span.wrap-form__text-big.wrap-form__text-big_indent Оплата по карте
+                    span.wrap-form__text-gray.wrap-form__text-gray_indent Онлайн оплата по картами Visa и Mastercard
+                .wrap-form__delivery-select.wrap-form__delivery-select_active
+                  .wrap-form__radio.wrap-form__radio_indent
+                  .wrap-form__wrap-text
+                    span.wrap-form__text-big.wrap-form__text-big_indent Оплата с расчетного счета юр. лица
+                    span.wrap-form__text-gray.wrap-form__text-gray_indent Оплата по выставленному счету
+
+      .wrap-basket__righr
+        .checkout-info
+          .checkout-info__row.checkout-info__row_indent
+            .checkout-info__name-big.checkout-info__name-big_indent Сумма заказа:
+            .checkout-info__price 6 360 руб.
+          .checkout-info__row.checkout-info__row_indent
+            .checkout-info__wrap.checkout-info__wrap_indent
+              .checkout-info__wrap-hint
+                +svgMono('questionMark')
+              .checkout-info__wrap-text
+                .checkout-info__name Доставка по Воронежу:
+                .checkout-info__text Бесплатно
+          .checkout-info__row.checkout-info__row_indent
+            .checkout-info__wrap.checkout-info__wrap_indent
+              .checkout-info__wrap-text
+                .checkout-info__name Всего товаров:
+                .checkout-info__text 3 шт.
+          .checkout-info__row.checkout-info__row_indent
+            .checkout-info__wrap.checkout-info__wrap_indent
+              .checkout-info__wrap-hint
+                +svgMono('questionMark')
+                .checkout-info__hint
+                  = 'Бонусы начисляются согласно '
+                  a(href="#") правилам бонусной программы
+              .checkout-info__wrap-text
+                .checkout-info__name Бонусные баллы:
+                .checkout-info__text.checkout-info__green + 173 балла
+          .checkout-info__row.checkout-info__row_indent
+            a(href="#").btn-form.checkout-info__all-w Оформить заказ
+          .checkout-info__row
+            input(type="text", placeholder="Промокод").checkout-info__promo-code.checkout-info__promo-code_indent
+            span.checkout-info__text-small
+              = 'Вы можете воспользоваться промокодом для получения скидки. Пожалуйста, ознакомьтесь с '
+              a(href="#").checkout-info__link правилами применения промокодов.
