@@ -10,6 +10,8 @@ PageList:
 - file: card.html
   ready: 90
 - file: basket.html
-  ready: 50
+  ready: 70
 - file: checkout.html
-  ready: 1
+  ready: 70
+- file: order-successfully-issued.html
+  ready: 70

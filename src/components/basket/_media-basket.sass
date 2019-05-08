@@ -1,0 +1,59 @@
++r($xl)
+  .wrap-basket__righr
+    width: 290px
+  .wrap-basket__left_indent
+    margin-right: 30px
+
++r($lg)
+  .wrap-basket
+    flex-wrap: wrap
+    &__left
+      width: 100%
+      &_indent
+        margin-right: 0
+        margin-bottom: 40px
+    &__righr
+      width: 100%
+  .hidden-992
+    display: none !important
+  .mobile-mt-20
+    margin-top: -20px
+
++r($md)
+  .your-cart
+    &__row
+      padding: 0
+      flex-wrap: wrap
+      &_bd
+        border: none
+    &__img
+      padding: 20px
+      width: calc(87.33px + 40px)
+      height: calc(66.67px + 40px)
+    &__wrap-text
+      padding: 20px 20px 20px 0
+      width: min-content
+    &__wrap-quantity
+      border: none
+      border-top: 1px solid #E8E8E8
+      padding: 20px
+      width: 100%
+      height: calc(42px + 40px)
+    &__quantity-prev, &__quantity, &__quantity-next
+      width: 42px
+      border: 2px solid #E1F0F2
+    &__quantity
+      border-left: none
+      border-right: none
+    &__mob-abs
+      position: absolute
+      right: 20px
+      bottom: 0
+      height: 82px
+      align-items: center
+    &__delete, &__compare
+      font-size: 0
+      svg
+        margin-right: 0
+      &_indent
+        margin-right: 20px

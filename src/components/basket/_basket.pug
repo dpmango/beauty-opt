@@ -1,6 +1,6 @@
 include ../horizontalMenu/_menu
 
-section.section_indent-small.section_negative-position-t20
+section.section_indent-small.section_negative-position-t20.hidden-992
   .container
     .progress-basket
       .progress-basket__item.progress-basket__item_active Ваша корзина
@@ -8,7 +8,7 @@ section.section_indent-small.section_negative-position-t20
       .progress-basket__item Подтверждение заказа и оплата
 
 // H1 TITLE
-section.section_indent
+section.section_indent.mobile-mt-20
   .container
     h1.h1-title Ваша корзина
 
@@ -21,28 +21,28 @@ mixin yourCartProduct(name, image, price)
         a(href="#").link-text.your-cart__title.your-cart__title_indent!= name
         span.your-cart__vendor-code.your-cart__vendor-code_indent Артикул: 34M20V-01
         span.your-cart__price!= price
-      .your-cart__wrap-quantity
+      .your-cart__wrap-quantity.your-cart__wrap-quantity_indent
         .your-cart__quantity-prev.link-text
           +svgMono('minus')
         .your-cart__quantity 1
         .your-cart__quantity-next.link-text
           +svgMono('plus')
     .your-cart__row.your-cart__space-between
-      .your-cart__col
+      .your-cart__col.your-cart__mob-abs
         a(href="#").link-text.your-cart__delete.your-cart__delete_indent
           +svgMono('delete')
           = 'Удалить'
         a(href="#").link-text.your-cart__compare
           +svgMono('comparison')
           = 'Сравнить'
-      .your-cart__col
+      .your-cart__col.hidden-768
         span.your-cart__amount
           = 'Сумма: '
           span.your-cart__amount-price 2 310 руб.
 
 section.section_indent
   .container
-    .wrap-basket
+    form.wrap-basket
       .wrap-basket__left.wrap-basket__left_indent
         .your-cart
           +yourCartProduct("Men Pure-formance Men's Aftershave", "images1.jpg", "870 руб.")
@@ -77,7 +77,7 @@ section.section_indent
                 .checkout-info__name Бонусные баллы:
                 .checkout-info__text.checkout-info__green + 173 балла
           .checkout-info__row.checkout-info__row_indent
-            a(href="#").btn-form.checkout-info__all-w Оформить заказ
+            button(type="submit").btn-form.checkout-info__all-w Оформить заказ
           .checkout-info__row
             input(type="text", placeholder="Промокод").checkout-info__promo-code.checkout-info__promo-code_indent
             span.checkout-info__text-small

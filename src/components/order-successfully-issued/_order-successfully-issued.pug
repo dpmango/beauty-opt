@@ -1,0 +1,69 @@
+include ../horizontalMenu/_menu
+
+section.section_indent-small.section_negative-position-t20.hidden-992
+  .container
+    .progress-basket
+      .progress-basket__item.progress-basket__item_active Ваша корзина
+      .progress-basket__item.progress-basket__item_active Оформление заказа
+      .progress-basket__item.progress-basket__item_active Подтверждение заказа и оплата
+
+// H1 TITLE
+section.section_indent.mobile-mt-20
+  .container
+    h1.h1-title Заказ успешно оформлен
+
+section.section_indent
+  .container
+    form.wrap-basket
+      .wrap-basket__left.wrap-basket__left_indent
+        .checkout-row.checkout-row_indent
+          .wrap-form
+            .wrap-form__row.wrap-form__row_indent
+              .wrap-form__text.wrap-form__text_w-100p
+                = 'Мы получили ваш заказ. Уведомления о статусе заказа вы будете получать по электронной почте '
+                b customer_email@yandex.ru
+                = ', а так же, вы можете отслеживать статусы в вашем личном кабинете.'
+            .wrap-form__row
+              .wrap-form__text.wrap-form__text_w-100p Формирование и отгрузка товара начнется после подтверждения заказа менеджером и оплаты.
+        .checkout-row
+          .wrap-form
+            .wrap-form__row
+              .wrap-form__warehouse-pickup.wrap-form__warehouse-pickup_w-100p
+                i.icon.icon-map
+                .wrap-form__warehouse-pickup-col.wrap-form__warehouse-pickup-col_indent_b.wrap-form__warehouse-pickup-col_indent_r
+                  h4.h4-title.wrap-form__warehouse-pickup-col_indent Склад самовывоза
+                  span.wrap-form__warehouse-pickup-col_indent10 г. Воронеж, ул. Революции 1905 года 33а
+                  span Время работы: 10:00 - 19:00
+                span.wrap-form__vertical-center
+                  +svgMono('warning')
+                  = 'Вы можете забрать заказ 12.11.2018 и в течение 3х дней'
+
+      .wrap-basket__righr
+        .checkout-info
+          .checkout-info__row.checkout-info__row_indent
+            .checkout-info__name-big.checkout-info__name-big_indent Сумма заказа:
+            .checkout-info__price 6 360 руб.
+          .checkout-info__row.checkout-info__row_indent
+            .checkout-info__wrap.checkout-info__wrap_indent
+              .checkout-info__wrap-hint
+                +svgMono('questionMark')
+              .checkout-info__wrap-text
+                .checkout-info__name Доставка по Воронежу:
+                .checkout-info__text Бесплатно
+          .checkout-info__row.checkout-info__row_indent
+            .checkout-info__wrap.checkout-info__wrap_indent
+              .checkout-info__wrap-text
+                .checkout-info__name Всего товаров:
+                .checkout-info__text 3 шт.
+          .checkout-info__row.checkout-info__row_indent
+            .checkout-info__wrap.checkout-info__wrap_indent
+              .checkout-info__wrap-hint
+                +svgMono('questionMark')
+                .checkout-info__hint
+                  = 'Бонусы начисляются согласно '
+                  a(href="#") правилам бонусной программы
+              .checkout-info__wrap-text
+                .checkout-info__name Бонусные баллы:
+                .checkout-info__text.checkout-info__green + 173 балла
+          .checkout-info__row
+            button(type="submit").btn-form.checkout-info__all-w Оплатить заказ
