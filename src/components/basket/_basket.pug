@@ -56,8 +56,11 @@ section.section_indent
             .checkout-info__price 6 360 руб.
           .checkout-info__row.checkout-info__row_indent
             .checkout-info__wrap.checkout-info__wrap_indent
-              .checkout-info__wrap-hint
+              .checkout-info__wrap-hint.wrap-hint-main
                 +svgMono('questionMark')
+                .wrap-hint-main__hint
+                  = 'Бонусы начисляются согласно '
+                  a(href="#") правилам бонусной программы
               .checkout-info__wrap-text
                 .checkout-info__name Доставка по Воронежу:
                 .checkout-info__text Бесплатно
@@ -68,9 +71,9 @@ section.section_indent
                 .checkout-info__text 3 шт.
           .checkout-info__row.checkout-info__row_indent
             .checkout-info__wrap.checkout-info__wrap_indent
-              .checkout-info__wrap-hint
+              .checkout-info__wrap-hint.wrap-hint-main
                 +svgMono('questionMark')
-                .checkout-info__hint
+                .wrap-hint-main__hint
                   = 'Бонусы начисляются согласно '
                   a(href="#") правилам бонусной программы
               .checkout-info__wrap-text

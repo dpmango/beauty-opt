@@ -69,6 +69,10 @@ section.section_indent.ovh
                   img(src="img/card-smal1.jpg", alt="")
                 .swiper-slide.gallery-thumbs__item
                   img(src="img/card-smal2.jpg", alt="")
+                .swiper-slide.gallery-thumbs__item
+                  img(src="img/card-smal1.jpg", alt="")
+                .swiper-slide.gallery-thumbs__item
+                  img(src="img/card-smal2.jpg", alt="")
           .wrap-card-img__right
             .swiper-container.gallery-main(js-gallery-main)
               .swiper-wrapper
@@ -80,6 +84,10 @@ section.section_indent.ovh
                 .swiper-slide.gallery-main__item
                   .product__wrap-tag
                     span.product__tag.product__tag_yellow Распродажа
+                  img(src="img/card1.jpg", alt="")
+                .swiper-slide.gallery-main__item
+                  img(src="img/card1.jpg", alt="")
+                .swiper-slide.gallery-main__item
                   img(src="img/card1.jpg", alt="")
                 .swiper-slide.gallery-main__item
                   img(src="img/card1.jpg", alt="")
@@ -140,8 +148,10 @@ section.section_indent.ovh
                   span.volume-color_indent_r10 Наличие на складе
                   .volume-color__line-availability-all.volume-color_indent_r10
                     .volume-color__line-availability-current
-                  a(href="#").volume-color__wrap-hint
+                  .volume-color__wrap-hint.wrap-hint-main
                     +svgMono('questionMark')
+                    .wrap-hint-main__hint
+                      = 'Текст Текст Текст Текст'
               .volume-color__row.volume-color__row_indent
                 .volume-color__wrap
                   a(href="#").btn-add-cart.volume-color_indent_r40
@@ -158,8 +168,11 @@ section.section_indent.ovh
                     span.hidden-480  за покупку
                     = ': '
                     span.volume-color__point +28 баллов
-                  a(href="#").volume-color__wrap-hint
+                  .volume-color__wrap-hint.wrap-hint-main
                     +svgMono('questionMark')
+                    .wrap-hint-main__hint
+                      = 'Бонусы начисляются согласно '
+                      a(href="#") правилам бонусной программы
                 .volume-color__wrap
                   span
                     = 'Доставка по Воронежу: '

@@ -80,6 +80,7 @@
       background-color: #796B60
   &__hint
     position: absolute
+    z-index: 1
     opacity: 0
     visibility: hidden
     pointer-events: none
@@ -132,8 +133,13 @@
     width: 65%
     background-color: #FFC328
   &__wrap-hint
+    position: relative
     display: flex
     color: #39B993
+    &:hover
+      .volume-color__hint
+        opacity: 1
+        visibility: visible
   &__point
     font-weight: 600
     color: #39B993

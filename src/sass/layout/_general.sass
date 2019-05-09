@@ -88,6 +88,38 @@ body, html
   font-size: 12px
   border-bottom-left-radius: 5px
 
+.hidden
+  display: none !important
+
+.wrap-hint-main
+  &:hover
+    .wrap-hint-main__hint
+      opacity: 1
+      visibility: visible
+  &__hint
+    position: absolute
+    z-index: 1
+    visibility: hidden
+    opacity: 0
+    width: 162px
+    padding: 10px
+    color: #fff
+    top: calc(100% + 9px)
+    right: -16px
+    border-radius: 4px
+    background-color: rgba(0, 0, 0, 0.7)
+    transition: $transitionSpeed
+    a
+      color: #FFC328
+      text-decoration: underline
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      right: 17px
+      transform: translate(0, -100%)
+      +arr(11, 4, rgba(0, 0, 0, 0.7), t)
+
 .flex-center
   display: flex
   justify-content: center
