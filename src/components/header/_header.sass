@@ -230,13 +230,19 @@
     background-color: #E9F1F2
     &_indent
       margin: 0 20px
-  &__menu
+  &__inner
     position: absolute
+    left: -20px
+    top: calc(100%)
+    padding-top: 20px
+    opacity: 0
+    visibility: hidden
+    transition: $transitionSpeed
+  &__menu
+    position: relative
     opacity: 0
     visibility: hidden
     width: 190px
-    top: calc(100% + 20px)
-    left: -20px
     z-index: 9
     margin: 0
     padding: 0
@@ -262,6 +268,9 @@
   &_active
     &:hover
       .block-login__menu
+        opacity: 1
+        visibility: visible
+      .block-login__inner
         opacity: 1
         visibility: visible
 

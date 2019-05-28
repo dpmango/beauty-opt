@@ -1,24 +1,6 @@
 // FOOTER :: START
 footer
 
-#popap-select-city.popup.popup_width530
-	.popup__wrap-title
-		h4.h4-title Город доставки
-	.popup__wrap-form
-		form.form-select-city
-			input(
-				type="text",
-				name='city',
-				placeholder='Введите название города'
-			).form-select-city__input.form-select-city_indent_b10
-			ul.form-select-city__custom-select.form-select-city_indent_b20
-				li Например:
-				li
-					a.link-text(href="#") Воронеж
-				li
-					a.link-text(href="#") Москва
-				li
-					a.link-text(href="#") Саратов
-			button(type="submit").btn-form.form-select-city__button Выбрать город
-
 // FOOTER :: END
+
+include ../modal/_modal

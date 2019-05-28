@@ -89,6 +89,11 @@
   &__spoiler-body
     &_indent
       margin-top: 20px
+  &__inner
+    padding-left: 10px
+    padding-right: 10px
+    margin-right: -10px
+    margin-left: -10px
 
 .slider-price
   &__row
@@ -238,3 +243,6 @@
     color: #26A1AD
   &__no-event
     pointer-events: none
+
+[type="checkbox"]:not(:checked) + label:before, [type="checkbox"]:checked + label:before
+  top: 10px
