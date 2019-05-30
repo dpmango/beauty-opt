@@ -10,6 +10,10 @@
           instance: undefined,
           disableOn: 1201,
         },
+        featuredProducts2: {
+          instance: undefined,
+          disableOn: 1201,
+        },
       },
     },
     init: function () {
@@ -109,12 +113,60 @@
         },
       });
 
+      function f() {
+        new Swiper('[js-auto-width-slider3]', {
+          slidesPerView: 'auto',
+          spaceBetween: 40,
+          navigation: {
+            nextEl: '.swiper-button-next.swiper-button-next__auto-width-slider3',
+            prevEl: '.swiper-button-prev.swiper-button-prev__auto-width-slider3',
+          },
+          pagination: {
+            el: '.swiper-pagination-small.swiper-pagination__auto-width-slider3',
+          },
+          breakpoints: {
+            992: {
+              spaceBetween: 0,
+            },
+          },
+        });
+      }
+
+      let aws = debounce(f, 100);
+      aws();
+
     },
     initResponsiveSwipers: function () {
       var featuredProducts = '[js-featured-products-swiper]';
       if ($(featuredProducts).length > 0) {
         this.initFeaturedProductsSwiper(featuredProducts);
       }
+
+      var featuredProducts2 = '[js-featured-products-swiper2]';
+      if ($(featuredProducts2).length > 0) {
+        this.initFeaturedProductsSwiper2(featuredProducts2);
+      }
+
+      function f() {
+        new Swiper('[js-auto-width-slider3]', {
+          slidesPerView: 'auto',
+          spaceBetween: 40,
+          navigation: {
+            nextEl: '.swiper-button-next.swiper-button-next__auto-width-slider3',
+            prevEl: '.swiper-button-prev.swiper-button-prev__auto-width-slider3',
+          },
+          pagination: {
+            el: '.swiper-pagination-small.swiper-pagination__auto-width-slider3',
+          },
+          breakpoints: {
+            992: {
+              spaceBetween: 0,
+            },
+          },
+        });
+      }
+      let aws = debounce(f, 100);
+      aws();
     },
     initFeaturedProductsSwiper: function (selector) {
       var dataObj = this.data.responsiveSwipers.featuredProducts;
@@ -141,8 +193,24 @@
                 },
               },
             });
-            // добавил еще 1 сладер, думаю что не правильно
-            dataObj.instance = new Swiper('[js-featured-products-swiper2]', {
+          }
+        }
+      }
+    },
+    initFeaturedProductsSwiper2: function (selector) {
+      var dataObj = this.data.responsiveSwipers.featuredProducts2;
+
+      if ($(selector).length > 0) {
+        if (window.innerWidth >= dataObj.disableOn) {
+          if (dataObj.instance !== undefined) {
+            dataObj.instance.destroy(true, true);
+            dataObj.instance = undefined;
+          }
+          // return
+        } else {
+          if (dataObj.instance === undefined) {
+            // ABOUT SWIPER
+            dataObj.instance = new Swiper(selector, {
               slidesPerView: 'auto',
               spaceBetween: 40,
               pagination: {

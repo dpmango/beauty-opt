@@ -35,7 +35,8 @@ section.section_indent
               input(type="email").wrap-form__input
             .wrap-form__row.wrap-form__row_indent
               span.wrap-form__title-input.wrap-form__title-input_indent Контактный телефон
-              input(type="tel").wrap-form__input
+              input(type="tel").wrap-form__input.wrap-form__input_error
+              span.wrap-form__text-error Номер телефона должен быть в формате +7 (000) 000-00-00
             .wrap-form__row.wrap-form__row_indent
               .wrap-form__checkbox
                 input(type="checkbox", name="checkbox-1-1", checked="checked")#checkbox-1-1
@@ -149,7 +150,7 @@ section.section_indent
                     input(type="text").wrap-form__input
 
       .wrap-basket__righr
-        .checkout-info
+        .checkout-info(js-sticky)
           .checkout-info__row.checkout-info__row_indent
             .checkout-info__name-big.checkout-info__name-big_indent Сумма заказа:
             .checkout-info__price 6 360 руб.
@@ -157,9 +158,10 @@ section.section_indent
             .checkout-info__wrap.checkout-info__wrap_indent
               .checkout-info__wrap-hint.wrap-hint-main
                 +svgMono('questionMark')
-                .wrap-hint-main__hint
-                  = 'Бонусы начисляются согласно '
-                  a(href="#") правилам бонусной программы
+                .wrap-hint-main__wrap-hint
+                  .wrap-hint-main__hint
+                    = 'Бонусы начисляются согласно '
+                    a(href="#") правилам бонусной программы
               .checkout-info__wrap-text
                 .checkout-info__name Доставка по Воронежу:
                 .checkout-info__text Бесплатно
@@ -172,9 +174,10 @@ section.section_indent
             .checkout-info__wrap.checkout-info__wrap_indent
               .checkout-info__wrap-hint.wrap-hint-main
                 +svgMono('questionMark')
-                .wrap-hint-main__hint
-                  = 'Бонусы начисляются согласно '
-                  a(href="#") правилам бонусной программы
+                .wrap-hint-main__wrap-hint
+                  .wrap-hint-main__hint
+                    = 'Бонусы начисляются согласно '
+                    a(href="#") правилам бонусной программы
               .checkout-info__wrap-text
                 .checkout-info__name Бонусные баллы:
                 .checkout-info__text.checkout-info__green + 173 балла

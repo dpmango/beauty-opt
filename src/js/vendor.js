@@ -19,6 +19,8 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import debounce from 'lodash/debounce';
 import throttle from 'lodash/throttle';
 import easy_autocomplete from 'easy-autocomplete';
+import Waypoints from 'waypoints/lib/jquery.waypoints.min.js';
+import Sticky from 'waypoints/lib/shortcuts/sticky.min.js';
 
 // expose imports to window to use in app.js
 // (jquery is exposed in expose-loader)
@@ -44,3 +46,5 @@ window.TweenMax = TweenMax;
 window.debounce = debounce;
 window.throttle = throttle;
 window.easy_autocomplete = easy_autocomplete;
+window.Waypoints = Waypoints;
+window.Sticky = Sticky;

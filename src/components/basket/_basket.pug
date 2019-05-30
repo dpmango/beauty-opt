@@ -12,7 +12,7 @@ section.section_indent.mobile-mt-20
   .container
     h1.h1-title Ваша корзина
 
-mixin yourCartProduct(name, image, price)
+mixin yourCartProduct(name, image, price, notAvailable)
   .your-cart__product.your-cart__product_indent
     .your-cart__row.your-cart__row_bd
       .your-cart__img
@@ -21,6 +21,7 @@ mixin yourCartProduct(name, image, price)
         a(href="#").link-text.your-cart__title.your-cart__title_indent!= name
         span.your-cart__vendor-code.your-cart__vendor-code_indent Артикул: 34M20V-01
         span.your-cart__price!= price
+        span.your-cart__not-available!= notAvailable
       .your-cart__wrap-quantity.your-cart__wrap-quantity_indent
         .your-cart__quantity-prev.link-text
           +svgMono('minus')
@@ -47,10 +48,10 @@ section.section_indent
         .your-cart
           +yourCartProduct("Men Pure-formance Men's Aftershave", "images1.jpg", "870 руб.")
           +yourCartProduct("Men Pure-formance Men's Aftershave", "images2.jpg", "920 руб.")
-          +yourCartProduct("Men Pure-formance Men's Aftershave", "images1.jpg", "870 руб.")
+          +yourCartProduct("Men Pure-formance Men's Aftershave", "images1.jpg", "870 руб.", "Нет в наличии")
 
       .wrap-basket__righr
-        .checkout-info
+        .checkout-info(js-sticky)
           .checkout-info__row.checkout-info__row_indent
             .checkout-info__name-big.checkout-info__name-big_indent Сумма заказа:
             .checkout-info__price 6 360 руб.
@@ -58,9 +59,10 @@ section.section_indent
             .checkout-info__wrap.checkout-info__wrap_indent
               .checkout-info__wrap-hint.wrap-hint-main
                 +svgMono('questionMark')
-                .wrap-hint-main__hint
-                  = 'Бонусы начисляются согласно '
-                  a(href="#") правилам бонусной программы
+                .wrap-hint-main__wrap-hint
+                  .wrap-hint-main__hint
+                    = 'Бонусы начисляются согласно '
+                    a(href="#") правилам бонусной программы
               .checkout-info__wrap-text
                 .checkout-info__name Доставка по Воронежу:
                 .checkout-info__text Бесплатно
@@ -73,9 +75,10 @@ section.section_indent
             .checkout-info__wrap.checkout-info__wrap_indent
               .checkout-info__wrap-hint.wrap-hint-main
                 +svgMono('questionMark')
-                .wrap-hint-main__hint
-                  = 'Бонусы начисляются согласно '
-                  a(href="#") правилам бонусной программы
+                .wrap-hint-main__wrap-hint
+                  .wrap-hint-main__hint
+                    = 'Бонусы начисляются согласно '
+                    a(href="#") правилам бонусной программы
               .checkout-info__wrap-text
                 .checkout-info__name Бонусные баллы:
                 .checkout-info__text.checkout-info__green + 173 балла

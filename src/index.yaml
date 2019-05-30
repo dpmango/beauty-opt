@@ -2,13 +2,13 @@ ProjectTitle: Beauty-opt
 
 PageList:
 - file: homepage.html
-  ready: 100
+  ready: 70
 - file: subdirectory.html
-  ready: 100
+  ready: 70
 - file: category.html
-  ready: 90
+  ready: 70
 - file: card.html
-  ready: 90
+  ready: 70
 - file: basket.html
   ready: 70
 - file: checkout.html

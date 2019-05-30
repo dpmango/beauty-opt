@@ -93,22 +93,25 @@ body, html
 
 .wrap-hint-main
   &:hover
-    .wrap-hint-main__hint
+    .wrap-hint-main__wrap-hint
       opacity: 1
       visibility: visible
-  &__hint
+  &__wrap-hint
     position: absolute
+    padding-top: 9px
+    width: 162px
     z-index: 1
     visibility: hidden
     opacity: 0
-    width: 162px
+    top: 100%
+    right: -16px
+    transition: $transitionSpeed
+  &__hint
+    position: relative
     padding: 10px
     color: #fff
-    top: calc(100% + 9px)
-    right: -16px
     border-radius: 4px
     background-color: rgba(0, 0, 0, 0.7)
-    transition: $transitionSpeed
     a
       color: #FFC328
       text-decoration: underline

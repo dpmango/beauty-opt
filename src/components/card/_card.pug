@@ -75,15 +75,13 @@ section.section_indent.ovh
                   img(src="img/card-smal2.jpg", alt="")
           .wrap-card-img__right
             .swiper-container.gallery-main(js-gallery-main)
+              .product__wrap-tag
+                span.product__tag.product__tag_yellow Распродажа
+                span.product__tag.product__tag_green Хит продаж
               .swiper-wrapper
                 .swiper-slide.gallery-main__item
-                  .product__wrap-tag
-                    span.product__tag.product__tag_yellow Распродажа
-                    span.product__tag.product__tag_green Хит продаж
                   img(src="img/card1.jpg", alt="")
                 .swiper-slide.gallery-main__item
-                  .product__wrap-tag
-                    span.product__tag.product__tag_yellow Распродажа
                   img(src="img/card1.jpg", alt="")
                 .swiper-slide.gallery-main__item
                   img(src="img/card1.jpg", alt="")
@@ -103,7 +101,7 @@ section.section_indent.ovh
         .wrap-similar-products.hidden-1200(js-teleport data-teleport-to="categories-mobile" data-teleport-condition="<1201")
           h2.h2-title Похожие товары
           .auto-width-slider-wrap.auto-width-slider-wrap_indent-small
-            .swiper-container.auto-width-slider.ovv-992.auto-width-slider_indent(js-auto-width-slider)
+            .swiper-container.auto-width-slider.ovv-992.auto-width-slider_indent(js-auto-width-slider3)
               .swiper-wrapper
                 +productCard("Men Pure-formance", "images2.jpg", "sale hit")
                 +productCard("Men Pure-formance Men's Aftershave", "images2.jpg", "hit")
@@ -116,10 +114,10 @@ section.section_indent.ovh
                 +productCard("Invati Nourishing Exfoliating Shampoo", "images1-1.jpg")
                 +productCard("Men Pure-formance Men's Aftershave", "images2.jpg")
 
-              .swiper-pagination-small.swiper-pagination__auto-width-slider
-            .swiper-button-prev.swiper-button-prev__auto-width-slider
+              .swiper-pagination-small.swiper-pagination__auto-width-slider3
+            .swiper-button-prev.swiper-button-prev__auto-width-slider3
               +svgMono('arrowBottom')
-            .swiper-button-next.swiper-button-next__auto-width-slider
+            .swiper-button-next.swiper-button-next__auto-width-slider3
               +svgMono('arrowBottom')
 
       .wrap-card__right
@@ -150,8 +148,9 @@ section.section_indent.ovh
                     .volume-color__line-availability-current.volume-color__line-availability-current_few
                   .volume-color__wrap-hint.wrap-hint-main
                     +svgMono('questionMark')
-                    .wrap-hint-main__hint
-                      = 'Текст Текст Текст Текст'
+                    .wrap-hint-main__wrap-hint
+                      .wrap-hint-main__hint
+                        = 'Текст Текст Текст Текст'
               .volume-color__row.volume-color__row_indent
                 .volume-color__wrap
                   a(href="#").btn-add-cart.volume-color_indent_r40
@@ -170,9 +169,10 @@ section.section_indent.ovh
                     span.volume-color__point +28 баллов
                   .volume-color__wrap-hint.wrap-hint-main
                     +svgMono('questionMark')
-                    .wrap-hint-main__hint
-                      = 'Бонусы начисляются согласно '
-                      a(href="#") правилам бонусной программы
+                    .wrap-hint-main__wrap-hint
+                      .wrap-hint-main__hint
+                        = 'Бонусы начисляются согласно '
+                        a(href="#") правилам бонусной программы
                 .volume-color__wrap
                   span
                     = 'Доставка по Воронежу: '

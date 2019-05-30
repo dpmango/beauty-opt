@@ -14,7 +14,7 @@ section.section_indent.mobile-mt-20
 
 section.section_indent
   .container
-    form.wrap-basket
+    form.wrap-basket.wrap-basket_contrariwise
       .wrap-basket__left.wrap-basket__left_indent
         .checkout-row.checkout-row_indent
           .wrap-form
@@ -38,8 +38,8 @@ section.section_indent
                   +svgMono('warning')
                   = 'Вы можете забрать заказ 12.11.2018 и в течение 3х дней'
 
-      .wrap-basket__righr
-        .checkout-info
+      .wrap-basket__righr.wrap-basket__righr_indent
+        .checkout-info(js-sticky)
           .checkout-info__row.checkout-info__row_indent
             .checkout-info__name-big.checkout-info__name-big_indent Сумма заказа:
             .checkout-info__price 6 360 руб.
@@ -47,9 +47,10 @@ section.section_indent
             .checkout-info__wrap.checkout-info__wrap_indent
               .checkout-info__wrap-hint.wrap-hint-main
                 +svgMono('questionMark')
-                .wrap-hint-main__hint
-                  = 'Бонусы начисляются согласно '
-                  a(href="#") правилам бонусной программы
+                .wrap-hint-main__wrap-hint
+                  .wrap-hint-main__hint
+                    = 'Бонусы начисляются согласно '
+                    a(href="#") правилам бонусной программы
               .checkout-info__wrap-text
                 .checkout-info__name Доставка по Воронежу:
                 .checkout-info__text Бесплатно
@@ -62,9 +63,10 @@ section.section_indent
             .checkout-info__wrap.checkout-info__wrap_indent
               .checkout-info__wrap-hint.wrap-hint-main
                 +svgMono('questionMark')
-                .wrap-hint-main__hint
-                  = 'Бонусы начисляются согласно '
-                  a(href="#") правилам бонусной программы
+                .wrap-hint-main__wrap-hint
+                  .wrap-hint-main__hint
+                    = 'Бонусы начисляются согласно '
+                    a(href="#") правилам бонусной программы
               .checkout-info__wrap-text
                 .checkout-info__name Бонусные баллы:
                 .checkout-info__text.checkout-info__green + 173 балла
