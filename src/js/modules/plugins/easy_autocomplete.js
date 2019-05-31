@@ -1,25 +1,24 @@
 ////////////////////
 // EASY AUTOCOMPLETE
 ////////////////////
-(function ($, APP) {
+(function($, APP) {
   APP.Plugins.easy_autocomplete = {
-    init: function () {
+    init: function() {
       var options = {
-        url: "../russia.json",
+        url: '../russia.json',
 
-        getValue: "city",
+        getValue: 'city',
 
         list: {
           match: {
-            enabled: true
-          }
+            enabled: true,
+          },
         },
-
       };
 
       $('#js-easyAutocomplete').easyAutocomplete(options);
     },
-    destroy: function () {
+    destroy: function() {
       // ... code ...
     },
   };
