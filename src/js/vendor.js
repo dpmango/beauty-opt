@@ -18,7 +18,7 @@ import TweenMax from 'gsap/TweenMax';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import debounce from 'lodash/debounce';
 import throttle from 'lodash/throttle';
-import easy_autocomplete from 'easy-autocomplete';
+import easy_autocomplete from 'easy-autocomplete/dist/jquery.easy-autocomplete.min.js';
 import Waypoints from 'waypoints/lib/jquery.waypoints.min.js';
 import Sticky from 'waypoints/lib/shortcuts/sticky.min.js';
 
