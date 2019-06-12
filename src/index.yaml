@@ -1,17 +1,17 @@
 ProjectTitle: Beauty-opt
 
 PageList:
-- file: homepage.html
-  ready: 70
-- file: subdirectory.html
-  ready: 70
-- file: category.html
-  ready: 70
-- file: card.html
-  ready: 70
-- file: basket.html
-  ready: 70
-- file: checkout.html
-  ready: 70
-- file: order-successfully-issued.html
-  ready: 70
+  - file: homepage.html
+    ready: 98
+  - file: subdirectory.html
+    ready: 98
+  - file: category.html
+    ready: 98
+  - file: card.html
+    ready: 98
+  - file: basket.html
+    ready: 98
+  - file: checkout.html
+    ready: 98
+  - file: order-successfully-issued.html
+    ready: 98
